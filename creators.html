@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ko" data-lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>K-Beauty Creator Ecosystem | Top Beauty Influencers | K-Beauty Intelligence</title>
+  <meta name="description" content="Discover the top K-Beauty creators and influencers on YouTube, TikTok, and Instagram. Follower counts, influence scores, and content categories for the global K-Beauty creator ecosystem." />
+  <meta name="keywords" content="K-Beauty creators, Korean beauty influencers, beauty YouTubers, K-Beauty TikTok, beauty Instagram influencers, K-Beauty creator ecosystem" />
+  <link rel="canonical" href="https://www.kimpactmedia.com/k-beauty/creators.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/kbeauty.css" />
+  <style>
+    .creators-hero {
+      background: linear-gradient(135deg, #0a0a0f 0%, #0d0a1a 50%, #0a0a0f 100%);
+      padding: 5rem 0 3rem;
+      border-bottom: 1px solid rgba(249,168,212,0.1);
+      position: relative; overflow: hidden;
+    }
+    .creators-hero::before {
+      content: ''; position: absolute; top: -40%; right: -10%; width: 60%; height: 200%;
+      background: radial-gradient(ellipse, rgba(249,168,212,0.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .creators-hero-inner { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
+    .creators-hero-tag {
+      display: inline-block; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: #f9a8d4; border: 1px solid rgba(249,168,212,0.25);
+      padding: 0.28rem 0.7rem; border-radius: 3px; margin-bottom: 1.2rem; font-family: 'Montserrat', sans-serif;
+    }
+    .creators-hero h1 { font-size: clamp(2rem,4vw,3.2rem); font-weight: 900; color: #fff; margin-bottom: 0.8rem; font-family: 'Montserrat', sans-serif; line-height: 1.15; }
+    .creators-hero h1 span { color: #f9a8d4; }
+    .creators-hero-desc { font-size: 0.95rem; color: rgba(255,255,255,0.45); max-width: 600px; line-height: 1.65; margin-bottom: 2rem; }
+    .creators-hero-stats { display: flex; gap: 2.5rem; flex-wrap: wrap; }
+    .chs-item { display: flex; flex-direction: column; gap: 0.2rem; }
+    .chs-val { font-size: 1.6rem; font-weight: 900; color: #f9a8d4; font-family: 'Montserrat', sans-serif; line-height: 1; }
+    .chs-label { font-size: 0.62rem; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 0.07em; font-family: 'Montserrat', sans-serif; }
+
+    .creators-filter-bar {
+      background: rgba(10,10,15,0.95); border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding: 1rem 0; position: sticky; top: 0; z-index: 100; backdrop-filter: blur(20px);
+    }
+    .creators-filter-inner { max-width: 1280px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+    .creators-filter-tabs { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+    .creators-filter-tab {
+      font-size: 0.65rem; font-weight: 600; padding: 0.35rem 0.8rem; border-radius: 4px;
+      border: 1px solid rgba(255,255,255,0.1); background: transparent; color: rgba(255,255,255,0.4);
+      cursor: pointer; transition: all 0.2s; font-family: 'Montserrat', sans-serif;
+    }
+    .creators-filter-tab.active { background: rgba(249,168,212,0.1); border-color: rgba(249,168,212,0.3); color: #f9a8d4; }
+
+    .creators-main { max-width: 1280px; margin: 0 auto; padding: 2.5rem 2rem; }
+    .creators-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8rem; }
+    @media(max-width:1000px){ .creators-grid { grid-template-columns: 1fr 1fr; } }
+    @media(max-width:600px){ .creators-grid { grid-template-columns: 1fr; } }
+
+    .creator-card {
+      background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 14px; overflow: hidden; transition: all 0.3s;
+    }
+    .creator-card:hover { border-color: rgba(249,168,212,0.22); transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
+
+    .creator-card-header { padding: 1.4rem 1.4rem 1rem; display: flex; align-items: flex-start; gap: 1rem; }
+    .creator-avatar {
+      width: 56px; height: 56px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; font-weight: 900; flex-shrink: 0; font-family: 'Montserrat', sans-serif;
+      border: 2px solid rgba(249,168,212,0.2);
+    }
+    .creator-info { flex: 1; }
+    .creator-name { font-size: 0.95rem; font-weight: 800; color: rgba(255,255,255,0.92); margin-bottom: 0.2rem; }
+    .creator-handle { font-size: 0.65rem; color: #f9a8d4; font-weight: 600; margin-bottom: 0.3rem; font-family: 'Montserrat', sans-serif; }
+    .creator-cat-tags { display: flex; gap: 0.3rem; flex-wrap: wrap; }
+    .creator-cat-tag { font-size: 0.52rem; font-weight: 600; padding: 0.12rem 0.38rem; border-radius: 3px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.4); font-family: 'Montserrat', sans-serif; }
+    .creator-rank-badge { font-size: 0.58rem; font-weight: 700; padding: 0.22rem 0.55rem; border-radius: 4px; background: rgba(249,168,212,0.08); border: 1px solid rgba(249,168,212,0.2); color: #f9a8d4; font-family: 'Montserrat', sans-serif; white-space: nowrap; }
+
+    .creator-influence { padding: 0.8rem 1.4rem; display: flex; align-items: center; gap: 0.8rem; border-top: 1px solid rgba(255,255,255,0.05); }
+    .ci-label { font-size: 0.55rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: rgba(255,255,255,0.25); font-family: 'Montserrat', sans-serif; white-space: nowrap; }
+    .ci-bar { flex: 1; height: 5px; background: rgba(255,255,255,0.06); border-radius: 3px; overflow: hidden; }
+    .ci-fill { height: 100%; background: linear-gradient(90deg, rgba(249,168,212,0.5), #f9a8d4); border-radius: 3px; }
+    .ci-score { font-size: 1.1rem; font-weight: 900; color: #f9a8d4; font-family: 'Montserrat', sans-serif; }
+
+    .creator-platforms { padding: 0.8rem 1.4rem; border-top: 1px solid rgba(255,255,255,0.05); }
+    .cp-label { font-size: 0.52rem; color: rgba(255,255,255,0.25); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.5rem; font-family: 'Montserrat', sans-serif; }
+    .cp-items { display: flex; flex-direction: column; gap: 0.4rem; }
+    .cp-item { display: flex; align-items: center; gap: 0.6rem; }
+    .cp-platform { display: flex; align-items: center; gap: 0.4rem; width: 90px; flex-shrink: 0; }
+    .cp-platform-icon { width: 20px; height: 20px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 0.5rem; font-weight: 900; font-family: 'Montserrat', sans-serif; }
+    .cp-platform-icon.yt { background: rgba(239,68,68,0.15); color: #ef4444; }
+    .cp-platform-icon.ig { background: rgba(249,168,212,0.15); color: #f9a8d4; }
+    .cp-platform-icon.tk { background: rgba(74,222,128,0.15); color: #4ade80; }
+    .cp-platform-name { font-size: 0.6rem; color: rgba(255,255,255,0.4); }
+    .cp-followers { font-size: 0.72rem; font-weight: 700; color: rgba(255,255,255,0.75); font-family: 'Montserrat', sans-serif; flex: 1; }
+    .cp-link { font-size: 0.58rem; font-weight: 600; color: #f9a8d4; text-decoration: none; padding: 0.15rem 0.4rem; border: 1px solid rgba(249,168,212,0.2); border-radius: 3px; font-family: 'Montserrat', sans-serif; }
+    .cp-link:hover { background: rgba(249,168,212,0.08); }
+
+    .creator-stats { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(255,255,255,0.05); }
+    .cs-item { padding: 0.7rem 1rem; border-right: 1px solid rgba(255,255,255,0.05); text-align: center; }
+    .cs-item:last-child { border-right: none; }
+    .cs-val { font-size: 0.88rem; font-weight: 800; color: rgba(255,255,255,0.82); display: block; font-family: 'Montserrat', sans-serif; }
+    .cs-label { font-size: 0.5rem; color: rgba(255,255,255,0.28); text-transform: uppercase; letter-spacing: 0.05em; font-family: 'Montserrat', sans-serif; }
+
+    .creator-collab { padding: 0.8rem 1.4rem; border-top: 1px solid rgba(255,255,255,0.05); }
+    .ccol-label { font-size: 0.52rem; color: rgba(255,255,255,0.25); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.4rem; font-family: 'Montserrat', sans-serif; }
+    .ccol-brands { display: flex; gap: 0.3rem; flex-wrap: wrap; }
+    .ccol-brand { font-size: 0.58rem; font-weight: 600; padding: 0.15rem 0.4rem; border-radius: 3px; background: rgba(201,168,76,0.07); border: 1px solid rgba(201,168,76,0.15); color: rgba(201,168,76,0.7); font-family: 'Montserrat', sans-serif; }
+
+    .creator-card-footer { padding: 0.8rem 1.4rem; border-top: 1px solid rgba(255,255,255,0.05); display: flex; gap: 0.5rem; }
+    .creator-card-btn { flex: 1; text-align: center; font-size: 0.62rem; font-weight: 700; padding: 0.4rem; border-radius: 5px; border: 1px solid rgba(249,168,212,0.2); color: #f9a8d4; text-decoration: none; transition: all 0.2s; font-family: 'Montserrat', sans-serif; }
+    .creator-card-btn:hover { background: rgba(249,168,212,0.08); }
+    .creator-card-btn.primary { background: rgba(249,168,212,0.1); }
+  </style>
+</head>
+<body>
+
+  <header id="kb-header" role="banner">
+    <div class="kb-header-top">
+      <a href="../kimpact-group/index.html" class="back-to-group">← K-IMPACT</a>
+      <div class="kb-header-top-right">
+        <div class="kb-lang-dropdown" id="kb-lang-dropdown">
+          <button class="kb-lang-toggle" id="kb-lang-toggle"><span id="kb-lang-label">KO</span></button>
+          <div class="kb-lang-menu" id="kb-lang-menu">
+            <button class="kb-lang-opt active" data-lang="ko">한국어</button>
+            <button class="kb-lang-opt" data-lang="en">English</button>
+            <button class="kb-lang-opt" data-lang="ja">日本語</button>
+          </div>
+        </div>
+        <button class="kb-login-btn">로그인</button>
+      </div>
+    </div>
+    <nav class="kb-nav-container">
+      <a href="index.html" class="kb-logo-link"><span class="kb-logo-text">K-Beauty</span></a>
+                        <ul class="kb-nav-menu" role="list">
+        <li><a href="index.html" class="kb-nav-link" data-i18n="kb.nav.home">Home</a></li>
+        <li class="kb-nav-has-dropdown">
+          <a href="brands.html" class="kb-nav-parent" data-i18n="kb.nav.brands_db">Brand Database <span class="kb-nav-arrow">&#9662;</span></a>
+          <ul class="kb-nav-dropdown" role="list">
+            <li><a href="brands.html" data-i18n="kb.nav.dd.brands_all">All Brands</a></li>
+            <li><a href="brands.html#cosrx">COSRX</a></li>
+            <li><a href="brands.html#anua">Anua</a></li>
+            <li><a href="brands.html#beauty-of-joseon">Beauty of Joseon</a></li>
+            <li><a href="brands.html#laneige">Laneige</a></li>
+            <li><a href="brands.html#romand">Rom&amp;nd</a></li>
+          </ul>
+        </li>
+        <li class="kb-nav-has-dropdown">
+          <a href="products.html" class="kb-nav-parent" data-i18n="kb.nav.products_db">Product Database <span class="kb-nav-arrow">&#9662;</span></a>
+          <ul class="kb-nav-dropdown" role="list">
+            <li><a href="products.html" data-i18n="kb.nav.dd.products_all">All Products</a></li>
+            <li><a href="best-sunscreens.html" data-i18n="kb.nav.dd.sunscreens">Best Sunscreens</a></li>
+            <li><a href="best-serums.html" data-i18n="kb.nav.dd.serums">Best Serums</a></li>
+            <li><a href="best-moisturizers.html" data-i18n="kb.nav.dd.moisturizers">Best Moisturizers</a></li>
+            <li><a href="best-cleansers.html" data-i18n="kb.nav.dd.cleansers">Best Cleansers</a></li>
+            <li><a href="best-essences.html" data-i18n="kb.nav.dd.essences">Best Essences</a></li>
+          </ul>
+        </li>
+        <li class="kb-nav-has-dropdown kb-nav-intelligence">
+          <a href="intelligence.html" class="kb-nav-parent" data-i18n="kb.nav.intelligence_menu">Intelligence <span class="kb-nav-arrow">&#9662;</span></a>
+          <ul class="kb-nav-dropdown kb-nav-dropdown-wide" role="list">
+            <li><a href="intelligence.html#market-intelligence" data-i18n="kb.nav.dd.market">Market Intelligence</a></li>
+            <li><a href="intelligence.html#company-intelligence" data-i18n="kb.nav.dd.company">Company Intelligence</a></li>
+            <li><a href="intelligence.html#industry-outlook" data-i18n="kb.nav.dd.outlook">Industry Outlook</a></li>
+            <li><a href="intelligence.html#ingredient-intelligence" data-i18n="kb.nav.dd.ingredients">Ingredient Intelligence</a></li>
+          </ul>
+        </li>
+        <li><a href="creators.html" class="kb-nav-link" data-i18n="kb.nav.creators_menu">Creator Ecosystem</a></li>
+        <li><a href="deals.html" class="kb-nav-link" data-i18n="kb.nav.deals_menu">Deals Engine</a></li>
+        <li><a href="top100-brands.html" class="kb-nav-link" data-i18n="kb.nav.top100_brands">Top 100 Brands</a></li>
+        <li><a href="top100-products.html" class="kb-nav-link" data-i18n="kb.nav.top100_products">Top 100 Products</a></li>
+      </ul>
+      <button class="kb-hamburger" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <div class="creators-hero">
+    <div class="creators-hero-inner">
+      <div class="creators-hero-tag">K-BEAUTY CREATOR ECOSYSTEM</div>
+      <h1>Beauty <span>Creator Data</span></h1>
+      <p class="creators-hero-desc">Track top K-Beauty creators and influencers with real-time influence scores, follower counts, platform data, and brand collaboration history. The intelligence hub for the K-Beauty creator economy.</p>
+      <div class="creators-hero-stats">
+        <div class="chs-item"><span class="chs-val">1,200+</span><span class="chs-label">Creators Tracked</span></div>
+        <div class="chs-item"><span class="chs-val">3</span><span class="chs-label">Platforms</span></div>
+        <div class="chs-item"><span class="chs-val">Weekly</span><span class="chs-label">Score Updates</span></div>
+        <div class="chs-item"><span class="chs-val">500+</span><span class="chs-label">Brand Collabs</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="creators-filter-bar">
+    <div class="creators-filter-inner">
+      <div class="creators-filter-tabs">
+        <button class="creators-filter-tab active" data-cat="all">All Platforms</button>
+        <button class="creators-filter-tab" data-cat="youtube">YouTube</button>
+        <button class="creators-filter-tab" data-cat="tiktok">TikTok</button>
+        <button class="creators-filter-tab" data-cat="instagram">Instagram</button>
+        <button class="creators-filter-tab" data-cat="skincare">Skincare</button>
+        <button class="creators-filter-tab" data-cat="makeup">Makeup</button>
+      </div>
+    </div>
+  </div>
+
+  <main class="creators-main">
+    <div class="creators-grid" id="creators-grid">
+
+      <!-- Creator 1 -->
+      <div class="creator-card" data-cat="youtube tiktok skincare">
+        <div class="creator-card-header">
+          <div class="creator-avatar" style="background:rgba(249,168,212,0.1);">🌸</div>
+          <div class="creator-info">
+            <div class="creator-name">Hyram Yarbro</div>
+            <div class="creator-handle">@hyramyarbro</div>
+            <div class="creator-cat-tags"><span class="creator-cat-tag">Skincare</span><span class="creator-cat-tag">K-Beauty</span><span class="creator-cat-tag">Education</span></div>
+          </div>
+          <span class="creator-rank-badge">Rank #1</span>
+        </div>
+        <div class="creator-influence">
+          <span class="ci-label">Influence Score</span>
+          <div class="ci-bar"><div class="ci-fill" style="width:98%"></div></div>
+          <span class="ci-score">98</span>
+        </div>
+        <div class="creator-platforms">
+          <div class="cp-label">Platforms & Followers</div>
+          <div class="cp-items">
+            <div class="cp-item">
+              <div class="cp-platform"><div class="cp-platform-icon yt">YT</div><span class="cp-platform-name">YouTube</span></div>
+              <span class="cp-followers">4.8M</span>
+              <a href="https://www.youtube.com/@hyramyarbro" target="_blank" rel="noopener" class="cp-link">View</a>
+            </div>
+            <div class="cp-item">
+              <div class="cp-platform"><div class="cp-platform-icon tk">TK</div><span class="cp-platform-name">TikTok</span></div>
+              <span class="cp-followers">6.2M</span>
+              <a href="https://www.tiktok.com/@hyramyarbro" target="_blank" rel="noopener" class="cp-link">View</a>
+            </div>
+            <div class="cp-item">
+              <div class="cp-platform"><div class="cp-platform-icon ig">IG</div><span class="cp-platform-name">Instagram</span></div>
+              <span class="cp-followers">1.2M</span>
+              <a href="https://www.instagram.com/hyramyarbro" target="_blank" rel="noopener" class="cp-link">View</a>
+            </div>
+          </div>
+        </div>
+        <div class="creator-stats">
+          <div class="cs-item"><span class="cs-val">12.1M</span><span class="cs-label">Total Followers</span></div>
+          <div class="cs-item"><span class="cs-val">8.4%</span><span class="cs-label">Avg Engagement</span></div>
+          <div class="cs-item"><span class="cs-val">Skincare</span><span class="cs-label">Category</span></div>
+        </div>
+        <div class="creator-collab">
+          <div class="ccol-label">Brand Collaborations</div>
+          <div class="ccol-brands"><span class="ccol-brand">COSRX</span><span class="ccol-brand">Anua</span><span class="ccol-brand">Beauty of Joseon</span></div>
+        </div>
+        <div class="creator-card-footer">
+          <a href="#" class="creator-card-btn">View Profile</a>
+          <a href="#" class="creator-card-btn primary">Collab Inquiry</a>
+        </div>
+      </div>
+
+      <!-- Creator 2 -->
+      <div class="creator-card" data-cat="tiktok skincare">
+        <div class="creator-card-header">
+          <div class="creator-avatar" style="background:rgba(74,222,128,0.1);">✨</div>
+          <div class="creator-info">
+            <div class="creator-name">Gothamista</div>
+            <div class="creator-handle">@gothamista</div>
+            <div class="creator-cat-tags"><span class="creator-cat-tag">Skincare</span><span class="creator-cat-tag">K-Beauty</span><span class="creator-cat-tag">Reviews</span></div>
+          </div>
+          <span class="creator-rank-badge">Rank #2</span>
+        </div>
+        <div class="creator-influence">
+          <span class="ci-label">Influence Score</span>
+          <div class="ci-bar"><div class="ci-fill" style="width:94%"></div></div>
+          <span class="ci-score">94</span>
+        </div>
+        <div class="creator-platforms">
+          <div class="cp-label">Platforms & Followers</div>
+          <div class="cp-items">
+            <div class="cp-item">
+              <div class="cp-platform"><div class="cp-platform-icon yt">YT</div><span class="cp-platform-name">YouTube</span></div>
+              <span class="cp-followers">2.1M</span>
+              <a href="https://www.youtube.com/@gothamista" target="_blank" rel="noopener" class="cp-link">View</a>
+            </div>
+            <div class="cp-item">
+              <div class="cp-platform"><div class="cp-platform-icon ig">IG</div><span class="cp-platform-name">Instagram</span></div>
+              <span class="cp-followers">890K</span>
+              <a href="https://www.instagram.com/gothamista" target="_blank" rel="noopener" class="cp-link">View</a>
+            </div>
+          </div>
+        </div>
+        <div class="creator-stats">
+          <div class="cs-item"><span class="cs-val">2.9M</span><span class="cs-label">Total Followers</span></div>
+          <div class="cs-item"><span class="cs-val">6.2%</span><span class="cs-label">Avg Engagement</span></div>
+          <div class="cs-item"><span class="cs-val">Skincare</span><span class="cs-label">Category</span></div>
+        </div>
+        <div class="creator-collab">
+          <div class="ccol-label">Brand Collaborations</div>
+          <div class="ccol-brands"><span class="ccol-brand">Torriden</span><span class="ccol-brand">Laneige</span><span class="ccol-brand">COSRX</span></div>
+        </div>
+        <div class="creator-card-footer">
+          <a href="#" class="creator-card-btn">View Profile</a>
+          <a href="#" class="creator-card-btn primary">Collab Inquiry</a>
+        </div>
+      </div>
+
+      <!-- Creator 3 -->
+      <div class="creator-card" data-cat="tiktok instagram makeup skincare">
+        <div class="creator-card-header">
+          <div class="creator-avatar" style="background:rgba(147,197,253,0.1);">💄</div>
+          <div class="creator-info">
+            <div class="creator-name">Jkissa</div>
+            <div class="creator-handle">@jkissa</div>
+            <div class="creator-cat-tags"><span class="creator-cat-tag">Makeup</span><span class="creator-cat-tag">K-Beauty</span><span class="creator-cat-tag">Tutorials</span></div>
+          </div>
+          <span class="creator-rank-badge">Rank #3</span>
+        </div>
+        <div class="creator-influence">
+          <span class="ci-label">Influence Score</span>
+          <div class="ci-bar"><div class="ci-fill" style="width:91%"></div></div>
+          <span class="ci-score">91</span>
+        </div>
+        <div class="creator-platforms">
+          <div class="cp-label">Platforms & Followers</div>
+          <div class="cp-items">
+            <div class="cp-item">
+              <div class="cp-platform"><div class="cp-platform-icon tk">TK</div><span class="cp-platform-name">TikTok</span></div>
+              <span class="cp-followers">3.4M</span>
+              <a href="https://www.tiktok.com/@jkissa" target="_blank" rel="noopener" class="cp-link">View</a>
+            </div>
+            <div class="cp-item">
+              <div class="cp-platform"><div class="cp-platform-icon ig">IG</div><span class="cp-platform-name">Instagram</span></div>
+              <span class="cp-followers">1.8M</span>
+              <a href="https://www.instagram.com/jkissa" target="_blank" rel="noopener" class="cp-link">View</a>
+            </div>
+          </div>
+        </div>
+        <div class="creator-stats">
+          <div class="cs-item"><span class="cs-val">5.2M</span><span class="cs-label">Total Followers</span></div>
+          <div class="cs-item"><span class="cs-val">9.1%</span><span class="cs-label">Avg Engagement</span></div>
+          <div class="cs-item"><span class="cs-val">Makeup</span><span class="cs-label">Category</span></div>
+        </div>
+        <div class="creator-collab">
+          <div class="ccol-label">Brand Collaborations</div>
+          <div class="ccol-brands"><span class="ccol-brand">Rom&amp;nd</span><span class="ccol-brand">Etude House</span></div>
+        </div>
+        <div class="creator-card-footer">
+          <a href="#" class="creator-card-btn">View Profile</a>
+          <a href="#" class="creator-card-btn primary">Collab Inquiry</a>
+        </div>
+      </div>
+
+      <!-- Creator 4 -->
+      <div class="creator-card" data-cat="youtube tiktok skincare">
+        <div class="creator-card-header">
+          <div class="creator-avatar" style="background:rgba(196,181,253,0.1);">🧴</div>
+          <div class="creator-info">
+            <div class="creator-name">Liah Yoo</div>
+            <div class="creator-handle">@liahyoo</div>
+            <div class="creator-cat-tags"><span class="creator-cat-tag">K-Beauty</span><span class="creator-cat-tag">Skincare</span><span class="creator-cat-tag">Founder</span></div>
+          </div>
+          <span class="creator-rank-badge">Rank #4</span>
+        </div>
+        <div class="creator-influence">
+          <span class="ci-label">Influence Score</span>
+          <div class="ci-bar"><div class="ci-fill" style="width:89%"></div></div>
+          <span class="ci-score">89</span>
+        </div>
+        <div class="creator-platforms">
+          <div class="cp-label">Platforms & Followers</div>
+          <div class="cp-items">
+            <div class="cp-item">
+              <div class="cp-platform"><div class="cp-platform-icon yt">YT</div><span class="cp-platform-name">YouTube</span></div>
+              <span class="cp-followers">1.5M</span>
+              <a href="https://www.youtube.com/@liahyoo" target="_blank" rel="noopener" class="cp-link">View</a>
+            </div>
+            <div class="cp-item">
+              <div class="cp-platform"><div class="cp-platform-icon ig">IG</div><span class="cp-platform-name">Instagram</span></div>
+              <span class="cp-followers">620K</span>
+              <a href="https://www.instagram.com/liahyoo" target="_blank" rel="noopener" class="cp-link">View</a>
+            </div>
+          </div>
+        </div>
+        <div class="creator-stats">
+          <div class="cs-item"><span class="cs-val">2.1M</span><span class="cs-label">Total Followers</span></div>
+          <div class="cs-item"><span class="cs-val">7.8%</span><span class="cs-label">Avg Engagement</span></div>
+          <div class="cs-item"><span class="cs-val">K-Beauty</span><span class="cs-label">Category</span></div>
+        </div>
+        <div class="creator-collab">
+          <div class="ccol-label">Brand Collaborations</div>
+          <div class="ccol-brands"><span class="ccol-brand">Krave Beauty</span><span class="ccol-brand">COSRX</span></div>
+        </div>
+        <div class="creator-card-footer">
+          <a href="#" class="creator-card-btn">View Profile</a>
+          <a href="#" class="creator-card-btn primary">Collab Inquiry</a>
+        </div>
+      </div>
+
+      <!-- Creator 5 -->
+      <div class="creator-card" data-cat="tiktok instagram skincare">
+        <div class="creator-card-header">
+          <div class="creator-avatar" style="background:rgba(251,191,36,0.1);">☀️</div>
+          <div class="creator-info">
+            <div class="creator-name">Skincare by Hyram</div>
+            <div class="creator-handle">@skincarebyh</div>
+            <div class="creator-cat-tags"><span class="creator-cat-tag">Skincare</span><span class="creator-cat-tag">Sunscreen</span><span class="creator-cat-tag">Reviews</span></div>
+          </div>
+          <span class="creator-rank-badge">Rank #5</span>
+        </div>
+        <div class="creator-influence">
+          <span class="ci-label">Influence Score</span>
+          <div class="ci-bar"><div class="ci-fill" style="width:87%"></div></div>
+          <span class="ci-score">87</span>
+        </div>
+        <div class="creator-platforms">
+          <div class="cp-label">Platforms & Followers</div>
+          <div class="cp-items">
+            <div class="cp-item">
+              <div class="cp-platform"><div class="cp-platform-icon tk">TK</div><span class="cp-platform-name">TikTok</span></div>
+              <span class="cp-followers">2.8M</span>
+              <a href="https://www.tiktok.com" target="_blank" rel="noopener" class="cp-link">View</a>
+            </div>
+            <div class="cp-item">
+              <div class="cp-platform"><div class="cp-platform-icon ig">IG</div><span class="cp-platform-name">Instagram</span></div>
+              <span class="cp-followers">980K</span>
+              <a href="https://www.instagram.com" target="_blank" rel="noopener" class="cp-link">View</a>
+            </div>
+          </div>
+        </div>
+        <div class="creator-stats">
+          <div class="cs-item"><span class="cs-val">3.8M</span><span class="cs-label">Total Followers</span></div>
+          <div class="cs-item"><span class="cs-val">11.2%</span><span class="cs-label">Avg Engagement</span></div>
+          <div class="cs-item"><span class="cs-val">Skincare</span><span class="cs-label">Category</span></div>
+        </div>
+        <div class="creator-collab">
+          <div class="ccol-label">Brand Collaborations</div>
+          <div class="ccol-brands"><span class="ccol-brand">Beauty of Joseon</span><span class="ccol-brand">Anua</span></div>
+        </div>
+        <div class="creator-card-footer">
+          <a href="#" class="creator-card-btn">View Profile</a>
+          <a href="#" class="creator-card-btn primary">Collab Inquiry</a>
+        </div>
+      </div>
+
+      <!-- Creator 6 -->
+      <div class="creator-card" data-cat="youtube instagram makeup">
+        <div class="creator-card-header">
+          <div class="creator-avatar" style="background:rgba(52,211,153,0.1);">🎨</div>
+          <div class="creator-info">
+            <div class="creator-name">Pony Syndrome</div>
+            <div class="creator-handle">@ponysmakeup</div>
+            <div class="creator-cat-tags"><span class="creator-cat-tag">Makeup</span><span class="creator-cat-tag">K-Beauty</span><span class="creator-cat-tag">Artist</span></div>
+          </div>
+          <span class="creator-rank-badge">Rank #6</span>
+        </div>
+        <div class="creator-influence">
+          <span class="ci-label">Influence Score</span>
+          <div class="ci-bar"><div class="ci-fill" style="width:85%"></div></div>
+          <span class="ci-score">85</span>
+        </div>
+        <div class="creator-platforms">
+          <div class="cp-label">Platforms & Followers</div>
+          <div class="cp-items">
+            <div class="cp-item">
+              <div class="cp-platform"><div class="cp-platform-icon yt">YT</div><span class="cp-platform-name">YouTube</span></div>
+              <span class="cp-followers">6.8M</span>
+              <a href="https://www.youtube.com/@ponysmakeup" target="_blank" rel="noopener" class="cp-link">View</a>
+            </div>
+            <div class="cp-item">
+              <div class="cp-platform"><div class="cp-platform-icon ig">IG</div><span class="cp-platform-name">Instagram</span></div>
+              <span class="cp-followers">7.2M</span>
+              <a href="https://www.instagram.com/ponysmakeup" target="_blank" rel="noopener" class="cp-link">View</a>
+            </div>
+          </div>
+        </div>
+        <div class="creator-stats">
+          <div class="cs-item"><span class="cs-val">14M</span><span class="cs-label">Total Followers</span></div>
+          <div class="cs-item"><span class="cs-val">4.5%</span><span class="cs-label">Avg Engagement</span></div>
+          <div class="cs-item"><span class="cs-val">Makeup</span><span class="cs-label">Category</span></div>
+        </div>
+        <div class="creator-collab">
+          <div class="ccol-label">Brand Collaborations</div>
+          <div class="ccol-brands"><span class="ccol-brand">Laneige</span><span class="ccol-brand">Etude House</span><span class="ccol-brand">Innisfree</span></div>
+        </div>
+        <div class="creator-card-footer">
+          <a href="#" class="creator-card-btn">View Profile</a>
+          <a href="#" class="creator-card-btn primary">Collab Inquiry</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer id="kb-footer" role="contentinfo">
+    <div class="kb-container">
+      <div class="kb-footer-top">
+        <div class="kb-footer-brand">
+          <div style="font-size:1.1rem;font-weight:800;color:#C9A84C;font-family:'Montserrat',sans-serif;">K-Beauty Intelligence</div>
+          <p class="kb-footer-parent">by K-IMPACT Media Group</p>
+        </div>
+        <nav class="kb-footer-nav">
+          <div class="kb-footer-col"><h4>Platform</h4><ul><li><a href="index.html#kb-global-index">K-Beauty Global Index</a></li><li><a href="brands.html">Brand Database</a></li></ul></div>
+          <div class="kb-footer-col"><h4>Ecosystem</h4><ul><li><a href="creators.html">Creator Ecosystem</a></li><li><a href="deals.html">Deals Engine</a></li></ul></div>
+        </nav>
+      </div>
+      <div class="kb-footer-bottom"><p>&copy; 2026 K-Beauty Intelligence by K-IMPACT Media Group. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <script src="assets/js/kb-i18n.js?v=2026"></script>
+  <script src="assets/js/kb-main.js?v=2026"></script>
+  <script>
+    const filterTabs = document.querySelectorAll('.creators-filter-tab');
+    const creatorCards = document.querySelectorAll('.creator-card');
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        filterTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const cat = tab.dataset.cat;
+        creatorCards.forEach(card => {
+          const cardCat = card.dataset.cat || '';
+          card.style.display = (cat === 'all' || cardCat.includes(cat)) ? '' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
