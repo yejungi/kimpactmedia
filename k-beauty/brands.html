@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+
+<html data-lang="ko" lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Korean Beauty Brand Database | Top K-Beauty Brands | K-Beauty Intelligence</title>
+<meta content="K-IMPACT Media Group - Global Cross-Border Media Platform connecting Korean brands with the world." name="description"/>
+<meta content="Korean beauty brands, K-Beauty brand database, COSRX, Anua, Beauty of Joseon, Laneige, Korean skincare brands, K-Beauty brand rankings" name="keywords"/>
+<link href="https://www.kimpactmedia.com/k-beauty/brands.html" rel="canonical"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&amp;family=Noto+Sans+KR:wght@300;400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/kbeauty.css" rel="stylesheet"/>
+<link href="../shared/auth.css" rel="stylesheet"/>
+<style>
+    .brands-hero {
+      background: linear-gradient(135deg, #0a0a0f 0%, #0d0a1a 50%, #0a0a0f 100%);
+      padding: 5rem 0 3rem;
+      border-bottom: 1px solid rgba(201,168,76,0.1);
+      position: relative;
+      overflow: hidden;
+    }
+    .brands-hero::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      left: -10%;
+      width: 60%;
+      height: 200%;
+      background: radial-gradient(ellipse, rgba(201,168,76,0.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .brands-hero-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .brands-hero-tag {
+      display: inline-block;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #C9A84C;
+      border: 1px solid rgba(201,168,76,0.25);
+      padding: 0.28rem 0.7rem;
+      border-radius: 3px;
+      margin-bottom: 1.2rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .brands-hero h1 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: 0.8rem;
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.15;
+    }
+    .brands-hero h1 span { color: #C9A84C; }
+    .brands-hero-desc {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.45);
+      max-width: 600px;
+      line-height: 1.65;
+      margin-bottom: 2rem;
+    }
+    .brands-hero-stats {
+      display: flex;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+    }
+    .bhs-item { display: flex; flex-direction: column; gap: 0.2rem; }
+    .bhs-val { font-size: 1.6rem; font-weight: 900; color: #C9A84C; font-family: 'Montserrat', sans-serif; line-height: 1; }
+    .bhs-label { font-size: 0.62rem; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 0.07em; font-family: 'Montserrat', sans-serif; }
+
+    .brands-filter-bar {
+      background: rgba(10,10,15,0.95);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(20px);
+    }
+    .brands-filter-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .brands-search { flex: 1; min-width: 200px; max-width: 320px; position: relative; }
+    .brands-search input {
+      width: 100%;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 6px;
+      padding: 0.5rem 0.9rem 0.5rem 2.2rem;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.75);
+      font-family: 'Montserrat', sans-serif;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .brands-search input:focus { border-color: rgba(201,168,76,0.35); }
+    .brands-search input::placeholder { color: rgba(255,255,255,0.25); }
+    .brands-search-icon { position: absolute; left: 0.7rem; top: 50%; transform: translateY(-50%); color: rgba(255,255,255,0.25); }
+    .brands-filter-tabs { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+    .brands-filter-tab {
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 0.35rem 0.8rem;
+      border-radius: 4px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: transparent;
+      color: rgba(255,255,255,0.4);
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .brands-filter-tab:hover { border-color: rgba(201,168,76,0.3); color: rgba(255,255,255,0.7); }
+    .brands-filter-tab.active { background: rgba(201,168,76,0.1); border-color: rgba(201,168,76,0.3); color: #C9A84C; }
+    .brands-sort { margin-left: auto; display: flex; align-items: center; gap: 0.5rem; }
+    .brands-sort-label { font-size: 0.62rem; color: rgba(255,255,255,0.3); font-family: 'Montserrat', sans-serif; }
+    .brands-sort select {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 4px;
+      padding: 0.35rem 0.7rem;
+      font-size: 0.65rem;
+      color: rgba(255,255,255,0.6);
+      font-family: 'Montserrat', sans-serif;
+      outline: none;
+    }
+
+    .brands-main { max-width: 1280px; margin: 0 auto; padding: 2.5rem 2rem; }
+    .brands-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8rem; }
+    @media(max-width:1000px){ .brands-grid { grid-template-columns: 1fr 1fr; } }
+    @media(max-width:600px){ .brands-grid { grid-template-columns: 1fr; } }
+
+    .brand-card {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: all 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+    .brand-card:hover {
+      border-color: rgba(201,168,76,0.22);
+      background: rgba(201,168,76,0.02);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    }
+    .brand-card-header { padding: 1.4rem 1.4rem 0; display: flex; align-items: flex-start; gap: 1rem; }
+    .brand-card-init {
+      width: 52px; height: 52px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.82rem;
+      font-weight: 900;
+      flex-shrink: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .brand-card-info { flex: 1; }
+    .brand-card-name { font-size: 1rem; font-weight: 800; color: rgba(255,255,255,0.92); margin-bottom: 0.2rem; }
+    .brand-card-kr { font-size: 0.68rem; color: rgba(255,255,255,0.35); margin-bottom: 0.35rem; }
+    .brand-card-cat-tags { display: flex; gap: 0.3rem; flex-wrap: wrap; }
+    .brand-card-cat-tag {
+      font-size: 0.52rem; font-weight: 600;
+      padding: 0.12rem 0.38rem; border-radius: 3px;
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.4); font-family: 'Montserrat', sans-serif;
+    }
+    .brand-card-rank {
+      font-size: 0.58rem; font-weight: 700;
+      padding: 0.22rem 0.55rem; border-radius: 4px;
+      background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.2);
+      color: #C9A84C; font-family: 'Montserrat', sans-serif; white-space: nowrap;
+    }
+
+    .brand-card-index {
+      padding: 1rem 1.4rem;
+      display: flex; align-items: center; gap: 0.8rem;
+      border-top: 1px solid rgba(255,255,255,0.05); margin-top: 1rem;
+    }
+    .bci-label { font-size: 0.55rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: rgba(255,255,255,0.25); font-family: 'Montserrat', sans-serif; white-space: nowrap; }
+    .bci-bar { flex: 1; height: 5px; background: rgba(255,255,255,0.06); border-radius: 3px; overflow: hidden; }
+    .bci-fill { height: 100%; background: linear-gradient(90deg, rgba(201,168,76,0.5), #C9A84C); border-radius: 3px; }
+    .bci-score { font-size: 1.1rem; font-weight: 900; color: #C9A84C; font-family: 'Montserrat', sans-serif; }
+    .bci-change { font-size: 0.6rem; font-weight: 700; font-family: 'Montserrat', sans-serif; }
+    .bci-change.up { color: #4ade80; }
+    .bci-change.down { color: #f87171; }
+
+    .brand-card-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid rgba(255,255,255,0.05); }
+    .bcm-item { padding: 0.75rem 1rem; border-right: 1px solid rgba(255,255,255,0.05); text-align: center; }
+    .bcm-item:last-child { border-right: none; }
+    .bcm-val { font-size: 0.88rem; font-weight: 800; color: rgba(255,255,255,0.82); display: block; font-family: 'Montserrat', sans-serif; }
+    .bcm-label { font-size: 0.52rem; color: rgba(255,255,255,0.28); text-transform: uppercase; letter-spacing: 0.05em; font-family: 'Montserrat', sans-serif; }
+
+    .brand-card-tabs { display: flex; border-top: 1px solid rgba(255,255,255,0.05); }
+    .bct-tab {
+      flex: 1; padding: 0.55rem;
+      font-size: 0.58rem; font-weight: 600; text-align: center;
+      color: rgba(255,255,255,0.3); cursor: pointer;
+      border-right: 1px solid rgba(255,255,255,0.05);
+      transition: all 0.2s; font-family: 'Montserrat', sans-serif;
+      background: none; border-bottom: none; border-left: none; border-top: none;
+    }
+    .bct-tab:last-child { border-right: none; }
+    .bct-tab.active { color: #C9A84C; background: rgba(201,168,76,0.05); }
+    .bct-tab:hover { color: rgba(255,255,255,0.6); }
+
+    .brand-card-tab-content { padding: 1rem 1.4rem; border-top: 1px solid rgba(255,255,255,0.05); min-height: 120px; flex: 1; }
+    .bctc-panel { display: none; }
+    .bctc-panel.active { display: block; }
+
+    .bctc-desc { font-size: 0.72rem; color: rgba(255,255,255,0.45); line-height: 1.6; margin-bottom: 0.8rem; }
+    .bctc-founded { font-size: 0.6rem; color: rgba(255,255,255,0.25); font-family: 'Montserrat', sans-serif; }
+
+    .bctc-products { display: flex; flex-direction: column; gap: 0.4rem; }
+    .bctc-product { display: flex; align-items: center; gap: 0.6rem; padding: 0.4rem 0.6rem; background: rgba(255,255,255,0.02); border-radius: 5px; border: 1px solid rgba(255,255,255,0.05); }
+    .bctc-prod-num { font-size: 0.55rem; font-weight: 800; color: rgba(255,255,255,0.22); width: 14px; text-align: center; font-family: 'Montserrat', sans-serif; }
+    .bctc-prod-num.gold { color: #C9A84C; }
+    .bctc-prod-name { font-size: 0.68rem; color: rgba(255,255,255,0.72); flex: 1; }
+    .bctc-prod-score { font-size: 0.65rem; font-weight: 700; color: #C9A84C; font-family: 'Montserrat', sans-serif; }
+
+    .bctc-markets { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.7rem; }
+    .bctc-market { display: flex; flex-direction: column; align-items: center; gap: 0.2rem; padding: 0.4rem 0.6rem; background: rgba(147,197,253,0.05); border: 1px solid rgba(147,197,253,0.12); border-radius: 5px; }
+    .bctc-market-flag { font-size: 0.65rem; font-weight: 700; color: #93c5fd; font-family: 'Montserrat', sans-serif; }
+    .bctc-market-share { font-size: 0.52rem; color: rgba(255,255,255,0.28); }
+
+    .bctc-trend-items { display: flex; flex-direction: column; gap: 0.45rem; }
+    .bctc-trend-item { display: flex; align-items: center; gap: 0.5rem; }
+    .bctc-trend-label { font-size: 0.6rem; color: rgba(255,255,255,0.38); width: 100px; flex-shrink: 0; }
+    .bctc-trend-bar { flex: 1; height: 4px; background: rgba(255,255,255,0.06); border-radius: 2px; overflow: hidden; }
+    .bctc-trend-fill { height: 100%; border-radius: 2px; }
+    .bctc-trend-fill.brand { background: linear-gradient(90deg, rgba(201,168,76,0.4), #C9A84C); }
+    .bctc-trend-fill.product { background: linear-gradient(90deg, rgba(74,222,128,0.4), #4ade80); }
+    .bctc-trend-fill.search { background: linear-gradient(90deg, rgba(147,197,253,0.4), #93c5fd); }
+    .bctc-trend-fill.social { background: linear-gradient(90deg, rgba(196,181,253,0.4), #c4b5fd); }
+    .bctc-trend-num { font-size: 0.65rem; font-weight: 700; color: rgba(255,255,255,0.6); font-family: 'Montserrat', sans-serif; width: 24px; text-align: right; }
+
+    .brand-card-footer { padding: 0.8rem 1.4rem; border-top: 1px solid rgba(255,255,255,0.05); display: flex; gap: 0.5rem; align-items: center; }
+    .brand-card-btn { flex: 1; text-align: center; font-size: 0.62rem; font-weight: 700; padding: 0.4rem; border-radius: 5px; border: 1px solid rgba(201,168,76,0.2); color: #C9A84C; text-decoration: none; transition: all 0.2s; font-family: 'Montserrat', sans-serif; }
+    .brand-card-btn:hover { background: rgba(201,168,76,0.08); }
+    .brand-card-btn.primary { background: rgba(201,168,76,0.1); }
+
+    .brands-ranking-section { max-width: 1280px; margin: 0 auto; padding: 0 2rem 3rem; }
+    .brs-title { font-size: 1.1rem; font-weight: 800; color: rgba(255,255,255,0.85); margin-bottom: 1.2rem; font-family: 'Montserrat', sans-serif; display: flex; align-items: center; gap: 0.8rem; }
+    .brs-title-tag { font-size: 0.55rem; font-weight: 700; padding: 0.18rem 0.5rem; border-radius: 3px; background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.2); color: #C9A84C; font-family: 'Montserrat', sans-serif; }
+    .brands-full-table { background: rgba(255,255,255,0.015); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; overflow: hidden; }
+    .bft-header { display: grid; grid-template-columns: 50px 1fr 100px 80px 80px 80px 80px; gap: 0.5rem; padding: 0.75rem 1.5rem; background: rgba(255,255,255,0.02); border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 0.58rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.25); font-family: 'Montserrat', sans-serif; }
+    .bft-row { display: grid; grid-template-columns: 50px 1fr 100px 80px 80px 80px 80px; gap: 0.5rem; padding: 0.85rem 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.04); align-items: center; transition: background 0.2s; }
+    .bft-row:last-child { border-bottom: none; }
+    .bft-row:hover { background: rgba(255,255,255,0.02); }
+    .bft-rank { font-size: 0.8rem; font-weight: 900; color: rgba(255,255,255,0.25); text-align: center; font-family: 'Montserrat', sans-serif; }
+    .bft-rank.gold { color: #C9A84C; }
+    .bft-rank.silver { color: #a8b8c8; }
+    .bft-rank.bronze { color: #cd7f32; }
+    .bft-brand { display: flex; align-items: center; gap: 0.7rem; }
+    .bft-init { width: 32px; height: 32px; border-radius: 7px; display: flex; align-items: center; justify-content: center; font-size: 0.6rem; font-weight: 800; flex-shrink: 0; font-family: 'Montserrat', sans-serif; }
+    .bft-name { font-size: 0.78rem; font-weight: 700; color: rgba(255,255,255,0.85); }
+    .bft-kr { font-size: 0.58rem; color: rgba(255,255,255,0.3); }
+    .bft-cat { font-size: 0.62rem; color: rgba(255,255,255,0.4); }
+    .bft-score { font-size: 0.82rem; font-weight: 800; color: #C9A84C; font-family: 'Montserrat', sans-serif; }
+    .bft-trend { font-size: 0.68rem; font-weight: 700; font-family: 'Montserrat', sans-serif; }
+    .bft-trend.up { color: #4ade80; }
+    .bft-trend.down { color: #f87171; }
+    .bft-trend.same { color: rgba(255,255,255,0.25); }
+    .bft-market-tags { display: flex; gap: 0.25rem; flex-wrap: wrap; }
+    .bft-market-tag { font-size: 0.5rem; font-weight: 600; padding: 0.1rem 0.3rem; border-radius: 2px; background: rgba(147,197,253,0.07); border: 1px solid rgba(147,197,253,0.14); color: #93c5fd; font-family: 'Montserrat', sans-serif; }
+    @media(max-width:900px){ .bft-header, .bft-row { grid-template-columns: 40px 1fr 80px 70px; } .bft-header span:nth-child(n+5), .bft-row > *:nth-child(n+5) { display: none; } }
+  </style>
+<meta content="Korean Beauty Brand Database | Top K-Beauty Brands | K-Beauty Intelligence" property="og:title"/><meta content="K-IMPACT Media Group - Global Cross-Border Media Platform connecting Korean brands with the world." property="og:description"/><meta content="website" property="og:type"/><meta content="https://www.kimpactmedia.com/k-beauty/brands.html" property="og:url"/><meta content="https://www.kimpactmedia.com/assets/images/logo-dark.png" property="og:image"/></head>
+<body>
+<header id="kb-header" role="banner">
+<div class="kb-header-top">
+<a class="back-to-group" href="../index.html">← K-IMPACT</a>
+<div class="kb-header-top-right">
+<div class="kb-lang-dropdown" id="kb-lang-dropdown">
+<button class="kb-lang-toggle" id="kb-lang-toggle"><span id="kb-lang-label">KO</span><svg fill="none" height="10" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="10"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+<div class="kb-lang-menu" id="kb-lang-menu">
+<button class="kb-lang-opt active" data-lang="ko">한국어</button>
+<button class="kb-lang-opt" data-lang="en">English</button>
+<button class="kb-lang-opt" data-lang="ja">日本語</button>
+</div>
+</div>
+<button class="kb-login-btn" data-auth-trigger="">로그인</button>
+</div>
+</div>
+<nav class="kb-nav-container">
+<a class="kb-logo-link" href="index.html">
+<span class="kb-logo-svg-wrap"><svg class="kb-logo-svg" fill="none" height="40" viewbox="0 0 100 100" width="40" xmlns="http://www.w3.org/2000/svg"><defs><radialgradient cx="50%" cy="50%" id="kbG" r="50%"><stop offset="0%" stop-color="#ff69b4" stop-opacity="0.9"></stop><stop offset="100%" stop-color="#4a0080" stop-opacity="0.6"></stop></radialgradient><lineargradient id="kbA" x1="0%" x2="100%" y1="0%" y2="100%"><stop offset="0%" stop-color="#ffd700"></stop><stop offset="100%" stop-color="#c9a84c"></stop></lineargradient><lineargradient id="kbKK" x1="0%" x2="100%" y1="0%" y2="100%"><stop offset="0%" stop-color="#ffffff"></stop><stop offset="100%" stop-color="#ff69b4"></stop></lineargradient><filter id="kbGl"><fegaussianblur result="blur" stddeviation="2"></fegaussianblur><femerge><femergenode in="blur"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter></defs><circle cx="50" cy="48" fill="url(#kbG)" filter="url(#kbGl)" opacity="0.85" r="30"></circle><text fill="url(#kbKK)" filter="url(#kbGl)" font-family="Arial Black" font-size="28" font-weight="900" x="38" y="60">K</text><path d="M 55 28 L 82 18 L 72 45" fill="url(#kbA)" filter="url(#kbGl)" opacity="0.95"></path><ellipse cx="50" cy="48" fill="none" opacity="0.8" rx="38" ry="14" stroke="url(#kbA)" stroke-width="2.5" transform="rotate(-25 50 48)"></ellipse></svg></span>
+<span class="kb-logo-text">K-Beauty</span>
+</a>
+<ul class="kb-nav-menu" role="list">
+<li><a class="kb-nav-link" href="index.html" data-i18n="kb.nav.home">홈</a></li>
+<li class="kb-nav-has-dropdown">
+<a class="kb-nav-parent" href="brands.html" data-i18n="kb.nav.brands_db">브랜드 데이터베이스 <span class="kb-nav-arrow">▾</span></a>
+<ul class="kb-nav-dropdown" role="list">
+<li><a href="brands.html" data-i18n="kb.nav.dd.brands_all">전체 브랜드</a></li>
+<li><a href="brands.html#cosrx">COSRX</a></li>
+<li><a href="brands.html#anua">Anua</a></li>
+<li><a href="brands.html#beauty-of-joseon">Beauty of Joseon</a></li>
+<li><a href="brands.html#laneige">Laneige</a></li>
+<li><a href="brands.html#romand">Rom&amp;nd</a></li>
+</ul>
+</li>
+<li class="kb-nav-has-dropdown">
+<a class="kb-nav-parent" href="products.html" data-i18n="kb.nav.products_db">제품 데이터베이스 <span class="kb-nav-arrow">▾</span></a>
+<ul class="kb-nav-dropdown" role="list">
+<li><a href="products.html" data-i18n="kb.nav.dd.products_all">전체 제품</a></li>
+<li><a href="best-sunscreens.html" data-i18n="kb.nav.dd.sunscreens">Best 선크림</a></li>
+<li><a href="best-serums.html" data-i18n="kb.nav.dd.serums">Best 세럼</a></li>
+<li><a href="best-moisturizers.html" data-i18n="kb.nav.dd.moisturizers">Best 모이스처라이저</a></li>
+<li><a href="best-cleansers.html" data-i18n="kb.nav.dd.cleansers">Best 클렌저</a></li>
+<li><a href="best-essences.html" data-i18n="kb.nav.dd.essences">Best 에센스</a></li>
+</ul>
+</li>
+<li class="kb-nav-has-dropdown kb-nav-intelligence">
+<a class="kb-nav-parent" href="intelligence.html" data-i18n="kb.nav.intelligence">인텔리전스 <span class="kb-nav-arrow">▾</span></a>
+<ul class="kb-nav-dropdown kb-nav-dropdown-wide" role="list">
+<li><a href="intelligence.html#market-intelligence" data-i18n="kb.nav.dd.market">시장 인텔리전스</a></li>
+<li><a href="intelligence.html#company-intelligence" data-i18n="kb.nav.dd.company">기업 인텔리전스</a></li>
+<li><a href="intelligence.html#industry-outlook" data-i18n="kb.nav.dd.outlook">산업 전망</a></li>
+<li><a href="intelligence.html#ingredient-intelligence">Ingredient Intelligence</a></li>
+</ul>
+</li>
+<li><a class="kb-nav-link" href="creators.html" data-i18n="kb.nav.creators_menu">크리에이터 네트워크</a></li>
+<li><a class="kb-nav-link" href="deals.html" data-i18n="kb.nav.deals_menu">뷰티 딜</a></li>
+<li><a class="kb-nav-link" href="top100-brands.html" data-i18n="kb.nav.top100_brands">Top 100 브랜드</a></li>
+<li><a class="kb-nav-link" href="top100-products.html" data-i18n="kb.nav.top100_products">Top 100 제품</a></li>
+</ul>
+<button aria-label="메뉴 열기" class="kb-hamburger"><span></span><span></span><span></span></button>
+</nav>
+</header>
+<div class="brands-hero">
+<div class="brands-hero-inner">
+<div class="brands-hero-tag" data-i18n="kb.nav.brands_db">브랜드 데이터베이스</div>
+<h1 data-i18n="kb.brands.hero.title">한국 뷰티 <span>브랜드 데이터베이스</span></h1>
+<p class="brands-hero-desc" data-i18n="kb.brands.hero.desc">K-뷰티 브랜드 인텔리전스 데이터베이스. 500개 이상의 한국 뷰티 브랜드를 K-뷰티 인덱스 점수, 글로벌 시장 데이터, 주요 제품, 트렌드 분석으로 추적합니다.</p>
+<div class="brands-hero-stats">
+<div class="bhs-item"><span class="bhs-val">500+</span> <span class="bhs-label" data-i18n="kb.brands.stat.brands">브랜드 추적 중</span></div>
+<div class="bhs-item"><span class="bhs-val">45+</span> <span class="bhs-label" data-i18n="kb.brands.stat.markets">글로벌 시장</span></div>
+<div class="bhs-item"><span class="bhs-val" data-i18n="kb.brands.stat.weekly.val">매주</span> <span class="bhs-label" data-i18n="kb.brands.stat.weekly.label">인덱스 업데이트</span></div>
+<div class="bhs-item"><span class="bhs-val">2,400+</span> <span class="bhs-label" data-i18n="kb.brands.stat.products">제품 인덱싱</span></div>
+</div>
+</div>
+</div>
+<div class="brands-filter-bar">
+<div class="brands-filter-inner">
+<div class="brands-search">
+<svg class="brands-search-icon" fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg>
+<input id="brand-search-input" placeholder="브랜드 검색..." type="text"/>
+</div>
+<div class="brands-filter-tabs">
+<button class="brands-filter-tab active" data-cat="all" data-i18n="kb.deals.all">전체</button>
+<button class="brands-filter-tab" data-cat="skincare" data-i18n="kb.deals.skincare">스킨케어</button>
+<button class="brands-filter-tab" data-cat="makeup" data-i18n="kb.deals.makeup">메이크업</button>
+<button class="brands-filter-tab" data-cat="luxury" data-i18n="kb.deals.luxury">럭셔리</button>
+<button class="brands-filter-tab" data-cat="vegan" data-i18n="kb.deals.vegan">비건</button>
+<button class="brands-filter-tab" data-cat="global" data-i18n="kb.deals.global">글로벌</button>
+</div>
+<div class="brands-sort">
+<span class="brands-sort-label" data-i18n="kb.brands.sort.label">정렬:</span>
+<select id="brands-sort-select">
+<option value="rank" data-i18n="kb.brands.sort.rank">K-뷰티 인덱스</option>
+<option value="trend" data-i18n="kb.brands.sort.trend">트렌드 점수</option>
+<option value="name" data-i18n="kb.brands.sort.name">브랜드명</option>
+</select>
+</div>
+</div>
+</div>
+<main class="brands-main">
+<div class="brands-grid" id="brands-grid">
+<!-- COSRX -->
+<div class="brand-card" data-cat="skincare global" data-name="cosrx" id="cosrx">
+<div class="brand-card-header">
+<div class="brand-card-init" style="background:rgba(201,168,76,0.14);color:#C9A84C;">CX</div>
+<div class="brand-card-info">
+<div class="brand-card-name">COSRX</div>
+<div class="brand-card-kr">코스알엑스 · Founded 2013</div>
+<div class="brand-card-cat-tags"><span class="brand-card-cat-tag">스킨케어</span><span class="brand-card-cat-tag">에센스</span><span class="brand-card-cat-tag">글로벌</span></div>
+</div>
+<span class="brand-card-rank">Rank #1</span>
+</div>
+<div class="brand-card-index">
+<span class="bci-label">K-Beauty Index</span>
+<div class="bci-bar"><div class="bci-fill" style="width:96%"></div></div>
+<span class="bci-score">96.0</span>
+<span class="bci-change up">▲ +210%</span>
+</div>
+<div class="brand-card-metrics">
+<div class="bcm-item"><span class="bcm-val">50+</span><span class="bcm-label">Products</span></div>
+<div class="bcm-item"><span class="bcm-val">45+</span><span class="bcm-label" data-i18n="kb.brands.card.markets">시장</span></div>
+<div class="bcm-item"><span class="bcm-val" style="color:#4ade80;">+210%</span><span class="bcm-label" data-i18n="kb.brands.stat.growth">성장률</span></div>
+</div>
+<div class="brand-card-tabs">
+<button class="bct-tab active" onclick="switchTab(this,'cosrx','overview')" data-i18n="kb.brands.card.overview">개요</button>
+<button class="bct-tab" onclick="switchTab(this,'cosrx','products')" data-i18n="kb.brands.card.top_products">주요 제품</button>
+<button class="bct-tab" onclick="switchTab(this,'cosrx','markets')" data-i18n="kb.brands.card.markets">시장</button>
+<button class="bct-tab" onclick="switchTab(this,'cosrx','trend')" data-i18n="kb.brands.card.trend_score">트렌드 점수</button>
+</div>
+<div class="brand-card-tab-content">
+<div class="bctc-panel active" id="cosrx-overview">
+<p class="bctc-desc">COSRX is a South Korean skincare brand known for effective, ingredient-focused formulations. Famous for the Advanced Snail 96 Mucin Power Essence, COSRX has become one of the most globally recognized K-Beauty brands.</p>
+<span class="bctc-founded">Founded: 2013 · HQ: Seoul, South Korea</span>
+</div>
+<div class="bctc-panel" id="cosrx-products">
+<div class="bctc-products">
+<div class="bctc-product"><span class="bctc-prod-num gold">1</span><span class="bctc-prod-name">Advanced Snail 96 Mucin Power Essence</span><span class="bctc-prod-score">99</span></div>
+<div class="bctc-product"><span class="bctc-prod-num">2</span><span class="bctc-prod-name">Advanced Snail 92 All In One Cream</span><span class="bctc-prod-score">94</span></div>
+<div class="bctc-product"><span class="bctc-prod-num">3</span><span class="bctc-prod-name">AHA/BHA Clarifying Treatment Toner</span><span class="bctc-prod-score">88</span></div>
+<div class="bctc-product"><span class="bctc-prod-num">4</span><span class="bctc-prod-name">Low pH Good Morning Gel Cleanser</span><span class="bctc-prod-score">85</span></div>
+</div>
+</div>
+<div class="bctc-panel" id="cosrx-markets">
+<div class="bctc-markets">
+<div class="bctc-market"><span class="bctc-market-flag">US</span><span class="bctc-market-share">32%</span></div>
+<div class="bctc-market"><span class="bctc-market-flag">EU</span><span class="bctc-market-share">18%</span></div>
+<div class="bctc-market"><span class="bctc-market-flag">JP</span><span class="bctc-market-share">14%</span></div>
+<div class="bctc-market"><span class="bctc-market-flag">SEA</span><span class="bctc-market-share">12%</span></div>
+<div class="bctc-market"><span class="bctc-market-flag">KR</span><span class="bctc-market-share">16%</span></div>
+</div>
+</div>
+<div class="bctc-panel" id="cosrx-trend">
+<div class="bctc-trend-items">
+<div class="bctc-trend-item"><span class="bctc-trend-label">Brand Popularity</span><div class="bctc-trend-bar"><div class="bctc-trend-fill brand" style="width:98%"></div></div><span class="bctc-trend-num">98</span></div>
+<div class="bctc-trend-item"><span class="bctc-trend-label">Product Trend</span><div class="bctc-trend-bar"><div class="bctc-trend-fill product" style="width:96%"></div></div><span class="bctc-trend-num">96</span></div>
+<div class="bctc-trend-item"><span class="bctc-trend-label">Search Trend</span><div class="bctc-trend-bar"><div class="bctc-trend-fill search" style="width:94%"></div></div><span class="bctc-trend-num">94</span></div>
+<div class="bctc-trend-item"><span class="bctc-trend-label">Social Mentions</span><div class="bctc-trend-bar"><div class="bctc-trend-fill social" style="width:97%"></div></div><span class="bctc-trend-num">97</span></div>
+</div>
+</div>
+</div>
+<div class="brand-card-footer">
+<a class="brand-card-btn" href="products.html?brand=cosrx" data-i18n="kb.brands.card.view_products">제품 보기</a>
+<a class="brand-card-btn primary" href="deals.html" data-i18n="kb.brands.card.find_deals">딜 찾기</a>
+</div>
+</div>
+<!-- ANUA -->
+<div class="brand-card" data-cat="skincare vegan" data-name="anua" id="anua">
+<div class="brand-card-header">
+<div class="brand-card-init" style="background:rgba(74,222,128,0.12);color:#4ade80;">AN</div>
+<div class="brand-card-info">
+<div class="brand-card-name">Anua</div>
+<div class="brand-card-kr">아누아 · Founded 2019</div>
+<div class="brand-card-cat-tags"><span class="brand-card-cat-tag">스킨케어</span><span class="brand-card-cat-tag">토너</span><span class="brand-card-cat-tag">비건</span></div>
+</div>
+<span class="brand-card-rank">Rank #2</span>
+</div>
+<div class="brand-card-index">
+<span class="bci-label">K-Beauty Index</span>
+<div class="bci-bar"><div class="bci-fill" style="width:94%"></div></div>
+<span class="bci-score">94.2</span>
+<span class="bci-change up">▲ +195%</span>
+</div>
+<div class="brand-card-metrics">
+<div class="bcm-item"><span class="bcm-val">20+</span><span class="bcm-label">Products</span></div>
+<div class="bcm-item"><span class="bcm-val">30+</span><span class="bcm-label" data-i18n="kb.brands.card.markets">시장</span></div>
+<div class="bcm-item"><span class="bcm-val" style="color:#4ade80;">+195%</span><span class="bcm-label" data-i18n="kb.brands.stat.growth">성장률</span></div>
+</div>
+<div class="brand-card-tabs">
+<button class="bct-tab active" onclick="switchTab(this,'anua','overview')" data-i18n="kb.brands.card.overview">개요</button>
+<button class="bct-tab" onclick="switchTab(this,'anua','products')" data-i18n="kb.brands.card.top_products">주요 제품</button>
+<button class="bct-tab" onclick="switchTab(this,'anua','markets')" data-i18n="kb.brands.card.markets">시장</button>
+<button class="bct-tab" onclick="switchTab(this,'anua','trend')" data-i18n="kb.brands.card.trend_score">트렌드 점수</button>
+</div>
+<div class="brand-card-tab-content">
+<div class="bctc-panel active" id="anua-overview">
+<p class="bctc-desc">Anua is a Korean skincare brand specializing in heartleaf (Houttuynia cordata) formulations. Known for gentle, effective products suitable for sensitive skin, Anua has experienced rapid global growth, driven by strong social media presence on TikTok and Instagram.</p>
+<span class="bctc-founded">Founded: 2019 · HQ: Seoul, South Korea</span>
+</div>
+<div class="bctc-panel" id="anua-products">
+<div class="bctc-products">
+<div class="bctc-product"><span class="bctc-prod-num gold">1</span><span class="bctc-prod-name">Heartleaf 77% Soothing Toner</span><span class="bctc-prod-score">94</span></div>
+<div class="bctc-product"><span class="bctc-prod-num">2</span><span class="bctc-prod-name">Heartleaf Airy Fit Sun Serum SPF 50+</span><span class="bctc-prod-score">91</span></div>
+<div class="bctc-product"><span class="bctc-prod-num">3</span><span class="bctc-prod-name">Heartleaf 77% Toner Pads</span><span class="bctc-prod-score">88</span></div>
+<div class="bctc-product"><span class="bctc-prod-num">4</span><span class="bctc-prod-name">Niacinamide 10% + TXA 4% Serum</span><span class="bctc-prod-score">85</span></div>
+</div>
+</div>
+<div class="bctc-panel" id="anua-markets">
+<div class="bctc-markets">
+<div class="bctc-market"><span class="bctc-market-flag">US</span><span class="bctc-market-share">38%</span></div>
+<div class="bctc-market"><span class="bctc-market-flag">EU</span><span class="bctc-market-share">22%</span></div>
+<div class="bctc-market"><span class="bctc-market-flag">KR</span><span class="bctc-market-share">20%</span></div>
+<div class="bctc-market"><span class="bctc-market-flag">AU</span><span class="bctc-market-share">12%</span></div>
+</div>
+</div>
+<div class="bctc-panel" id="anua-trend">
+<div class="bctc-trend-items">
+<div class="bctc-trend-item"><span class="bctc-trend-label">Brand Popularity</span><div class="bctc-trend-bar"><div class="bctc-trend-fill brand" style="width:95%"></div></div><span class="bctc-trend-num">95</span></div>
+<div class="bctc-trend-item"><span class="bctc-trend-label">Product Trend</span><div class="bctc-trend-bar"><div class="bctc-trend-fill product" style="width:93%"></div></div><span class="bctc-trend-num">93</span></div>
+<div class="bctc-trend-item"><span class="bctc-trend-label">Search Trend</span><div class="bctc-trend-bar"><div class="bctc-trend-fill search" style="width:92%"></div></div><span class="bctc-trend-num">92</span></div>
+<div class="bctc-trend-item"><span class="bctc-trend-label">Social Mentions</span><div class="bctc-trend-bar"><div class="bctc-trend-fill social" style="width:96%"></div></div><span class="bctc-trend-num">96</span></div>
+</div>
+</div>
+</div>
+<div class="brand-card-footer">
+<a class="brand-card-btn" href="products.html?brand=anua" data-i18n="kb.brands.card.view_products">제품 보기</a>
+<a class="brand-card-btn primary" href="deals.html" data-i18n="kb.brands.card.find_deals">딜 찾기</a>
+</div>
+</div>
+<!-- BEAUTY OF JOSEON -->
+<div class="brand-card" data-cat="skincare global" data-name="beauty of joseon" id="beauty-of-joseon">
+<div class="brand-card-header">
+<div class="brand-card-init" style="background:rgba(147,197,253,0.12);color:#93c5fd;">BJ</div>
+<div class="brand-card-info">
+<div class="brand-card-name">Beauty of Joseon</div>
+<div class="brand-card-kr">조선미녀 · Founded 2017</div>
+<div class="brand-card-cat-tags"><span class="brand-card-cat-tag">스킨케어</span><span class="brand-card-cat-tag">세럼</span><span class="brand-card-cat-tag">선크림</span></div>
+</div>
+<span class="brand-card-rank">Rank #3</span>
+</div>
+<div class="brand-card-index">
+<span class="bci-label">K-Beauty Index</span>
+<div class="bci-bar"><div class="bci-fill" style="width:92%"></div></div>
+<span class="bci-score">92.1</span>
+<span class="bci-change up">▲ +145%</span>
+</div>
+<div class="brand-card-metrics">
+<div class="bcm-item"><span class="bcm-val">30+</span><span class="bcm-label">Products</span></div>
+<div class="bcm-item"><span class="bcm-val">40+</span><span class="bcm-label" data-i18n="kb.brands.card.markets">시장</span></div>
+<div class="bcm-item"><span class="bcm-val" style="color:#4ade80;">+145%</span><span class="bcm-label" data-i18n="kb.brands.stat.growth">성장률</span></div>
+</div>
+<div class="brand-card-tabs">
+<button class="bct-tab active" onclick="switchTab(this,'boj','overview')" data-i18n="kb.brands.card.overview">개요</button>
+<button class="bct-tab" onclick="switchTab(this,'boj','products')" data-i18n="kb.brands.card.top_products">주요 제품</button>
+<button class="bct-tab" onclick="switchTab(this,'boj','markets')" data-i18n="kb.brands.card.markets">시장</button>
+<button class="bct-tab" onclick="switchTab(this,'boj','trend')" data-i18n="kb.brands.card.trend_score">트렌드 점수</button>
+</div>
+<div class="brand-card-tab-content">
+<div class="bctc-panel active" id="boj-overview">
+<p class="bctc-desc">Beauty of Joseon (조선미녀) draws inspiration from Joseon Dynasty beauty rituals, combining traditional Korean ingredients with modern skincare science. Known for the Relief Sun and Glow Serum globally.</p>
+<span class="bctc-founded">Founded: 2017 · HQ: Seoul, South Korea</span>
+</div>
+<div class="bctc-panel" id="boj-products">
+<div class="bctc-products">
+<div class="bctc-product"><span class="bctc-prod-num gold">1</span><span class="bctc-prod-name">Relief Sun: Rice + Probiotics SPF 50+</span><span class="bctc-prod-score">92</span></div>
+<div class="bctc-product"><span class="bctc-prod-num">2</span><span class="bctc-prod-name">Glow Serum: Propolis + Niacinamide</span><span class="bctc-prod-score">90</span></div>
+<div class="bctc-product"><span class="bctc-prod-num">3</span><span class="bctc-prod-name">Dynasty Cream: Ginseng + Honey</span><span class="bctc-prod-score">86</span></div>
+</div>
+</div>
+<div class="bctc-panel" id="boj-markets">
+<div class="bctc-markets">
+<div class="bctc-market"><span class="bctc-market-flag">US</span><span class="bctc-market-share">35%</span></div>
+<div class="bctc-market"><span class="bctc-market-flag">EU</span><span class="bctc-market-share">25%</span></div>
+<div class="bctc-market"><span class="bctc-market-flag">AU</span><span class="bctc-market-share">15%</span></div>
+<div class="bctc-market"><span class="bctc-market-flag">KR</span><span class="bctc-market-share">15%</span></div>
+</div>
+</div>
+<div class="bctc-panel" id="boj-trend">
+<div class="bctc-trend-items">
+<div class="bctc-trend-item"><span class="bctc-trend-label">Brand Popularity</span><div class="bctc-trend-bar"><div class="bctc-trend-fill brand" style="width:93%"></div></div><span class="bctc-trend-num">93</span></div>
+<div class="bctc-trend-item"><span class="bctc-trend-label">Product Trend</span><div class="bctc-trend-bar"><div class="bctc-trend-fill product" style="width:91%"></div></div><span class="bctc-trend-num">91</span></div>
+<div class="bctc-trend-item"><span class="bctc-trend-label">Search Trend</span><div class="bctc-trend-bar"><div class="bctc-trend-fill search" style="width:90%"></div></div><span class="bctc-trend-num">90</span></div>
+<div class="bctc-trend-item"><span class="bctc-trend-label">Social Mentions</span><div class="bctc-trend-bar"><div class="bctc-trend-fill social" style="width:94%"></div></div><span class="bctc-trend-num">94</span></div>
+</div>
+</div>
+</div>
+<div class="brand-card-footer">
+<a class="brand-card-btn" href="products.html?brand=beauty-of-joseon" data-i18n="kb.brands.card.view_products">제품 보기</a>
+<a class="brand-card-btn primary" href="deals.html" data-i18n="kb.brands.card.find_deals">딜 찾기</a>
+</div>
+</div>
+<!-- TORRIDEN -->
+<div class="brand-card" data-cat="skincare vegan" data-name="torriden" id="torriden">
+<div class="brand-card-header">
+<div class="brand-card-init" style="background:rgba(196,181,253,0.12);color:#c4b5fd;">TR</div>
+<div class="brand-card-info">
+<div class="brand-card-name">Torriden</div>
+<div class="brand-card-kr">토리든 · Founded 2020</div>
+<div class="brand-card-cat-tags"><span class="brand-card-cat-tag">스킨케어</span><span class="brand-card-cat-tag">세럼</span><span class="brand-card-cat-tag">비건</span></div>
+</div>
+<span class="brand-card-rank">Rank #4</span>
+</div>
+<div class="brand-card-index">
+<span class="bci-label">K-Beauty Index</span>
+<div class="bci-bar"><div class="bci-fill" style="width:91%"></div></div>
+<span class="bci-score">91.0</span>
+<span class="bci-change up">▲ +88%</span>
+</div>
+<div class="brand-card-metrics">
+<div class="bcm-item"><span class="bcm-val">15+</span><span class="bcm-label">Products</span></div>
+<div class="bcm-item"><span class="bcm-val">25+</span><span class="bcm-label" data-i18n="kb.brands.card.markets">시장</span></div>
+<div class="bcm-item"><span class="bcm-val" style="color:#4ade80;">+88%</span><span class="bcm-label" data-i18n="kb.brands.stat.growth">성장률</span></div>
+</div>
+<div class="brand-card-tabs">
+<button class="bct-tab active" onclick="switchTab(this,'torriden','overview')" data-i18n="kb.brands.card.overview">개요</button>
+<button class="bct-tab" onclick="switchTab(this,'torriden','products')" data-i18n="kb.brands.card.top_products">주요 제품</button>
+<button class="bct-tab" onclick="switchTab(this,'torriden','markets')" data-i18n="kb.brands.card.markets">시장</button>
+<button class="bct-tab" onclick="switchTab(this,'torriden','trend')" data-i18n="kb.brands.card.trend_score">트렌드 점수</button>
+</div>
+<div class="brand-card-tab-content">
+<div class="bctc-panel active" id="torriden-overview">
+<p class="bctc-desc">Torriden is a Korean skincare brand focused on hyaluronic acid-based formulations. The Dive-In Low Molecule Hyaluronic Acid Serum has become a global bestseller, praised for its lightweight, deeply hydrating formula.</p>
+<span class="bctc-founded">Founded: 2020 · HQ: Seoul, South Korea</span>
+</div>
+<div class="bctc-panel" id="torriden-products">
+<div class="bctc-products">
+<div class="bctc-product"><span class="bctc-prod-num gold">1</span><span class="bctc-prod-name">Dive-In Low Molecule Hyaluronic Acid Serum</span><span class="bctc-prod-score">93</span></div>
+<div class="bctc-product"><span class="bctc-prod-num">2</span><span class="bctc-prod-name">Dive-In Hyaluronic Acid Moisturizing Cream</span><span class="bctc-prod-score">89</span></div>
+<div class="bctc-product"><span class="bctc-prod-num">3</span><span class="bctc-prod-name">Dive-In Low Molecule Hyaluronic Acid Toner</span><span class="bctc-prod-score">85</span></div>
+</div>
+</div>
+<div class="bctc-panel" id="torriden-markets">
+<div class="bctc-markets">
+<div class="bctc-market"><span class="bctc-market-flag">KR</span><span class="bctc-market-share">30%</span></div>
+<div class="bctc-market"><span class="bctc-market-flag">US</span><span class="bctc-market-share">28%</span></div>
+<div class="bctc-market"><span class="bctc-market-flag">JP</span><span class="bctc-market-share">22%</span></div>
+<div class="bctc-market"><span class="bctc-market-flag">EU</span><span class="bctc-market-share">12%</span></div>
+</div>
+</div>
+<div class="bctc-panel" id="torriden-trend">
+<div class="bctc-trend-items">
+<div class="bctc-trend-item"><span class="bctc-trend-label">Brand Popularity</span><div class="bctc-trend-bar"><div class="bctc-trend-fill brand" style="width:91%"></div></div><span class="bctc-trend-num">91</span></div>
+<div class="bctc-trend-item"><span class="bctc-trend-label">Product Trend</span><div class="bctc-trend-bar"><div class="bctc-trend-fill product" style="width:90%"></div></div><span class="bctc-trend-num">90</span></div>
+<div class="bctc-trend-item"><span class="bctc-trend-label">Search Trend</span><div class="bctc-trend-bar"><div class="bctc-trend-fill search" style="width:88%"></div></div><span class="bctc-trend-num">88</span></div>
+<div class="bctc-trend-item"><span class="bctc-trend-label">Social Mentions</span><div class="bctc-trend-bar"><div class="bctc-trend-fill social" style="width:92%"></div></div><span class="bctc-trend-num">92</span></div>
+</div>
+</div>
+</div>
+<div class="brand-card-footer">
+<a class="brand-card-btn" href="products.html?brand=torriden" data-i18n="kb.brands.card.view_products">제품 보기</a>
+<a class="brand-card-btn primary" href="deals.html" data-i18n="kb.brands.card.find_deals">딜 찾기</a>
+</div>
+</div>
+<!-- LANEIGE -->
+<div class="brand-card" data-cat="skincare luxury global" data-name="laneige" id="laneige">
+<div class="brand-card-header">
+<div class="brand-card-init" style="background:rgba(249,168,212,0.12);color:#f9a8d4;">LN</div>
+<div class="brand-card-info">
+<div class="brand-card-name">Laneige</div>
+<div class="brand-card-kr">라네즈 · Founded 1994</div>
+<div class="brand-card-cat-tags"><span class="brand-card-cat-tag">스킨케어</span><span class="brand-card-cat-tag">모이스처라이저</span><span class="brand-card-cat-tag">럭셔리</span></div>
+</div>
+<span class="brand-card-rank">Rank #5</span>
+</div>
+<div class="brand-card-index">
+<span class="bci-label">K-Beauty Index</span>
+<div class="bci-bar"><div class="bci-fill" style="width:89%"></div></div>
+<span class="bci-score">89.5</span>
+<span class="bci-change up">▲ +45%</span>
+</div>
+<div class="brand-card-metrics">
+<div class="bcm-item"><span class="bcm-val">80+</span><span class="bcm-label">Products</span></div>
+<div class="bcm-item"><span class="bcm-val">45+</span><span class="bcm-label" data-i18n="kb.brands.card.markets">시장</span></div>
+<div class="bcm-item"><span class="bcm-val" style="color:#4ade80;">+45%</span><span class="bcm-label" data-i18n="kb.brands.stat.growth">성장률</span></div>
+</div>
+<div class="brand-card-tabs">
+<button class="bct-tab active" onclick="switchTab(this,'laneige','overview')" data-i18n="kb.brands.card.overview">개요</button>
+<button class="bct-tab" onclick="switchTab(this,'laneige','products')" data-i18n="kb.brands.card.top_products">주요 제품</button>
+<button class="bct-tab" onclick="switchTab(this,'laneige','markets')" data-i18n="kb.brands.card.markets">시장</button>
+<button class="bct-tab" onclick="switchTab(this,'laneige','trend')" data-i18n="kb.brands.card.trend_score">트렌드 점수</button>
+</div>
+<div class="brand-card-tab-content">
+<div class="bctc-panel active" id="laneige-overview">
+<p class="bctc-desc">Laneige (라네즈) is a premium Korean skincare brand by Amorepacific, known for its water science technology. The Water Sleeping Mask is one of the best-selling K-Beauty products globally, endorsed by celebrities worldwide.</p>
+<span class="bctc-founded">Founded: 1994 · HQ: Seoul, South Korea · Parent: Amorepacific</span>
+</div>
+<div class="bctc-panel" id="laneige-products">
+<div class="bctc-products">
+<div class="bctc-product"><span class="bctc-prod-num gold">1</span><span class="bctc-prod-name">Water Sleeping Mask</span><span class="bctc-prod-score">94</span></div>
+<div class="bctc-product"><span class="bctc-prod-num">2</span><span class="bctc-prod-name">Lip Sleeping Mask</span><span class="bctc-prod-score">91</span></div>
+<div class="bctc-product"><span class="bctc-prod-num">3</span><span class="bctc-prod-name">Water Bank Blue Hyaluronic Cream</span><span class="bctc-prod-score">87</span></div>
+</div>
+</div>
+<div class="bctc-panel" id="laneige-markets">
+<div class="bctc-markets">
+<div class="bctc-market"><span class="bctc-market-flag">US</span><span class="bctc-market-share">30%</span></div>
+<div class="bctc-market"><span class="bctc-market-flag">KR</span><span class="bctc-market-share">25%</span></div>
+<div class="bctc-market"><span class="bctc-market-flag">CN</span><span class="bctc-market-share">20%</span></div>
+<div class="bctc-market"><span class="bctc-market-flag">SEA</span><span class="bctc-market-share">15%</span></div>
+</div>
+</div>
+<div class="bctc-panel" id="laneige-trend">
+<div class="bctc-trend-items">
+<div class="bctc-trend-item"><span class="bctc-trend-label">Brand Popularity</span><div class="bctc-trend-bar"><div class="bctc-trend-fill brand" style="width:90%"></div></div><span class="bctc-trend-num">90</span></div>
+<div class="bctc-trend-item"><span class="bctc-trend-label">Product Trend</span><div class="bctc-trend-bar"><div class="bctc-trend-fill product" style="width:88%"></div></div><span class="bctc-trend-num">88</span></div>
+<div class="bctc-trend-item"><span class="bctc-trend-label">Search Trend</span><div class="bctc-trend-bar"><div class="bctc-trend-fill search" style="width:87%"></div></div><span class="bctc-trend-num">87</span></div>
+<div class="bctc-trend-item"><span class="bctc-trend-label">Social Mentions</span><div class="bctc-trend-bar"><div class="bctc-trend-fill social" style="width:91%"></div></div><span class="bctc-trend-num">91</span></div>
+</div>
+</div>
+</div>
+<div class="brand-card-footer">
+<a class="brand-card-btn" href="products.html?brand=laneige" data-i18n="kb.brands.card.view_products">제품 보기</a>
+<a class="brand-card-btn primary" href="deals.html" data-i18n="kb.brands.card.find_deals">딜 찾기</a>
+</div>
+</div>
+<!-- ROM&ND -->
+<div class="brand-card" data-cat="makeup global" data-name="romand" id="romand">
+<div class="brand-card-header">
+<div class="brand-card-init" style="background:rgba(251,191,36,0.12);color:#fbbf24;">RM</div>
+<div class="brand-card-info">
+<div class="brand-card-name">Rom&amp;nd</div>
+<div class="brand-card-kr">롬앤 · Founded 2018</div>
+<div class="brand-card-cat-tags"><span class="brand-card-cat-tag">메이크업</span><span class="brand-card-cat-tag">립</span><span class="brand-card-cat-tag">글로벌</span></div>
+</div>
+<span class="brand-card-rank">Rank #6</span>
+</div>
+<div class="brand-card-index">
+<span class="bci-label">K-Beauty Index</span>
+<div class="bci-bar"><div class="bci-fill" style="width:88%"></div></div>
+<span class="bci-score">88.3</span>
+<span class="bci-change up">▲ +92%</span>
+</div>
+<div class="brand-card-metrics">
+<div class="bcm-item"><span class="bcm-val">60+</span><span class="bcm-label">Products</span></div>
+<div class="bcm-item"><span class="bcm-val">35+</span><span class="bcm-label" data-i18n="kb.brands.card.markets">시장</span></div>
+<div class="bcm-item"><span class="bcm-val" style="color:#4ade80;">+92%</span><span class="bcm-label" data-i18n="kb.brands.stat.growth">성장률</span></div>
+</div>
+<div class="brand-card-tabs">
+<button class="bct-tab active" onclick="switchTab(this,'romand','overview')" data-i18n="kb.brands.card.overview">개요</button>
+<button class="bct-tab" onclick="switchTab(this,'romand','products')" data-i18n="kb.brands.card.top_products">주요 제품</button>
+<button class="bct-tab" onclick="switchTab(this,'romand','markets')" data-i18n="kb.brands.card.markets">시장</button>
+<button class="bct-tab" onclick="switchTab(this,'romand','trend')" data-i18n="kb.brands.card.trend_score">트렌드 점수</button>
+</div>
+<div class="brand-card-tab-content">
+<div class="bctc-panel active" id="romand-overview">
+<p class="bctc-desc">Rom&amp;nd (롬앤) is a Korean makeup brand known for its trendy lip products and eye makeup. The Juicy Lasting Tint series has gained strong global recognition, particularly in Japan, Southeast Asia, and North America.</p>
+<span class="bctc-founded">Founded: 2018 · HQ: Seoul, South Korea</span>
+</div>
+<div class="bctc-panel" id="romand-products">
+<div class="bctc-products">
+<div class="bctc-product"><span class="bctc-prod-num gold">1</span><span class="bctc-prod-name">Juicy Lasting Tint</span><span class="bctc-prod-score">91</span></div>
+<div class="bctc-product"><span class="bctc-prod-num">2</span><span class="bctc-prod-name">Zero Velvet Tint</span><span class="bctc-prod-score">88</span></div>
+<div class="bctc-product"><span class="bctc-prod-num">3</span><span class="bctc-prod-name">Han All Fix Mascara</span><span class="bctc-prod-score">84</span></div>
+</div>
+</div>
+<div class="bctc-panel" id="romand-markets">
+<div class="bctc-markets">
+<div class="bctc-market"><span class="bctc-market-flag">JP</span><span class="bctc-market-share">35%</span></div>
+<div class="bctc-market"><span class="bctc-market-flag">KR</span><span class="bctc-market-share">25%</span></div>
+<div class="bctc-market"><span class="bctc-market-flag">SEA</span><span class="bctc-market-share">20%</span></div>
+<div class="bctc-market"><span class="bctc-market-flag">US</span><span class="bctc-market-share">12%</span></div>
+</div>
+</div>
+<div class="bctc-panel" id="romand-trend">
+<div class="bctc-trend-items">
+<div class="bctc-trend-item"><span class="bctc-trend-label">Brand Popularity</span><div class="bctc-trend-bar"><div class="bctc-trend-fill brand" style="width:88%"></div></div><span class="bctc-trend-num">88</span></div>
+<div class="bctc-trend-item"><span class="bctc-trend-label">Product Trend</span><div class="bctc-trend-bar"><div class="bctc-trend-fill product" style="width:87%"></div></div><span class="bctc-trend-num">87</span></div>
+<div class="bctc-trend-item"><span class="bctc-trend-label">Search Trend</span><div class="bctc-trend-bar"><div class="bctc-trend-fill search" style="width:86%"></div></div><span class="bctc-trend-num">86</span></div>
+<div class="bctc-trend-item"><span class="bctc-trend-label">Social Mentions</span><div class="bctc-trend-bar"><div class="bctc-trend-fill social" style="width:90%"></div></div><span class="bctc-trend-num">90</span></div>
+</div>
+</div>
+</div>
+<div class="brand-card-footer">
+<a class="brand-card-btn" href="products.html?brand=romand" data-i18n="kb.brands.card.view_products">제품 보기</a>
+<a class="brand-card-btn primary" href="deals.html" data-i18n="kb.brands.card.find_deals">딜 찾기</a>
+</div>
+</div>
+</div>
+</main>
+<!-- FULL RANKING TABLE -->
+<section class="brands-ranking-section">
+<div class="brs-title">K-Beauty Brand Full Ranking <span class="brs-title-tag">Top 10</span></div>
+<div class="brands-full-table">
+<div class="bft-header"><span>#</span><span>Brand</span><span>Category</span><span>K-Beauty Index</span><span>Trend</span><span>Markets</span><span>Change</span></div>
+<div class="bft-row"><span class="bft-rank gold">1</span><div class="bft-brand"><div class="bft-init" style="background:rgba(201,168,76,0.14);color:#C9A84C;">CX</div><div><div class="bft-name">COSRX</div><div class="bft-kr">코스알엑스</div></div></div><span class="bft-cat">스킨케어</span><span class="bft-score">96.0</span><span class="bft-trend up">▲ +210%</span><div class="bft-market-tags"><span class="bft-market-tag">US</span><span class="bft-market-tag">EU</span><span class="bft-market-tag">JP</span></div><span class="bft-trend up">▲ 2</span></div>
+<div class="bft-row"><span class="bft-rank silver">2</span><div class="bft-brand"><div class="bft-init" style="background:rgba(74,222,128,0.12);color:#4ade80;">AN</div><div><div class="bft-name">Anua</div><div class="bft-kr">아누아</div></div></div><span class="bft-cat">스킨케어</span><span class="bft-score">94.2</span><span class="bft-trend up">▲ +195%</span><div class="bft-market-tags"><span class="bft-market-tag">US</span><span class="bft-market-tag">EU</span></div><span class="bft-trend up">▲ 5</span></div>
+<div class="bft-row"><span class="bft-rank bronze">3</span><div class="bft-brand"><div class="bft-init" style="background:rgba(147,197,253,0.12);color:#93c5fd;">BJ</div><div><div class="bft-name">Beauty of Joseon</div><div class="bft-kr">조선미녀</div></div></div><span class="bft-cat">스킨케어</span><span class="bft-score">92.1</span><span class="bft-trend up">▲ +145%</span><div class="bft-market-tags"><span class="bft-market-tag">US</span><span class="bft-market-tag">EU</span></div><span class="bft-trend up">▲ 8</span></div>
+<div class="bft-row"><span class="bft-rank">4</span><div class="bft-brand"><div class="bft-init" style="background:rgba(196,181,253,0.12);color:#c4b5fd;">TR</div><div><div class="bft-name">Torriden</div><div class="bft-kr">토리든</div></div></div><span class="bft-cat">스킨케어</span><span class="bft-score">91.0</span><span class="bft-trend up">▲ +88%</span><div class="bft-market-tags"><span class="bft-market-tag">KR</span><span class="bft-market-tag">US</span></div><span class="bft-trend up">▲ 3</span></div>
+<div class="bft-row"><span class="bft-rank">5</span><div class="bft-brand"><div class="bft-init" style="background:rgba(249,168,212,0.12);color:#f9a8d4;">LN</div><div><div class="bft-name">Laneige</div><div class="bft-kr">라네즈</div></div></div><span class="bft-cat">스킨케어</span><span class="bft-score">89.5</span><span class="bft-trend up">▲ +45%</span><div class="bft-market-tags"><span class="bft-market-tag">US</span><span class="bft-market-tag">CN</span></div><span class="bft-trend same">— 0</span></div>
+<div class="bft-row"><span class="bft-rank">6</span><div class="bft-brand"><div class="bft-init" style="background:rgba(251,191,36,0.12);color:#fbbf24;">RM</div><div><div class="bft-name">Rom&amp;nd</div><div class="bft-kr">롬앤</div></div></div><span class="bft-cat">메이크업</span><span class="bft-score">88.3</span><span class="bft-trend up">▲ +92%</span><div class="bft-market-tags"><span class="bft-market-tag">JP</span><span class="bft-market-tag">SEA</span></div><span class="bft-trend up">▲ 4</span></div>
+<div class="bft-row"><span class="bft-rank">7</span><div class="bft-brand"><div class="bft-init" style="background:rgba(52,211,153,0.12);color:#34d399;">SK</div><div><div class="bft-name">Skin1004</div><div class="bft-kr">스킨1004</div></div></div><span class="bft-cat">스킨케어</span><span class="bft-score">86.7</span><span class="bft-trend up">▲ +120%</span><div class="bft-market-tags"><span class="bft-market-tag">US</span><span class="bft-market-tag">EU</span></div><span class="bft-trend up">▲ 12</span></div>
+<div class="bft-row"><span class="bft-rank">8</span><div class="bft-brand"><div class="bft-init" style="background:rgba(167,139,250,0.12);color:#a78bfa;">IS</div><div><div class="bft-name">Isntree</div><div class="bft-kr">이즈앤트리</div></div></div><span class="bft-cat">스킨케어</span><span class="bft-score">84.2</span><span class="bft-trend up">▲ +75%</span><div class="bft-market-tags"><span class="bft-market-tag">US</span><span class="bft-market-tag">JP</span></div><span class="bft-trend up">▲ 9</span></div>
+<div class="bft-row"><span class="bft-rank">9</span><div class="bft-brand"><div class="bft-init" style="background:rgba(251,113,133,0.12);color:#fb7185;">DJ</div><div><div class="bft-name">Dr.Jart+</div><div class="bft-kr">닥터자르트</div></div></div><span class="bft-cat">스킨케어</span><span class="bft-score">83.1</span><span class="bft-trend down">▼ -5%</span><div class="bft-market-tags"><span class="bft-market-tag">US</span><span class="bft-market-tag">EU</span></div><span class="bft-trend down">▼ 1</span></div>
+<div class="bft-row"><span class="bft-rank">10</span><div class="bft-brand"><div class="bft-init" style="background:rgba(45,212,191,0.12);color:#2dd4bf;">HH</div><div><div class="bft-name">Haruharu Wonder</div><div class="bft-kr">하루하루원더</div></div></div><span class="bft-cat">스킨케어</span><span class="bft-score">81.5</span><span class="bft-trend up">▲ +68%</span><div class="bft-market-tags"><span class="bft-market-tag">US</span><span class="bft-market-tag">EU</span></div><span class="bft-trend up">▲ 7</span></div>
+</div>
+<div style="text-align:center;margin-top:1.5rem;">
+<a href="top100-brands.html" style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.72rem;font-weight:600;color:#C9A84C;text-decoration:none;padding:0.5rem 1.1rem;border:1px solid rgba(201,168,76,0.25);border-radius:6px;font-family:'Montserrat',sans-serif;">View Top 100 Korean Brands →</a>
+</div>
+</section>
+<footer id="kb-footer" role="contentinfo">
+<div class="kb-container">
+<div class="kb-footer-top">
+<div class="kb-footer-brand">
+<div style="font-size:1.1rem;font-weight:800;color:#C9A84C;font-family:'Montserrat',sans-serif;">K-Beauty Intelligence</div>
+<p class="kb-footer-parent">by K-IMPACT Media Group</p>
+</div>
+<nav class="kb-footer-nav">
+<div class="kb-footer-col"><h4>플랫폼</h4><ul><li><a href="index.html#kb-global-index">K-Beauty 글로벌 인덱스</a></li><li><a href="index.html#brand-rankings">브랜드 랭킹</a></li></ul></div>
+<div class="kb-footer-col"><h4>Database</h4><ul><li><a href="brands.html">Brand Database</a></li><li><a href="products.html">Product Database</a></li><li><a href="deals.html" data-i18n="kb.nav.deals_menu">뷰티 딜</a></li></ul></div>
+</nav>
+</div>
+<div class="kb-footer-bottom"><p>© 2026 K-Beauty Intelligence by K-IMPACT Media Group. All rights reserved.</p></div>
+</div>
+</footer>
+<script src="assets/js/kb-i18n.js?v=2026"></script>
+<script src="assets/js/kb-main.js?v=2026"></script>
+<script src="../shared/auth.js"></script>
+<script>
+    function switchTab(btn, brandId, panel) {
+      const card = btn.closest('.brand-card');
+      card.querySelectorAll('.bct-tab').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+      card.querySelectorAll('.bctc-panel').forEach(p => p.classList.remove('active'));
+      const target = document.getElementById(brandId + '-' + panel);
+      if (target) target.classList.add('active');
+    }
+    const filterTabs = document.querySelectorAll('.brands-filter-tab');
+    const brandCards = document.querySelectorAll('.brand-card');
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        filterTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const cat = tab.dataset.cat;
+        brandCards.forEach(card => {
+          const cardCat = card.dataset.cat || '';
+          card.style.display = (cat === 'all' || cardCat.includes(cat)) ? '' : 'none';
+        });
+      });
+    });
+    const searchInput = document.getElementById('brand-search-input');
+    if (searchInput) {
+      searchInput.addEventListener('input', () => {
+        const q = searchInput.value.toLowerCase();
+        brandCards.forEach(card => {
+          const name = card.dataset.name || '';
+          card.style.display = name.includes(q) ? '' : 'none';
+        });
+      });
+    }
+    const bars = document.querySelectorAll('.bci-fill, .bctc-trend-fill');
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.style.transition = 'width 1.2s cubic-bezier(0.4,0,0.2,1)'; });
+    }, { threshold: 0.3 });
+    bars.forEach(b => obs.observe(b));
+  </script>
+</body>
+</html>
