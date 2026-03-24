@@ -29,12 +29,5 @@
         }
       ]
     }
-  ],
-  "redirects": [
-    {
-      "source": "/k-beauty",
-      "destination": "/k-beauty/index.html",
-      "permanent": false
-    }
   ]
 }
