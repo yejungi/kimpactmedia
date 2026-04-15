@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+
+<html data-lang="ko" lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>K-Beauty Market Intelligence | Industry Analysis | K-Beauty Intelligence Platform</title>
+<meta content="K-IMPACT Media Group - Global Cross-Border Media Platform connecting Korean brands with the world." name="description"/>
+<meta content="K-Beauty market intelligence, Korean beauty industry analysis, K-Beauty market size, Korean beauty trends, ingredient intelligence, beauty industry outlook" name="keywords"/>
+<link href="https://www.kimpactmedia.com/k-beauty/intelligence.html" rel="canonical"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&amp;family=Noto+Sans+KR:wght@300;400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/kbeauty.css" rel="stylesheet"/>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "K-Beauty Market Intelligence | K-Beauty Intelligence Platform",
+    "url": "https://www.kimpactmedia.com/k-beauty/intelligence.html",
+    "description": "Access comprehensive K-Beauty market intelligence, industry analysis, and trend reports.",
+    "publisher": { "@type": "Organization", "name": "K-IMPACT Media Group", "url": "https://www.kimpactmedia.com", "email": "mailto:yejungi@naver.com" }
+  }
+  </script>
+<style>
+    .intel-hero {
+      background: linear-gradient(135deg, #0a0a0f 0%, #0d1020 50%, #0a0a0f 100%);
+      padding: 5rem 0 3rem;
+      border-bottom: 1px solid rgba(196,181,253,0.1);
+      position: relative; overflow: hidden;
+    }
+    .intel-hero::before {
+      content: ''; position: absolute; top: -40%; left: 20%; width: 60%; height: 200%;
+      background: radial-gradient(ellipse, rgba(196,181,253,0.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .intel-hero-inner { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
+    .intel-hero-tag {
+      display: inline-block; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: #c4b5fd; border: 1px solid rgba(196,181,253,0.25);
+      padding: 0.28rem 0.7rem; border-radius: 3px; margin-bottom: 1.2rem; font-family: 'Montserrat', sans-serif;
+    }
+    .intel-hero h1 { font-size: clamp(2rem,4vw,3.2rem); font-weight: 900; color: #fff; margin-bottom: 0.8rem; font-family: 'Montserrat', sans-serif; line-height: 1.15; }
+    .intel-hero h1 span { color: #c4b5fd; }
+    .intel-hero-desc { font-size: 0.95rem; color: rgba(255,255,255,0.45); max-width: 600px; line-height: 1.65; margin-bottom: 2rem; }
+    .intel-hero-stats { display: flex; gap: 2.5rem; flex-wrap: wrap; }
+    .ihs-item { display: flex; flex-direction: column; gap: 0.2rem; }
+    .ihs-val { font-size: 1.6rem; font-weight: 900; color: #c4b5fd; font-family: 'Montserrat', sans-serif; line-height: 1; }
+    .ihs-label { font-size: 0.62rem; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 0.07em; font-family: 'Montserrat', sans-serif; }
+
+    .intel-nav-bar {
+      background: rgba(10,10,15,0.95); border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding: 0.8rem 0; position: sticky; top: 0; z-index: 100; backdrop-filter: blur(20px);
+    }
+    .intel-nav-inner { max-width: 1280px; margin: 0 auto; padding: 0 2rem; display: flex; gap: 0.5rem; }
+    .intel-nav-tab {
+      font-size: 0.68rem; font-weight: 700; padding: 0.4rem 1rem; border-radius: 5px;
+      border: 1px solid rgba(255,255,255,0.1); background: transparent; color: rgba(255,255,255,0.4);
+      cursor: pointer; transition: all 0.2s; font-family: 'Montserrat', sans-serif; text-decoration: none;
+    }
+    .intel-nav-tab:hover { border-color: rgba(196,181,253,0.3); color: rgba(255,255,255,0.7); }
+    .intel-nav-tab.active { background: rgba(196,181,253,0.1); border-color: rgba(196,181,253,0.3); color: #c4b5fd; }
+
+    .intel-main { max-width: 1280px; margin: 0 auto; padding: 3rem 2rem; }
+    .intel-section { margin-bottom: 4rem; }
+    .intel-section-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem; }
+    .intel-section-tag { display: inline-block; font-size: 0.58rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #c4b5fd; border: 1px solid rgba(196,181,253,0.2); padding: 0.2rem 0.55rem; border-radius: 3px; margin-bottom: 0.5rem; font-family: 'Montserrat', sans-serif; }
+    .intel-section-title { font-size: 1.4rem; font-weight: 900; color: rgba(255,255,255,0.9); font-family: 'Montserrat', sans-serif; }
+    .intel-section-subtitle { font-size: 0.78rem; color: rgba(255,255,255,0.35); margin-top: 0.3rem; }
+    .intel-update-badge { font-size: 0.58rem; font-weight: 700; padding: 0.22rem 0.6rem; border-radius: 4px; background: rgba(74,222,128,0.08); border: 1px solid rgba(74,222,128,0.2); color: #4ade80; font-family: 'Montserrat', sans-serif; white-space: nowrap; }
+
+    /* Market Intelligence Grid */
+    .market-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem; }
+    @media(max-width:900px){ .market-grid { grid-template-columns: 1fr; } }
+    .market-main-card {
+      background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 2rem;
+    }
+    .market-main-title { font-size: 1rem; font-weight: 800; color: rgba(255,255,255,0.85); margin-bottom: 0.5rem; font-family: 'Montserrat', sans-serif; }
+    .market-main-subtitle { font-size: 0.72rem; color: rgba(255,255,255,0.35); margin-bottom: 1.5rem; }
+    .market-size-display { display: flex; align-items: flex-end; gap: 1rem; margin-bottom: 1.5rem; }
+    .market-size-val { font-size: 3rem; font-weight: 900; color: #c4b5fd; font-family: 'Montserrat', sans-serif; line-height: 1; }
+    .market-size-unit { font-size: 0.8rem; color: rgba(255,255,255,0.4); margin-bottom: 0.5rem; }
+    .market-size-growth { font-size: 0.9rem; font-weight: 800; color: #4ade80; font-family: 'Montserrat', sans-serif; margin-bottom: 0.5rem; }
+    .market-chart-bars { display: flex; align-items: flex-end; gap: 0.5rem; height: 80px; margin-bottom: 0.5rem; }
+    .mcb-bar { flex: 1; border-radius: 3px 3px 0 0; background: rgba(196,181,253,0.2); position: relative; transition: background 0.2s; }
+    .mcb-bar:hover { background: rgba(196,181,253,0.35); }
+    .mcb-bar.current { background: rgba(196,181,253,0.5); }
+    .mcb-bar.projected { background: rgba(196,181,253,0.15); border: 1px dashed rgba(196,181,253,0.3); }
+    .market-chart-labels { display: flex; gap: 0.5rem; }
+    .mcl-label { flex: 1; font-size: 0.5rem; text-align: center; color: rgba(255,255,255,0.25); font-family: 'Montserrat', sans-serif; }
+    .market-regions { display: flex; flex-direction: column; gap: 0.6rem; margin-top: 1rem; }
+    .mr-item { display: flex; align-items: center; gap: 0.7rem; }
+    .mr-region { font-size: 0.65rem; color: rgba(255,255,255,0.5); width: 80px; flex-shrink: 0; }
+    .mr-bar { flex: 1; height: 5px; background: rgba(255,255,255,0.06); border-radius: 3px; overflow: hidden; }
+    .mr-fill { height: 100%; border-radius: 3px; background: linear-gradient(90deg, rgba(196,181,253,0.4), #c4b5fd); }
+    .mr-pct { font-size: 0.65rem; font-weight: 700; color: rgba(255,255,255,0.6); font-family: 'Montserrat', sans-serif; width: 32px; text-align: right; }
+
+    .market-side-cards { display: flex; flex-direction: column; gap: 1rem; }
+    .market-kpi-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 1.2rem; }
+    .mkc-label { font-size: 0.58rem; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 0.4rem; font-family: 'Montserrat', sans-serif; }
+    .mkc-val { font-size: 1.5rem; font-weight: 900; color: rgba(255,255,255,0.85); font-family: 'Montserrat', sans-serif; line-height: 1; margin-bottom: 0.3rem; }
+    .mkc-change { font-size: 0.65rem; font-weight: 700; font-family: 'Montserrat', sans-serif; }
+    .mkc-change.up { color: #4ade80; }
+    .mkc-change.down { color: #f87171; }
+
+    /* Company Intelligence */
+    .company-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+    @media(max-width:900px){ .company-grid { grid-template-columns: 1fr 1fr; } }
+    @media(max-width:600px){ .company-grid { grid-template-columns: 1fr; } }
+    .company-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 1.4rem; transition: all 0.3s; }
+    .company-card:hover { border-color: rgba(196,181,253,0.2); transform: translateY(-2px); }
+    .company-card-header { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem; }
+    .company-init { width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.68rem; font-weight: 900; flex-shrink: 0; font-family: 'Montserrat', sans-serif; }
+    .company-name { font-size: 0.88rem; font-weight: 800; color: rgba(255,255,255,0.85); }
+    .company-type { font-size: 0.58rem; color: rgba(255,255,255,0.3); }
+    .company-metrics { display: flex; flex-direction: column; gap: 0.5rem; }
+    .cm-item { display: flex; justify-content: space-between; align-items: center; padding: 0.35rem 0; border-bottom: 1px solid rgba(255,255,255,0.04); }
+    .cm-item:last-child { border-bottom: none; }
+    .cm-label { font-size: 0.6rem; color: rgba(255,255,255,0.3); }
+    .cm-val { font-size: 0.72rem; font-weight: 700; color: rgba(255,255,255,0.75); font-family: 'Montserrat', sans-serif; }
+    .cm-val.positive { color: #4ade80; }
+    .cm-val.negative { color: #f87171; }
+
+    /* Industry Outlook */
+    .outlook-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    @media(max-width:700px){ .outlook-grid { grid-template-columns: 1fr; } }
+    .outlook-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 1.5rem; }
+    .outlook-card-tag { font-size: 0.55rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #C9A84C; border: 1px solid rgba(201,168,76,0.2); padding: 0.15rem 0.45rem; border-radius: 3px; margin-bottom: 0.8rem; display: inline-block; font-family: 'Montserrat', sans-serif; }
+    .outlook-card-title { font-size: 0.92rem; font-weight: 800; color: rgba(255,255,255,0.85); margin-bottom: 0.5rem; }
+    .outlook-card-desc { font-size: 0.72rem; color: rgba(255,255,255,0.4); line-height: 1.65; margin-bottom: 1rem; }
+    .outlook-points { display: flex; flex-direction: column; gap: 0.4rem; }
+    .op-item { display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.68rem; color: rgba(255,255,255,0.55); line-height: 1.5; }
+    .op-dot { width: 5px; height: 5px; border-radius: 50%; background: #c4b5fd; flex-shrink: 0; margin-top: 0.45rem; }
+
+    /* Ingredient Intelligence */
+    .ingredient-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+    @media(max-width:900px){ .ingredient-grid { grid-template-columns: 1fr 1fr; } }
+    @media(max-width:500px){ .ingredient-grid { grid-template-columns: 1fr; } }
+    .ingredient-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 1.2rem; transition: all 0.3s; }
+    .ingredient-card:hover { border-color: rgba(201,168,76,0.2); transform: translateY(-2px); }
+    .ingredient-name { font-size: 0.85rem; font-weight: 800; color: rgba(255,255,255,0.85); margin-bottom: 0.3rem; }
+    .ingredient-kr { font-size: 0.6rem; color: rgba(255,255,255,0.3); margin-bottom: 0.8rem; }
+    .ingredient-score-wrap { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.6rem; }
+    .ing-score-label { font-size: 0.52rem; color: rgba(255,255,255,0.25); text-transform: uppercase; letter-spacing: 0.06em; font-family: 'Montserrat', sans-serif; }
+    .ing-score-val { font-size: 0.9rem; font-weight: 900; color: #C9A84C; font-family: 'Montserrat', sans-serif; margin-left: auto; }
+    .ing-bar { width: 100%; height: 4px; background: rgba(255,255,255,0.06); border-radius: 2px; overflow: hidden; margin-bottom: 0.8rem; }
+    .ing-fill { height: 100%; border-radius: 2px; background: linear-gradient(90deg, rgba(201,168,76,0.4), #C9A84C); }
+    .ingredient-tags { display: flex; gap: 0.3rem; flex-wrap: wrap; }
+    .ing-tag { font-size: 0.52rem; font-weight: 600; padding: 0.12rem 0.35rem; border-radius: 3px; background: rgba(201,168,76,0.07); border: 1px solid rgba(201,168,76,0.15); color: rgba(201,168,76,0.7); font-family: 'Montserrat', sans-serif; }
+    .ingredient-trend { display: flex; align-items: center; gap: 0.4rem; margin-top: 0.8rem; }
+    .ing-trend-label { font-size: 0.58rem; color: rgba(255,255,255,0.3); }
+    .ing-trend-val { font-size: 0.65rem; font-weight: 700; font-family: 'Montserrat', sans-serif; }
+    .ing-trend-val.up { color: #4ade80; }
+    .ing-trend-val.hot { color: #fbbf24; }
+    .ing-trend-val.stable { color: #C9A84C; }
+  </style>
+<meta content="K-Beauty Market Intelligence | Industry Analysis | K-Beauty Intelligence Platform" property="og:title"/><meta content="K-IMPACT Media Group - Global Cross-Border Media Platform connecting Korean brands with the world." property="og:description"/><meta content="website" property="og:type"/><meta content="https://www.kimpactmedia.com/k-beauty/intelligence.html" property="og:url"/><meta content="https://www.kimpactmedia.com/assets/images/logo-dark.png" property="og:image"/></head>
+<body>
+<header id="kb-header" role="banner">
+<div class="kb-header-top">
+<a class="back-to-group" href="../index.html">← K-IMPACT</a>
+<div class="kb-header-top-right">
+<div class="kb-lang-dropdown" id="kb-lang-dropdown">
+<button class="kb-lang-toggle" id="kb-lang-toggle"><span id="kb-lang-label">KO</span></button>
+<div class="kb-lang-menu" id="kb-lang-menu">
+<button class="kb-lang-opt active" data-lang="ko">한국어</button>
+<button class="kb-lang-opt" data-lang="en">English</button>
+<button class="kb-lang-opt" data-lang="ja">日本語</button>
+</div>
+</div>
+<button class="kb-login-btn">로그인</button>
+</div>
+</div>
+<nav class="kb-nav-container">
+<a class="kb-logo-link" href="index.html"><span class="kb-logo-text">K-Beauty</span></a>
+<ul class="kb-nav-menu" role="list">
+<li><a class="kb-nav-link" href="index.html">Home</a></li>
+<li class="kb-nav-has-dropdown">
+<a class="kb-nav-parent" href="brands.html">Brand Database <span class="kb-nav-arrow">▾</span></a>
+<ul class="kb-nav-dropdown" role="list">
+<li><a href="brands.html">All Brands</a></li>
+<li><a href="brands.html#cosrx">COSRX</a></li>
+<li><a href="brands.html#anua">Anua</a></li>
+<li><a href="brands.html#beauty-of-joseon">Beauty of Joseon</a></li>
+<li><a href="brands.html#laneige">Laneige</a></li>
+<li><a href="brands.html#romand">Rom&amp;nd</a></li>
+</ul>
+</li>
+<li class="kb-nav-has-dropdown">
+<a class="kb-nav-parent" href="products.html">Product Database <span class="kb-nav-arrow">▾</span></a>
+<ul class="kb-nav-dropdown" role="list">
+<li><a href="products.html">All Products</a></li>
+<li><a href="best-sunscreens.html">Best Sunscreens</a></li>
+<li><a href="best-serums.html">Best Serums</a></li>
+<li><a href="best-moisturizers.html">Best Moisturizers</a></li>
+<li><a href="best-cleansers.html">Best Cleansers</a></li>
+<li><a href="best-essences.html">Best Essences</a></li>
+</ul>
+</li>
+<li class="kb-nav-has-dropdown kb-nav-intelligence">
+<a class="kb-nav-parent" href="intelligence.html">Intelligence <span class="kb-nav-arrow">▾</span></a>
+<ul class="kb-nav-dropdown kb-nav-dropdown-wide" role="list">
+<li><a href="intelligence.html#market-intelligence">Market Intelligence</a></li>
+<li><a href="intelligence.html#company-intelligence">Company Intelligence</a></li>
+<li><a href="intelligence.html#industry-outlook">Industry Outlook</a></li>
+<li><a href="intelligence.html#ingredient-intelligence">Ingredient Intelligence</a></li>
+</ul>
+</li>
+<li><a class="kb-nav-link" href="creators.html">Creator Ecosystem</a></li>
+<li><a class="kb-nav-link" href="deals.html">Deals Engine</a></li>
+<li><a class="kb-nav-link" href="top100-brands.html">Top 100 Brands</a></li>
+<li><a class="kb-nav-link" href="top100-products.html">Top 100 Products</a></li>
+</ul>
+<button aria-label="메뉴 열기" class="kb-hamburger"><span></span><span></span><span></span></button>
+</nav>
+</header>
+<div class="intel-hero">
+<div class="intel-hero-inner">
+<div class="intel-hero-tag">K-BEAUTY INDUSTRY INTELLIGENCE</div>
+<h1>Beauty <span>Intelligence</span></h1>
+<p class="intel-hero-desc">Comprehensive K-Beauty industry intelligence. Market analysis, company intelligence, industry outlook, and ingredient trend analysis — all in one data platform.</p>
+<div class="intel-hero-stats">
+<div class="ihs-item"><span class="ihs-val">$24.3B</span><span class="ihs-label">Global K-Beauty Market</span></div>
+<div class="ihs-item"><span class="ihs-val">+8.4%</span><span class="ihs-label">CAGR 2024-2030</span></div>
+<div class="ihs-item"><span class="ihs-val">150+</span><span class="ihs-label">Reports Published</span></div>
+<div class="ihs-item"><span class="ihs-val">Monthly</span><span class="ihs-label">Market Updates</span></div>
+</div>
+</div>
+</div>
+<div class="intel-nav-bar">
+<div class="intel-nav-inner">
+<a class="intel-nav-tab active" href="#market-intelligence">Market Intelligence</a>
+<a class="intel-nav-tab" href="#company-intelligence">Company Intelligence</a>
+<a class="intel-nav-tab" href="#industry-outlook">Industry Outlook</a>
+<a class="intel-nav-tab" href="#ingredient-intelligence">Ingredient Intelligence</a>
+</div>
+</div>
+<main class="intel-main">
+<!-- MARKET INTELLIGENCE -->
+<section class="intel-section" id="market-intelligence">
+<div class="intel-section-header">
+<div>
+<div class="intel-section-tag">MARKET INTELLIGENCE</div>
+<div class="intel-section-title">Global K-Beauty Market Analysis</div>
+<div class="intel-section-subtitle">Global beauty market size, regional breakdown, and growth trajectory</div>
+</div>
+<span class="intel-update-badge">Updated: Mar 2026</span>
+</div>
+<div class="market-grid">
+<div class="market-main-card">
+<div class="market-main-title">Global K-Beauty Market Size</div>
+<div class="market-main-subtitle">2020–2030 Market Size Projection (USD Billion)</div>
+<div class="market-size-display">
+<span class="market-size-val">$24.3B</span>
+<div>
+<div class="market-size-unit">2026 Market Size</div>
+<div class="market-size-growth">▲ +8.4% CAGR</div>
+</div>
+</div>
+<div class="market-chart-bars">
+<div class="mcb-bar" style="height:30%;" title="2020: $12.1B"></div>
+<div class="mcb-bar" style="height:40%;" title="2021: $14.5B"></div>
+<div class="mcb-bar" style="height:52%;" title="2022: $17.2B"></div>
+<div class="mcb-bar" style="height:65%;" title="2023: $20.1B"></div>
+<div class="mcb-bar" style="height:78%;" title="2024: $22.4B"></div>
+<div class="mcb-bar current" style="height:90%;" title="2026: $24.3B"></div>
+<div class="mcb-bar projected" style="height:95%;" title="2026E: $26.4B"></div>
+<div class="mcb-bar projected" style="height:100%;" title="2027E: $28.8B"></div>
+</div>
+<div class="market-chart-labels">
+<span class="mcl-label">2020</span><span class="mcl-label">2021</span><span class="mcl-label">2022</span><span class="mcl-label">2023</span><span class="mcl-label">2024</span><span class="mcl-label">2026</span><span class="mcl-label">2026E</span><span class="mcl-label">2027E</span>
+</div>
+<div class="market-regions" style="margin-top:1.5rem;">
+<div style="font-size:0.62rem;font-weight:700;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:0.5rem;font-family:'Montserrat',sans-serif;">Regional Market Share</div>
+<div class="mr-item"><span class="mr-region">North America</span><div class="mr-bar"><div class="mr-fill" style="width:32%"></div></div><span class="mr-pct">32%</span></div>
+<div class="mr-item"><span class="mr-region">Asia Pacific</span><div class="mr-bar"><div class="mr-fill" style="width:28%"></div></div><span class="mr-pct">28%</span></div>
+<div class="mr-item"><span class="mr-region">Europe</span><div class="mr-bar"><div class="mr-fill" style="width:22%"></div></div><span class="mr-pct">22%</span></div>
+<div class="mr-item"><span class="mr-region">South Korea</span><div class="mr-bar"><div class="mr-fill" style="width:12%"></div></div><span class="mr-pct">12%</span></div>
+<div class="mr-item"><span class="mr-region">Others</span><div class="mr-bar"><div class="mr-fill" style="width:6%"></div></div><span class="mr-pct">6%</span></div>
+</div>
+</div>
+<div class="market-side-cards">
+<div class="market-kpi-card">
+<div class="mkc-label">K-Beauty Export Value</div>
+<div class="mkc-val">$9.8B</div>
+<div class="mkc-change up">▲ +14.2% YoY (2026)</div>
+</div>
+<div class="market-kpi-card">
+<div class="mkc-label">Top Export Destination</div>
+<div class="mkc-val">USA</div>
+<div class="mkc-change up">▲ +28% YoY Growth</div>
+</div>
+<div class="market-kpi-card">
+<div class="mkc-label">Skincare Market Share</div>
+<div class="mkc-val">68%</div>
+<div class="mkc-change up">▲ Dominant Category</div>
+</div>
+<div class="market-kpi-card">
+<div class="mkc-label">Online Sales Share</div>
+<div class="mkc-val">52%</div>
+<div class="mkc-change up">▲ +8pts vs 2023</div>
+</div>
+</div>
+</div>
+</section>
+<!-- COMPANY INTELLIGENCE -->
+<section class="intel-section" id="company-intelligence">
+<div class="intel-section-header">
+<div>
+<div class="intel-section-tag">COMPANY INTELLIGENCE</div>
+<div class="intel-section-title">Korean Beauty Company Analysis</div>
+<div class="intel-section-subtitle">Financial performance, market position, and strategic outlook of major K-Beauty companies</div>
+</div>
+<span class="intel-update-badge">Q4 2026 Data</span>
+</div>
+<div class="company-grid">
+<div class="company-card">
+<div class="company-card-header">
+<div class="company-init" style="background:rgba(201,168,76,0.14);color:#C9A84C;">AP</div>
+<div><div class="company-name">Amorepacific</div><div class="company-type">Conglomerate · KOSPI Listed</div></div>
+</div>
+<div class="company-metrics">
+<div class="cm-item"><span class="cm-label">Revenue (2026E)</span><span class="cm-val">₩4.2T</span></div>
+<div class="cm-item"><span class="cm-label">Global Revenue Share</span><span class="cm-val">45%</span></div>
+<div class="cm-item"><span class="cm-label">YoY Growth</span><span class="cm-val positive">+8.2%</span></div>
+<div class="cm-item"><span class="cm-label">Key Brands</span><span class="cm-val">Laneige, Sulwhasoo, IOPE</span></div>
+</div>
+</div>
+<div class="company-card">
+<div class="company-card-header">
+<div class="company-init" style="background:rgba(147,197,253,0.12);color:#93c5fd;">LG</div>
+<div><div class="company-name">LG H&amp;H</div><div class="company-type">Conglomerate · KOSPI Listed</div></div>
+</div>
+<div class="company-metrics">
+<div class="cm-item"><span class="cm-label">Revenue (2026E)</span><span class="cm-val">₩3.8T</span></div>
+<div class="cm-item"><span class="cm-label">Global Revenue Share</span><span class="cm-val">38%</span></div>
+<div class="cm-item"><span class="cm-label">YoY Growth</span><span class="cm-val positive">+5.1%</span></div>
+<div class="cm-item"><span class="cm-label">Key Brands</span><span class="cm-val">The History of Whoo, Ohui</span></div>
+</div>
+</div>
+<div class="company-card">
+<div class="company-card-header">
+<div class="company-init" style="background:rgba(74,222,128,0.12);color:#4ade80;">CX</div>
+<div><div class="company-name">COSRX (P&amp;G)</div><div class="company-type">Indie → Global · Acquired 2023</div></div>
+</div>
+<div class="company-metrics">
+<div class="cm-item"><span class="cm-label">Revenue (2026E)</span><span class="cm-val">$480M</span></div>
+<div class="cm-item"><span class="cm-label">US Market Share</span><span class="cm-val">32%</span></div>
+<div class="cm-item"><span class="cm-label">YoY Growth</span><span class="cm-val positive">+210%</span></div>
+<div class="cm-item"><span class="cm-label">Key Product</span><span class="cm-val">Snail 96 Essence</span></div>
+</div>
+</div>
+<div class="company-card">
+<div class="company-card-header">
+<div class="company-init" style="background:rgba(196,181,253,0.12);color:#c4b5fd;">AN</div>
+<div><div class="company-name">Anua (Labcorp)</div><div class="company-type">Indie Brand · Fast Growing</div></div>
+</div>
+<div class="company-metrics">
+<div class="cm-item"><span class="cm-label">Revenue (2026E)</span><span class="cm-val">$180M</span></div>
+<div class="cm-item"><span class="cm-label">US Market Share</span><span class="cm-val">38%</span></div>
+<div class="cm-item"><span class="cm-label">YoY Growth</span><span class="cm-val positive">+195%</span></div>
+<div class="cm-item"><span class="cm-label">Key Product</span><span class="cm-val">Heartleaf Toner</span></div>
+</div>
+</div>
+<div class="company-card">
+<div class="company-card-header">
+<div class="company-init" style="background:rgba(249,168,212,0.12);color:#f9a8d4;">BJ</div>
+<div><div class="company-name">Beauty of Joseon</div><div class="company-type">Indie Brand · Heritage</div></div>
+</div>
+<div class="company-metrics">
+<div class="cm-item"><span class="cm-label">Revenue (2026E)</span><span class="cm-val">$220M</span></div>
+<div class="cm-item"><span class="cm-label">US Market Share</span><span class="cm-val">35%</span></div>
+<div class="cm-item"><span class="cm-label">YoY Growth</span><span class="cm-val positive">+145%</span></div>
+<div class="cm-item"><span class="cm-label">Key Product</span><span class="cm-val">Relief Sun</span></div>
+</div>
+</div>
+<div class="company-card">
+<div class="company-card-header">
+<div class="company-init" style="background:rgba(251,191,36,0.12);color:#fbbf24;">OY</div>
+<div><div class="company-name">Olive Young (CJ)</div><div class="company-type">Retail Platform · KOSPI</div></div>
+</div>
+<div class="company-metrics">
+<div class="cm-item"><span class="cm-label">Revenue (2026E)</span><span class="cm-val">₩4.1T</span></div>
+<div class="cm-item"><span class="cm-label">Store Count</span><span class="cm-val">1,300+</span></div>
+<div class="cm-item"><span class="cm-label">YoY Growth</span><span class="cm-val positive">+18.5%</span></div>
+<div class="cm-item"><span class="cm-label">Global Shipping</span><span class="cm-val">150+ Countries</span></div>
+</div>
+</div>
+</div>
+</section>
+<!-- INDUSTRY OUTLOOK -->
+<section class="intel-section" id="industry-outlook">
+<div class="intel-section-header">
+<div>
+<div class="intel-section-tag">INDUSTRY OUTLOOK</div>
+<div class="intel-section-title">K-Beauty Industry Forecast 2026–2030</div>
+<div class="intel-section-subtitle">Key trends, growth drivers, and strategic outlook for the global K-Beauty industry</div>
+</div>
+<span class="intel-update-badge">2026 Forecast</span>
+</div>
+<div class="outlook-grid">
+<div class="outlook-card">
+<div class="outlook-card-tag">GROWTH DRIVER</div>
+<div class="outlook-card-title">North America K-Beauty Boom</div>
+<div class="outlook-card-desc">The US market is driving the largest K-Beauty growth globally, with TikTok and Instagram accelerating consumer discovery and purchase conversion at unprecedented rates.</div>
+<div class="outlook-points">
+<div class="op-item"><span class="op-dot"></span>US K-Beauty market grew 28% YoY in 2026</div>
+<div class="op-item"><span class="op-dot"></span>TikTok Shop K-Beauty GMV exceeded $1.2B in 2026</div>
+<div class="op-item"><span class="op-dot"></span>Sephora K-Beauty shelf space expanded 40% in 2026</div>
+<div class="op-item"><span class="op-dot"></span>Amazon K-Beauty category grew 35% YoY</div>
+</div>
+</div>
+<div class="outlook-card">
+<div class="outlook-card-tag">TREND</div>
+<div class="outlook-card-title">Ingredient-First Consumer Behavior</div>
+<div class="outlook-card-desc">Global consumers are increasingly ingredient-literate, driving demand for K-Beauty's science-backed, ingredient-focused formulations. Snail mucin, centella, and niacinamide lead global searches.</div>
+<div class="outlook-points">
+<div class="op-item"><span class="op-dot"></span>"Snail mucin" searches up 340% globally (2024-2026)</div>
+<div class="op-item"><span class="op-dot"></span>Centella asiatica products grew 180% in US</div>
+<div class="op-item"><span class="op-dot"></span>Niacinamide remains #1 searched skincare ingredient</div>
+<div class="op-item"><span class="op-dot"></span>Clean beauty + K-Beauty overlap growing rapidly</div>
+</div>
+</div>
+<div class="outlook-card">
+<div class="outlook-card-tag">MARKET SHIFT</div>
+<div class="outlook-card-title">Indie Brand Disruption</div>
+<div class="outlook-card-desc">Indie K-Beauty brands like COSRX, Anua, and Beauty of Joseon are outpacing traditional conglomerates in global growth, driven by strong social media engagement and direct-to-consumer strategies.</div>
+<div class="outlook-points">
+<div class="op-item"><span class="op-dot"></span>Indie brands now represent 45% of K-Beauty exports</div>
+<div class="op-item"><span class="op-dot"></span>Average indie brand growth rate: 120% YoY</div>
+<div class="op-item"><span class="op-dot"></span>P&amp;G acquired COSRX for $1.7B in 2023</div>
+<div class="op-item"><span class="op-dot"></span>M&amp;A activity in K-Beauty accelerating</div>
+</div>
+</div>
+<div class="outlook-card">
+<div class="outlook-card-tag">FORECAST</div>
+<div class="outlook-card-title">2030 Market Projection</div>
+<div class="outlook-card-desc">The global K-Beauty market is projected to reach $43.5B by 2030, driven by North America, Europe, and Southeast Asia expansion. Sunscreen and serum categories will lead growth.</div>
+<div class="outlook-points">
+<div class="op-item"><span class="op-dot"></span>2030 market size: $43.5B (CAGR 8.4%)</div>
+<div class="op-item"><span class="op-dot"></span>Sunscreen category: fastest growing segment</div>
+<div class="op-item"><span class="op-dot"></span>Europe to become #2 K-Beauty market by 2028</div>
+<div class="op-item"><span class="op-dot"></span>Middle East emerging as high-growth market</div>
+</div>
+</div>
+</div>
+</section>
+<!-- INGREDIENT INTELLIGENCE -->
+<section class="intel-section" id="ingredient-intelligence">
+<div class="intel-section-header">
+<div>
+<div class="intel-section-tag">INGREDIENT INTELLIGENCE</div>
+<div class="intel-section-title">K-Beauty Ingredient Trend Analysis</div>
+<div class="intel-section-subtitle">Trending skincare ingredients driving K-Beauty product innovation and global consumer demand</div>
+</div>
+<span class="intel-update-badge">Mar 2026 Trend</span>
+</div>
+<div class="ingredient-grid">
+<div class="ingredient-card">
+<div class="ingredient-name">Snail Mucin</div>
+<div class="ingredient-kr">달팽이 점액</div>
+<div class="ingredient-score-wrap"><span class="ing-score-label">Trend Score</span><span class="ing-score-val">99</span></div>
+<div class="ing-bar"><div class="ing-fill" style="width:99%"></div></div>
+<div class="ingredient-tags"><span class="ing-tag">Repair</span><span class="ing-tag">Hydration</span><span class="ing-tag">Anti-Aging</span></div>
+<div class="ingredient-trend"><span class="ing-trend-label">YoY Search</span><span class="ing-trend-val hot">▲ +340%</span></div>
+</div>
+<div class="ingredient-card">
+<div class="ingredient-name">Centella Asiatica</div>
+<div class="ingredient-kr">병풀 추출물</div>
+<div class="ingredient-score-wrap"><span class="ing-score-label">Trend Score</span><span class="ing-score-val">96</span></div>
+<div class="ing-bar"><div class="ing-fill" style="width:96%"></div></div>
+<div class="ingredient-tags"><span class="ing-tag">Soothing</span><span class="ing-tag">Sensitive</span><span class="ing-tag">Healing</span></div>
+<div class="ingredient-trend"><span class="ing-trend-label">YoY Search</span><span class="ing-trend-val up">▲ +180%</span></div>
+</div>
+<div class="ingredient-card">
+<div class="ingredient-name">Niacinamide</div>
+<div class="ingredient-kr">나이아신아마이드</div>
+<div class="ingredient-score-wrap"><span class="ing-score-label">Trend Score</span><span class="ing-score-val">95</span></div>
+<div class="ing-bar"><div class="ing-fill" style="width:95%"></div></div>
+<div class="ingredient-tags"><span class="ing-tag">Brightening</span><span class="ing-tag">Pore</span><span class="ing-tag">Oil Control</span></div>
+<div class="ingredient-trend"><span class="ing-trend-label">YoY Search</span><span class="ing-trend-val up">▲ +95%</span></div>
+</div>
+<div class="ingredient-card">
+<div class="ingredient-name">Hyaluronic Acid</div>
+<div class="ingredient-kr">히알루론산</div>
+<div class="ingredient-score-wrap"><span class="ing-score-label">Trend Score</span><span class="ing-score-val">94</span></div>
+<div class="ing-bar"><div class="ing-fill" style="width:94%"></div></div>
+<div class="ingredient-tags"><span class="ing-tag">Hydration</span><span class="ing-tag">Plumping</span><span class="ing-tag">All Types</span></div>
+<div class="ingredient-trend"><span class="ing-trend-label">YoY Search</span><span class="ing-trend-val stable">▲ +45%</span></div>
+</div>
+<div class="ingredient-card">
+<div class="ingredient-name">Heartleaf</div>
+<div class="ingredient-kr">어성초 (Houttuynia)</div>
+<div class="ingredient-score-wrap"><span class="ing-score-label">Trend Score</span><span class="ing-score-val">92</span></div>
+<div class="ing-bar"><div class="ing-fill" style="width:92%"></div></div>
+<div class="ingredient-tags"><span class="ing-tag">Calming</span><span class="ing-tag">Acne</span><span class="ing-tag">Sensitive</span></div>
+<div class="ingredient-trend"><span class="ing-trend-label">YoY Search</span><span class="ing-trend-val hot">▲ +220%</span></div>
+</div>
+<div class="ingredient-card">
+<div class="ingredient-name">Propolis</div>
+<div class="ingredient-kr">프로폴리스</div>
+<div class="ingredient-score-wrap"><span class="ing-score-label">Trend Score</span><span class="ing-score-val">88</span></div>
+<div class="ing-bar"><div class="ing-fill" style="width:88%"></div></div>
+<div class="ingredient-tags"><span class="ing-tag">Antioxidant</span><span class="ing-tag">Glow</span><span class="ing-tag">Repair</span></div>
+<div class="ingredient-trend"><span class="ing-trend-label">YoY Search</span><span class="ing-trend-val up">▲ +125%</span></div>
+</div>
+<div class="ingredient-card">
+<div class="ingredient-name">Rice Extract</div>
+<div class="ingredient-kr">쌀 추출물</div>
+<div class="ingredient-score-wrap"><span class="ing-score-label">Trend Score</span><span class="ing-score-val">87</span></div>
+<div class="ing-bar"><div class="ing-fill" style="width:87%"></div></div>
+<div class="ingredient-tags"><span class="ing-tag">Brightening</span><span class="ing-tag">Traditional</span><span class="ing-tag">Gentle</span></div>
+<div class="ingredient-trend"><span class="ing-trend-label">YoY Search</span><span class="ing-trend-val up">▲ +88%</span></div>
+</div>
+<div class="ingredient-card">
+<div class="ingredient-name">Ceramide</div>
+<div class="ingredient-kr">세라마이드</div>
+<div class="ingredient-score-wrap"><span class="ing-score-label">Trend Score</span><span class="ing-score-val">86</span></div>
+<div class="ing-bar"><div class="ing-fill" style="width:86%"></div></div>
+<div class="ingredient-tags"><span class="ing-tag">Barrier</span><span class="ing-tag">Dry Skin</span><span class="ing-tag">Repair</span></div>
+<div class="ingredient-trend"><span class="ing-trend-label">YoY Search</span><span class="ing-trend-val stable">▲ +62%</span></div>
+</div>
+</div>
+</section>
+</main>
+<footer id="kb-footer" role="contentinfo">
+<div class="kb-container">
+<div class="kb-footer-top">
+<div class="kb-footer-brand">
+<div style="font-size:1.1rem;font-weight:800;color:#C9A84C;font-family:'Montserrat',sans-serif;">K-Beauty Intelligence</div>
+<p class="kb-footer-parent">by K-IMPACT Media Group</p>
+</div>
+<nav class="kb-footer-nav">
+<div class="kb-footer-col"><h4>Intelligence</h4><ul><li><a href="#market-intelligence">Market Intelligence</a></li><li><a href="#company-intelligence">Company Intelligence</a></li><li><a href="#industry-outlook">Industry Outlook</a></li><li><a href="#ingredient-intelligence">Ingredient Intelligence</a></li></ul></div>
+<div class="kb-footer-col"><h4>Database</h4><ul><li><a href="brands.html">Brand Database</a></li><li><a href="products.html">Product Database</a></li><li><a href="deals.html">Deals Engine</a></li></ul></div>
+</nav>
+</div>
+<div class="kb-footer-bottom">
+	            <p>
+	                K-IMPACT Media Group | 대표자: 이예정 | 사업자등록번호: 688-07-03669<br>
+	                사업장 주소: 서울특별시 동작구 사당로 300 | 이메일: yejungi@naver.com<br>
+	                통신판매업 신고: 준비 중
+	            </p>
+	            <p>© 2026 K-Beauty Intelligence by K-IMPACT Media Group. All rights reserved.</p>
+	        </div>
+</div>
+</footer>
+<script src="assets/js/kb-i18n.js?v=2026"></script>
+<script src="assets/js/kb-i18n.js?v=13"></script>
+<script src="assets/js/kb-main.js?v=13"></script>
+<script>
+    const navTabs = document.querySelectorAll('.intel-nav-tab');
+    navTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        navTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+      });
+    });
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          navTabs.forEach(tab => {
+            tab.classList.toggle('active', tab.getAttribute('href') === '#' + id);
+          });
+        }
+      });
+    }, { threshold: 0.3 });
+    document.querySelectorAll('.intel-section').forEach(s => observer.observe(s));
+  </script>
+</body>
+</html>
