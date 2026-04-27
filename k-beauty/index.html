@@ -1,0 +1,2257 @@
+<!DOCTYPE html>
+
+<html data-lang="ko" lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>K-Beauty Intelligence Platform | K-IMPACT</title>
+<meta content="The ultimate destination for K-Beauty trends, brands, and products. Discover data-driven insights and top Korean skincare recommendations." name="description"/>
+<meta content="K-Beauty, Korean Beauty, K-Beauty Intelligence, Beauty Data Platform, Korean Skincare, K-Beauty Trends, Brand Rankings, Beauty Intelligence, Best Korean Skincare, Top K-Beauty Products" name="keywords"/>
+<meta content="K-Beauty by K-IMPACT Media Group" name="author"/>
+<meta content="index, follow" name="robots"/>
+<meta content="website" property="og:type"/>
+<meta content="K-Beauty Intelligence Platform | K-IMPACT" property="og:title"/>
+<meta content="The ultimate destination for K-Beauty trends, brands, and products. Discover data-driven insights and top Korean skincare recommendations." property="og:description"/>
+<meta content="https://www.kimpactmedia.com/k-beauty/index.html" property="og:url"/>
+<meta content="ko_KR" property="og:locale"/>
+<meta content="K-Beauty Intelligence by K-IMPACT" property="og:site_name"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@kimpactmedia" name="twitter:site"/>
+<meta content="https://www.kimpactmedia.com/assets/images/logo-dark.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="https://www.kimpactmedia.com/k-beauty/assets/images/og-kbeauty.jpg" name="twitter:image"/>
+<meta content="K-Beauty Intelligence | Global Beauty Intelligence Platform" name="twitter:title"/>
+<meta content="Discover data, trends and insights shaping the global K-Beauty industry." name="twitter:description"/>
+<link href="https://www.kimpactmedia.com/k-beauty/index.html" rel="canonical"/>
+<link href="https://www.kimpactmedia.com/k-beauty/index.html" hreflang="ko" rel="alternate"/>
+<link href="https://www.kimpactmedia.com/k-beauty/index.html?lang=en" hreflang="en" rel="alternate"/>
+<link href="https://www.kimpactmedia.com/k-beauty/index.html?lang=ja" hreflang="ja" rel="alternate"/>
+<link href="https://www.kimpactmedia.com/k-beauty/index.html" hreflang="x-default" rel="alternate"/>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "K-Beauty Intelligence",
+    "url": "https://www.kimpactmedia.com/k-beauty/",
+    "description": "Global Beauty Intelligence Platform — data, trends and insights for the K-Beauty industry.",
+    "publisher": { "@type": "Organization", "name": "K-IMPACT Media Group", "url": "https://www.kimpactmedia.com", "email": "mailto:yejungi@naver.com" }
+  }
+  </script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&amp;family=Montserrat:wght@300;400;600;700;900&amp;family=Noto+Sans+KR:wght@300;400;700;900&amp;family=Noto+Sans+Arabic:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/kbeauty.css?v=13" rel="stylesheet"/>
+<link href="../shared/auth.css?v=13" rel="stylesheet"/>
+<style>
+    /* ===== PLATFORM STATS BAR ===== */
+    .kb-platform-stats {
+      background: rgba(0,0,0,0.5);
+      border-bottom: 1px solid rgba(201,168,76,0.12);
+      padding: 0.55rem 0;
+      position: relative;
+      z-index: 10;
+    }
+    .kb-platform-stats-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .kb-pstat {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.4);
+      font-family: 'Montserrat', sans-serif;
+    }
+    .kb-pstat-val { font-weight: 700; color: #C9A84C; }
+    .kb-pstat-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #4ade80;
+      animation: pulse-dot 2s infinite;
+    }
+    @keyframes pulse-dot {
+      0%,100%{opacity:1;transform:scale(1);}
+      50%{opacity:0.5;transform:scale(1.4);}
+    }
+
+    /* ===== SECTION DIVIDER ===== */
+    .kb-section-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201,168,76,0.12), transparent);
+    }
+
+    /* ===== PREVIEW BADGE ===== */
+    .kb-preview-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.7rem;
+      border-radius: 4px;
+      background: rgba(201,168,76,0.06);
+      border: 1px solid rgba(201,168,76,0.18);
+      color: rgba(201,168,76,0.6);
+      margin-top: 0.5rem;
+    }
+
+    /* ===== VIEW ALL BUTTON ===== */
+    .kb-view-all-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #C9A84C;
+      text-decoration: none;
+      padding: 0.5rem 1.1rem;
+      border: 1px solid rgba(201,168,76,0.25);
+      border-radius: 6px;
+      transition: all 0.2s;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .kb-view-all-btn:hover {
+      background: rgba(201,168,76,0.08);
+      border-color: rgba(201,168,76,0.4);
+      color: #e8c97a;
+    }
+
+    /* ===== TOP BRAND RANKINGS ===== */
+    .kb-brand-rankings { background: rgba(0,0,0,0.25); }
+    .brand-rank-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    @media(max-width:768px){ .brand-rank-grid { grid-template-columns: 1fr; } }
+    .brand-rank-table {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .brt-header {
+      display: grid;
+      grid-template-columns: 36px 1fr 70px 70px 50px;
+      gap: 0.5rem;
+      padding: 0.7rem 1.2rem;
+      background: rgba(255,255,255,0.02);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      font-size: 0.58rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.28);
+      font-family: 'Montserrat', sans-serif;
+    }
+    .brt-row {
+      display: grid;
+      grid-template-columns: 36px 1fr 70px 70px 50px;
+      gap: 0.5rem;
+      padding: 0.75rem 1.2rem;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      align-items: center;
+      transition: background 0.2s;
+    }
+    .brt-row:last-child { border-bottom: none; }
+    .brt-row:hover { background: rgba(255,255,255,0.02); }
+    .brt-rank {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: rgba(255,255,255,0.28);
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .brt-rank.gold { color: #C9A84C; }
+    .brt-rank.silver { color: #a8b8c8; }
+    .brt-rank.bronze { color: #cd7f32; }
+    .brt-brand-cell { display: flex; align-items: center; gap: 0.6rem; }
+    .brt-init {
+      width: 28px; height: 28px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.58rem;
+      font-weight: 800;
+      flex-shrink: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .brt-brand-name { font-size: 0.76rem; font-weight: 600; color: rgba(255,255,255,0.85); }
+    .brt-brand-cat { font-size: 0.58rem; color: rgba(255,255,255,0.32); }
+    .brt-cat-tag {
+      font-size: 0.58rem;
+      color: rgba(255,255,255,0.4);
+      font-family: 'Montserrat', sans-serif;
+    }
+    .brt-score-wrap { display: flex; flex-direction: column; gap: 0.2rem; }
+    .brt-score-bar {
+      height: 3px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .brt-score-fill {
+      height: 100%;
+      background: linear-gradient(90deg, rgba(201,168,76,0.4), #C9A84C);
+      border-radius: 2px;
+    }
+    .brt-score-num {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #C9A84C;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .brt-change {
+      font-size: 0.62rem;
+      font-weight: 700;
+      text-align: right;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .brt-change.up { color: #4ade80; }
+    .brt-change.down { color: #f87171; }
+    .brt-change.same { color: rgba(255,255,255,0.28); }
+    .brand-rank-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .brand-rank-note { font-size: 0.6rem; color: rgba(255,255,255,0.22); font-family: 'Montserrat', sans-serif; }
+
+    /* ===== TOP PRODUCT RANKINGS ===== */
+    .kb-product-rankings { background: rgba(0,0,0,0.15); }
+    .prod-rank-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    @media(max-width:900px){ .prod-rank-grid { grid-template-columns: 1fr 1fr; } }
+    @media(max-width:600px){ .prod-rank-grid { grid-template-columns: 1fr; } }
+    .prod-rank-category {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .prc-header {
+      padding: 0.85rem 1.2rem;
+      background: rgba(255,255,255,0.02);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .prc-title {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      font-family: 'Montserrat', sans-serif;
+    }
+    .prc-update {
+      font-size: 0.55rem;
+      font-weight: 700;
+      background: rgba(74,222,128,0.08);
+      border: 1px solid rgba(74,222,128,0.18);
+      color: #4ade80;
+      padding: 0.12rem 0.45rem;
+      border-radius: 3px;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .prc-list { padding: 0.3rem 0; }
+    .prc-item {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 0.55rem 1.2rem;
+      border-bottom: 1px solid rgba(255,255,255,0.03);
+      transition: background 0.2s;
+    }
+    .prc-item:last-child { border-bottom: none; }
+    .prc-item:hover { background: rgba(255,255,255,0.02); }
+    .prc-num {
+      font-size: 0.62rem;
+      font-weight: 800;
+      color: rgba(255,255,255,0.22);
+      width: 16px;
+      text-align: center;
+      flex-shrink: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .prc-num.gold { color: #C9A84C; }
+    .prc-num.silver { color: #a8b8c8; }
+    .prc-num.bronze { color: #cd7f32; }
+    .prc-info { flex: 1; min-width: 0; }
+    .prc-name {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.82);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .prc-brand { font-size: 0.58rem; color: rgba(255,255,255,0.32); }
+    .prc-score {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #C9A84C;
+      flex-shrink: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .prc-footer {
+      padding: 0.6rem 1.2rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    /* ===== BRAND DATABASE PREVIEW ===== */
+    .kb-brand-db-preview { background: rgba(0,0,0,0.3); }
+    .brand-db-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.2rem;
+      margin-top: 2rem;
+    }
+    @media(max-width:1000px){ .brand-db-grid { grid-template-columns: 1fr 1fr; } }
+    @media(max-width:500px){ .brand-db-grid { grid-template-columns: 1fr; } }
+    .brand-db-card {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 12px;
+      padding: 1.2rem;
+      transition: all 0.3s;
+      text-decoration: none;
+      display: block;
+    }
+    .brand-db-card:hover {
+      border-color: rgba(201,168,76,0.25);
+      background: rgba(201,168,76,0.03);
+      transform: translateY(-2px);
+    }
+    .bdb-header { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.9rem; }
+    .bdb-init {
+      width: 40px; height: 40px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.72rem;
+      font-weight: 800;
+      flex-shrink: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .bdb-info { flex: 1; }
+    .bdb-name { font-size: 0.82rem; font-weight: 700; color: rgba(255,255,255,0.9); }
+    .bdb-cat { font-size: 0.6rem; color: rgba(255,255,255,0.32); }
+    .bdb-rank-badge {
+      font-size: 0.55rem;
+      font-weight: 700;
+      padding: 0.18rem 0.45rem;
+      border-radius: 3px;
+      background: rgba(201,168,76,0.08);
+      border: 1px solid rgba(201,168,76,0.18);
+      color: #C9A84C;
+      font-family: 'Montserrat', sans-serif;
+      white-space: nowrap;
+    }
+    .bdb-metrics {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+      margin-bottom: 0.9rem;
+    }
+    .bdb-metric {
+      background: rgba(255,255,255,0.02);
+      border-radius: 6px;
+      padding: 0.4rem 0.6rem;
+    }
+    .bdb-metric-label {
+      font-size: 0.52rem;
+      color: rgba(255,255,255,0.28);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.2rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .bdb-metric-val {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #C9A84C;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .bdb-markets { display: flex; gap: 0.3rem; flex-wrap: wrap; margin-bottom: 0.8rem; }
+    .bdb-market-tag {
+      font-size: 0.52rem;
+      font-weight: 600;
+      padding: 0.12rem 0.38rem;
+      border-radius: 3px;
+      background: rgba(147,197,253,0.07);
+      border: 1px solid rgba(147,197,253,0.14);
+      color: #93c5fd;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .bdb-trend-score { display: flex; align-items: center; gap: 0.5rem; }
+    .bdb-trend-label {
+      font-size: 0.55rem;
+      color: rgba(255,255,255,0.28);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .bdb-trend-bar {
+      flex: 1;
+      height: 4px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .bdb-trend-fill {
+      height: 100%;
+      background: linear-gradient(90deg, rgba(74,222,128,0.4), #4ade80);
+      border-radius: 2px;
+    }
+    .bdb-trend-num {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #4ade80;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    /* ===== PRODUCT DATABASE PREVIEW ===== */
+    .kb-product-db-preview { background: rgba(0,0,0,0.18); }
+    .prod-db-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    @media(max-width:900px){ .prod-db-grid { grid-template-columns: 1fr 1fr; } }
+    @media(max-width:600px){ .prod-db-grid { grid-template-columns: 1fr; } }
+    .prod-db-card {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 12px;
+      padding: 1.3rem;
+      transition: all 0.3s;
+    }
+    .prod-db-card:hover {
+      border-color: rgba(201,168,76,0.2);
+      background: rgba(201,168,76,0.02);
+      transform: translateY(-2px);
+    }
+    .pdb-rank-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.58rem;
+      font-weight: 700;
+      padding: 0.18rem 0.55rem;
+      border-radius: 3px;
+      margin-bottom: 0.8rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .pdb-rank-badge.gold { background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.22); color: #C9A84C; }
+    .pdb-rank-badge.silver { background: rgba(168,184,200,0.1); border: 1px solid rgba(168,184,200,0.22); color: #a8b8c8; }
+    .pdb-rank-badge.bronze { background: rgba(205,127,50,0.1); border: 1px solid rgba(205,127,50,0.22); color: #cd7f32; }
+    .pdb-name { font-size: 0.85rem; font-weight: 700; color: rgba(255,255,255,0.9); margin-bottom: 0.3rem; line-height: 1.3; }
+    .pdb-brand { font-size: 0.62rem; color: rgba(255,255,255,0.38); margin-bottom: 0.8rem; }
+    .pdb-tags { display: flex; gap: 0.3rem; flex-wrap: wrap; margin-bottom: 0.8rem; }
+    .pdb-tag {
+      font-size: 0.52rem;
+      font-weight: 600;
+      padding: 0.12rem 0.38rem;
+      border-radius: 3px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.45);
+      font-family: 'Montserrat', sans-serif;
+    }
+    .pdb-ing-section { margin-bottom: 0.8rem; }
+    .pdb-ing-label {
+      font-size: 0.55rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.25);
+      margin-bottom: 0.4rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .pdb-ing-list { display: flex; gap: 0.3rem; flex-wrap: wrap; }
+    .pdb-ing {
+      font-size: 0.55rem;
+      padding: 0.12rem 0.38rem;
+      border-radius: 3px;
+      background: rgba(74,222,128,0.06);
+      border: 1px solid rgba(74,222,128,0.12);
+      color: #4ade80;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .pdb-score-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.8rem;
+      padding: 0.5rem 0.7rem;
+      background: rgba(201,168,76,0.04);
+      border: 1px solid rgba(201,168,76,0.1);
+      border-radius: 6px;
+    }
+    .pdb-score-label {
+      font-size: 0.58rem;
+      color: rgba(255,255,255,0.3);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .pdb-score-val {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #C9A84C;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .pdb-skin-types { display: flex; gap: 0.3rem; flex-wrap: wrap; margin-bottom: 0.9rem; }
+    .pdb-skin-type {
+      font-size: 0.52rem;
+      font-weight: 600;
+      padding: 0.12rem 0.38rem;
+      border-radius: 3px;
+      background: rgba(196,181,253,0.07);
+      border: 1px solid rgba(196,181,253,0.14);
+      color: #c4b5fd;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .pdb-buy-links { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+    .pdb-buy-link {
+      font-size: 0.58rem;
+      font-weight: 600;
+      padding: 0.22rem 0.55rem;
+      border-radius: 4px;
+      background: rgba(201,168,76,0.07);
+      border: 1px solid rgba(201,168,76,0.18);
+      color: #C9A84C;
+      text-decoration: none;
+      transition: all 0.2s;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .pdb-buy-link:hover { background: rgba(201,168,76,0.14); color: #e8c97a; }
+
+    /* ===== MARKET INTELLIGENCE ===== */
+    .kb-market-intel { background: rgba(0,0,0,0.35); }
+    .market-intel-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    @media(max-width:900px){ .market-intel-grid { grid-template-columns: 1fr; } }
+    .market-intel-articles { display: flex; flex-direction: column; gap: 1rem; }
+    .mia-card {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 10px;
+      padding: 1.2rem 1.4rem;
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+      transition: all 0.25s;
+    }
+    .mia-card:hover { border-color: rgba(201,168,76,0.2); background: rgba(201,168,76,0.02); }
+    .mia-category {
+      font-size: 0.55rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.18rem 0.45rem;
+      border-radius: 3px;
+      flex-shrink: 0;
+      margin-top: 0.2rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .mia-cat-market { background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.18); color: #C9A84C; }
+    .mia-cat-company { background: rgba(147,197,253,0.07); border: 1px solid rgba(147,197,253,0.18); color: #93c5fd; }
+    .mia-cat-outlook { background: rgba(196,181,253,0.07); border: 1px solid rgba(196,181,253,0.18); color: #c4b5fd; }
+    .mia-cat-ingredient { background: rgba(74,222,128,0.07); border: 1px solid rgba(74,222,128,0.18); color: #4ade80; }
+    .mia-content { flex: 1; }
+    .mia-title { font-size: 0.88rem; font-weight: 700; color: rgba(255,255,255,0.85); margin-bottom: 0.4rem; line-height: 1.4; }
+    .mia-excerpt { font-size: 0.7rem; color: rgba(255,255,255,0.38); line-height: 1.55; margin-bottom: 0.6rem; }
+    .mia-meta { display: flex; align-items: center; gap: 0.8rem; }
+    .mia-date { font-size: 0.58rem; color: rgba(255,255,255,0.22); font-family: 'Montserrat', sans-serif; }
+    .mia-read { font-size: 0.6rem; font-weight: 600; color: #C9A84C; text-decoration: none; }
+    .mia-read:hover { text-decoration: underline; }
+    .market-intel-sidebar { display: flex; flex-direction: column; gap: 1rem; }
+    .mis-widget {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 10px;
+      padding: 1.2rem;
+    }
+    .mis-widget-title {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.28);
+      margin-bottom: 0.9rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      font-family: 'Montserrat', sans-serif;
+    }
+    .mis-stat-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.45rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .mis-stat-row:last-child { border-bottom: none; }
+    .mis-stat-label { font-size: 0.66rem; color: rgba(255,255,255,0.48); }
+    .mis-stat-val { font-size: 0.72rem; font-weight: 700; color: #C9A84C; font-family: 'Montserrat', sans-serif; }
+    .mis-stat-change { font-size: 0.6rem; font-weight: 600; font-family: 'Montserrat', sans-serif; }
+    .mis-stat-change.up { color: #4ade80; }
+    .mis-stat-change.down { color: #f87171; }
+
+    /* ===== CREATOR INFLUENCE SCORE ===== */
+    .creator-influence-row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.45rem 0.7rem;
+      background: rgba(201,168,76,0.05);
+      border: 1px solid rgba(201,168,76,0.12);
+      border-radius: 5px;
+      margin: 0.6rem 0 0.8rem;
+    }
+    .cir-label {
+      font-size: 0.55rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.28);
+      font-family: 'Montserrat', sans-serif;
+      white-space: nowrap;
+    }
+    .cir-bar {
+      flex: 1;
+      height: 4px;
+      background: rgba(255,255,255,0.07);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .cir-fill {
+      height: 100%;
+      background: linear-gradient(90deg, rgba(201,168,76,0.5), #C9A84C);
+      border-radius: 2px;
+    }
+    .cir-score {
+      font-size: 0.9rem;
+      font-weight: 800;
+      color: #C9A84C;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .creator-stats-mini {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
+      margin: 0.6rem 0;
+    }
+    .csm-item {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 6px;
+      padding: 0.45rem;
+      text-align: center;
+    }
+    .csm-val {
+      font-size: 0.88rem;
+      font-weight: 800;
+      color: #C9A84C;
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .csm-label {
+      font-size: 0.52rem;
+      color: rgba(255,255,255,0.28);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    /* ===== HERO PILLARS ===== */
+    .kb-hero-pillars {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 1.5rem 0 0.5rem;
+      flex-wrap: wrap;
+    }
+    .kb-hero-pillar {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 8px;
+      padding: 0.5rem 1rem;
+    }
+    .kb-hero-pillar-icon { font-size: 1.1rem; }
+    .kb-hero-pillar-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.85);
+      letter-spacing: 0.04em;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .kb-hero-pillar-sep {
+      font-size: 1rem;
+      color: rgba(201,168,76,0.5);
+      font-weight: 700;
+    }
+
+    /* ===== 3축 플랫폼 소개 ===== */
+    .kb-platform-intro { background: rgba(0,0,0,0.2); }
+    .kb-platform-3col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    @media(max-width:900px) { .kb-platform-3col { grid-template-columns: 1fr; } }
+    @media(min-width:901px) and (max-width:1100px) { .kb-platform-3col { grid-template-columns: 1fr 1fr; } }
+    .kb-platform-card {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 2rem 1.8rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .kb-platform-card:hover {
+      border-color: rgba(201,168,76,0.3);
+      transform: translateY(-4px);
+    }
+    .kb-platform-featured {
+      border-color: rgba(201,168,76,0.25);
+      background: rgba(201,168,76,0.04);
+      position: relative;
+    }
+    .kb-platform-featured::before {
+      content: 'FEATURED';
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.58rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      color: #C9A84C;
+      background: rgba(10,10,20,0.95);
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 4px;
+      padding: 2px 10px;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .kb-platform-card-icon { font-size: 2rem; }
+    .kb-platform-card-tag {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(201,168,76,0.7);
+      font-family: 'Montserrat', sans-serif;
+    }
+    .kb-platform-card-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.92);
+      line-height: 1.4;
+    }
+    .kb-platform-card-desc {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.7;
+    }
+    .kb-platform-card-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      flex: 1;
+    }
+    .kb-platform-card-list li {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.6);
+      padding-left: 1rem;
+      position: relative;
+    }
+    .kb-platform-card-list li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: rgba(201,168,76,0.5);
+    }
+    .kb-platform-card-btn {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 6px;
+      padding: 0.5rem 1rem;
+      margin-top: 0.5rem;
+      transition: all 0.2s;
+      font-family: 'Montserrat', sans-serif;
+      width: fit-content;
+    }
+    .kb-platform-card-btn:hover {
+      border-color: rgba(201,168,76,0.4);
+      color: #C9A84C;
+    }
+    .kb-platform-card-btn-gold {
+      color: #C9A84C;
+      border-color: rgba(201,168,76,0.3);
+      background: rgba(201,168,76,0.06);
+    }
+    .kb-platform-card-btn-gold:hover {
+      background: rgba(201,168,76,0.12);
+    }
+
+    /* ===== 인기 트렌드 섹션 ===== */
+    .kb-trending-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    @media(max-width:768px) { .kb-trending-grid { grid-template-columns: 1fr 1fr; } }
+    @media(max-width:480px) { .kb-trending-grid { grid-template-columns: 1fr; } }
+    .kb-trend-card {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 12px;
+      padding: 1.2rem;
+      transition: border-color 0.2s;
+    }
+    .kb-trend-card:hover { border-color: rgba(201,168,76,0.25); }
+    .kb-trend-card-label {
+      font-size: 0.58rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(201,168,76,0.6);
+      margin-bottom: 0.4rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .kb-trend-card-title {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 0.4rem;
+      line-height: 1.4;
+    }
+    .kb-trend-card-signal {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #4ade80;
+      font-family: 'Montserrat', sans-serif;
+    }
+  
+/* SNS 링크 hover 효과 */
+.kb-header-sns-link, .kb-sns-link, .kb-sns-top {
+  transition: color 0.2s ease, transform 0.2s ease, opacity 0.2s ease !important;
+}
+.kb-header-sns-link:hover, .kb-sns-link:hover, .kb-sns-top:hover {
+  color: #e8b4c8 !important;
+  transform: translateY(-2px) !important;
+  opacity: 1 !important;
+}
+</style>
+</head>
+<body>
+<!-- ===== HEADER ===== -->
+<header id="kb-header" role="banner">
+<div class="kb-header-top">
+<a aria-label="K-IMPACT Media Group으로 돌아가기" class="back-to-group" href="../index.html">← K-IMPACT</a>
+<div class="kb-header-top-right">
+<div aria-label="SNS 링크" class="kb-header-sns">
+<a aria-label="K-IMPACT Media Group Instagram" class="kb-header-sns-link" title="K-IMPACT Media Group Instagram" href="https://www.instagram.com/kbeauty.kimpact/" rel="noopener" target="_blank">
+<svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+</a>
+<a aria-label="TikTok" class="kb-header-sns-link" href="https://www.tiktok.com/@kimpactmedia" rel="noopener" target="_blank">
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V9.05a8.16 8.16 0 0 0 4.77 1.52V7.12a4.85 4.85 0 0 1-1-.43z"></path></svg>
+</a>
+<a aria-label="YouTube" class="kb-header-sns-link" href="https://www.youtube.com/@kimpactmedia" rel="noopener" target="_blank">
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 0 0 .5 6.19C0 8.04 0 12 0 12s0 3.96.5 5.81a3.02 3.02 0 0 0 2.12 2.14C4.46 20.5 12 20.5 12 20.5s7.54 0 9.38-.55a3.02 3.02 0 0 0 2.12-2.14C24 15.96 24 12 24 12s0-3.96-.5-5.81zM9.75 15.5v-7l6.5 3.5-6.5 3.5z"></path></svg>
+</a>
+<a aria-label="Threads" class="kb-header-sns-link" href="https://www.threads.net/@kimpactmedia" rel="noopener" target="_blank">
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.473 12.01v-.017c.027-3.579.877-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-.505-1.808-1.403-3.245-2.672-4.271-1.338-1.073-3.14-1.664-5.35-1.679-2.917.02-5.11.938-6.52 2.729-1.337 1.7-2.02 4.138-2.044 7.244.024 3.106.707 5.545 2.044 7.244 1.41 1.79 3.603 2.708 6.52 2.729 2.21-.015 4.013-.606 5.35-1.679 1.269-1.026 2.167-2.463 2.672-4.271l2.04.569c-.651 2.337-1.832 4.177-3.509 5.467-1.783 1.373-4.08 2.078-6.826 2.098h-.028z"></path></svg>
+</a>
+<a aria-label="X (Twitter)" class="kb-header-sns-link" href="https://x.com/kimpactmedia" rel="noopener" target="_blank">
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+</a>
+<a aria-label="K-IMPACT Media Group Naver Blog" class="kb-header-sns-link" title="K-IMPACT Media Group Naver Blog" href="https://blog.naver.com/kimpactmedia" rel="noopener" target="_blank">
+<svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5zm3 2v2h12V7H6zm0 4v2h12v-2H6zm0 4v2h8v-2H6z"></path></svg>
+</a>
+</div>
+<div aria-label="언어 선택" class="kb-lang-dropdown" id="kb-lang-dropdown" role="navigation">
+<button aria-expanded="false" aria-haspopup="listbox" class="kb-lang-toggle" id="kb-lang-toggle">
+<span id="kb-lang-label">KO</span>
+<svg fill="none" height="10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="10"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</button>
+<div class="kb-lang-menu" id="kb-lang-menu" role="listbox">
+<button class="kb-lang-opt active" data-lang="ko" role="option">한국어</button>
+<button class="kb-lang-opt" data-lang="en" role="option">English</button>
+<button class="kb-lang-opt" data-lang="ja" role="option">日本語</button>
+<button class="kb-lang-opt" data-lang="zh" disabled="" role="option">中文 <span class="kb-lang-badge">준비 중</span></button>
+<button class="kb-lang-opt" data-lang="ar" disabled="" role="option">العربية <span class="kb-lang-badge">준비 중</span></button>
+</div>
+</div>
+<button aria-label="로그인" class="kb-login-btn" data-auth-trigger="">로그인</button>
+</div>
+</div>
+<!-- 메인 네비게이션 -->
+<nav aria-label="K-Beauty 내비게이션" class="kb-nav-container">
+<a aria-label="K-Beauty 홈" class="kb-logo-link" href="#kb-hero">
+<span aria-hidden="true" class="kb-logo-svg-wrap">
+<svg class="kb-logo-svg" fill="none" height="40" viewbox="0 0 100 100" width="40" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialgradient cx="50%" cy="50%" id="kbGlobe" r="50%"><stop offset="0%" stop-color="#ff69b4" stop-opacity="0.9"></stop><stop offset="60%" stop-color="#9b30ff" stop-opacity="0.8"></stop><stop offset="100%" stop-color="#4a0080" stop-opacity="0.6"></stop></radialgradient>
+<lineargradient id="kbArrow" x1="0%" x2="100%" y1="0%" y2="100%"><stop offset="0%" stop-color="#ffd700"></stop><stop offset="50%" stop-color="#ff69b4"></stop><stop offset="100%" stop-color="#c9a84c"></stop></lineargradient>
+<lineargradient id="kbK" x1="0%" x2="100%" y1="0%" y2="100%"><stop offset="0%" stop-color="#ffffff"></stop><stop offset="50%" stop-color="#ffd700"></stop><stop offset="100%" stop-color="#ff69b4"></stop></lineargradient>
+<filter id="kbGlow"><fegaussianblur result="blur" stddeviation="2"></fegaussianblur><femerge><femergenode in="blur"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter>
+</defs>
+<circle cx="50" cy="48" fill="url(#kbGlobe)" filter="url(#kbGlow)" opacity="0.85" r="30"></circle>
+<ellipse cx="50" cy="48" fill="none" rx="30" ry="30" stroke="rgba(255,255,255,0.25)" stroke-width="0.8"></ellipse>
+<ellipse cx="50" cy="48" fill="none" rx="18" ry="30" stroke="rgba(255,255,255,0.2)" stroke-width="0.8"></ellipse>
+<line stroke="rgba(255,255,255,0.2)" stroke-width="0.8" x1="20" x2="80" y1="48" y2="48"></line>
+<text fill="url(#kbK)" filter="url(#kbGlow)" font-family="Arial Black, sans-serif" font-size="28" font-weight="900" x="38" y="60">K</text>
+<path d="M 55 28 L 82 18 L 72 45" fill="url(#kbArrow)" filter="url(#kbGlow)" opacity="0.95"></path>
+<ellipse cx="50" cy="48" fill="none" opacity="0.8" rx="38" ry="14" stroke="url(#kbArrow)" stroke-width="2.5" transform="rotate(-25 50 48)"></ellipse>
+</svg>
+</span>
+<span class="kb-logo-text">K-Beauty</span>
+</a>
+<ul class="kb-nav-menu" role="list">
+<li><a class="kb-nav-link" href="index.html" data-i18n="kb.nav.home">홈</a></li>
+<!-- MEDIA -->
+<li class="kb-nav-has-dropdown">
+<a class="kb-nav-parent" href="intelligence.html">미디어 <span class="kb-nav-arrow">▾</span></a>
+<ul class="kb-nav-dropdown" role="list">
+<li><a href="intelligence.html">K-뷰티 뉴스</a></li>
+<li><a href="intelligence.html#market-intelligence">산업 인사이트</a></li>
+<li><a href="intelligence.html#company-intelligence">브랜드 스토리</a></li>
+<li><a href="intelligence.html#industry-outlook">시장 트렌드</a></li>
+<li><a href="creators.html">크리에이터 트렌드</a></li>
+</ul>
+</li>
+<!-- DATA PLATFORM -->
+<li class="kb-nav-has-dropdown">
+<a class="kb-nav-parent" href="brands.html">데이터 플랫폼 <span class="kb-nav-arrow">▾</span></a>
+<ul class="kb-nav-dropdown kb-nav-dropdown-wide" role="list">
+<li><a href="brands.html">브랜드 데이터베이스</a></li>
+<li><a href="products.html">제품 데이터베이스</a></li>
+<li><a href="intelligence.html#ingredient-intelligence">성분 트렌드</a></li>
+<li><a href="intelligence.html#market-intelligence">글로벌 시장 데이터</a></li>
+<li><a href="top100-brands.html">Top 100 브랜드</a></li>
+<li><a href="top100-products.html">Top 100 제품</a></li>
+</ul>
+</li>
+<!-- RANKINGS -->
+<li class="kb-nav-has-dropdown">
+<a class="kb-nav-parent" href="top100-brands.html">랭킹 <span class="kb-nav-arrow">▾</span></a>
+<ul class="kb-nav-dropdown" role="list">
+<li><a href="top100-brands.html">Top K-뷰티 브랜드</a></li>
+<li><a href="top100-products.html">Top K-뷰티 제품</a></li>
+<li><a href="best-sunscreens.html">베스트 선크림</a></li>
+<li><a href="best-serums.html">베스트 세럼</a></li>
+<li><a href="best-moisturizers.html">베스트 모이스처라이저</a></li>
+<li><a href="best-cleansers.html">베스트 클렌저</a></li>
+</ul>
+</li>
+<!-- COMMERCE -->
+<li class="kb-nav-has-dropdown">
+<a class="kb-nav-parent" href="deals.html">커머스 <span class="kb-nav-arrow">▾</span></a>
+<ul class="kb-nav-dropdown" role="list">
+<li><a href="deals.html">K-뷰티 딜</a></li>
+<li><a href="deals.html#editors-picks">에디터 픽</a></li>
+<li><a href="deals.html#olive-young">올리브영 베스트</a></li>
+<li><a href="deals.html#amazon">Amazon K-뷰티</a></li>
+</ul>
+</li>
+<!-- CREATORS -->
+<li><a class="kb-nav-link" href="creators.html" data-i18n="kb.nav.creator">크리에이터</a></li>
+<!-- ABOUT -->
+<li><a class="kb-nav-link" href="about.html" data-i18n="kb.nav.about">소개</a></li>
+</ul>
+<button aria-expanded="false" aria-label="메뉴 열기" class="kb-hamburger">
+<span></span><span></span><span></span>
+</button>
+</nav>
+</header>
+<!-- ===== PLATFORM STATS BAR ===== -->
+<div class="kb-platform-stats">
+<div class="kb-platform-stats-inner">
+<div class="kb-pstat"><span class="kb-pstat-dot"></span><span>실시간 데이터</span></div>
+<div class="kb-pstat"><span>K-뷰티 글로벌 인덱스</span><span class="kb-pstat-val">87.4</span><span style="font-size:0.62rem;color:#4ade80;font-weight:700;">▲ +8.2%</span></div>
+<div class="kb-pstat"><span>추적 브랜드</span><span class="kb-pstat-val">500+</span></div>
+<div class="kb-pstat"><span>인덱스 제품</span><span class="kb-pstat-val">2,400+</span></div>
+<div class="kb-pstat"><span>글로벌 시장</span><span class="kb-pstat-val">45+</span></div>
+<div class="kb-pstat"><span>업데이트</span><span class="kb-pstat-val">매주</span></div>
+</div>
+</div>
+<!-- ===== 1. HERO SECTION ===== -->
+<section aria-label="K-Beauty Hero" class="kb-hero" id="kb-hero">
+<div aria-hidden="true" class="kb-hero-bg">
+<div class="kb-hero-orb kb-orb-1"></div>
+<div class="kb-hero-orb kb-orb-2"></div>
+<div class="kb-hero-orb kb-orb-3"></div>
+<div class="kb-hero-grid"></div>
+</div>
+<div class="kb-hero-content">
+<div class="kb-hero-eyebrow">
+<span class="kb-hero-badge" data-i18n="kb.hero.badge">K-뷰티 인텔리전스 플랫폼</span>
+</div>
+<h1 class="kb-hero-title">
+<span class="kb-title-top" data-i18n="kb.hero.title1">K-뷰티 산업을 위한</span>
+<span class="kb-title-main gold-shimmer" data-i18n="kb.hero.title2">글로벌 인텔리전스 플랫폼</span>
+</h1>
+<p class="kb-hero-sub" data-i18n="kb.hero.sub">브랜드 데이터, 제품 인텔리전스, 시장 인사이트, 크리에이터 생태계를 통합하여 글로벌 K-뷰티 산업의 종합적인 데이터 플랫폼입니다.</p>
+<!-- 3축 플랫폼 배지 -->
+<div class="kb-hero-pillars">
+<div class="kb-hero-pillar">
+<span class="kb-hero-pillar-icon">📡</span>
+<span class="kb-hero-pillar-label" data-i18n="kb.hero.pillar.media">미디어</span>
+</div>
+<div class="kb-hero-pillar-sep">×</div>
+<div class="kb-hero-pillar">
+<span class="kb-hero-pillar-icon">📊</span>
+<span class="kb-hero-pillar-label" data-i18n="kb.hero.pillar.data">데이터</span>
+</div>
+<div class="kb-hero-pillar-sep">×</div>
+<div class="kb-hero-pillar">
+<span class="kb-hero-pillar-icon">🛒</span>
+<span class="kb-hero-pillar-label" data-i18n="kb.hero.pillar.commerce">커머스</span>
+</div>
+</div>
+<div class="kb-hero-cta">
+<a class="kb-btn kb-btn-gold" href="#kb-platform-intro">플랫폼 탐색하기</a>
+<a class="kb-btn kb-btn-outline" href="brands.html">브랜드 데이터베이스 →</a>
+</div>
+<div aria-label="실시간 트렌드" class="kb-hero-ticker">
+<span class="ticker-label" data-i18n="kb.ticker.label">트렌딩 NOW</span>
+<div class="ticker-scroll-wrap">
+<div class="ticker-track">
+<span class="ticker-item">COSRX 스네일 뮤신 에센스 — 글로벌 K-뷰티 #1 제품</span>
+<span class="ticker-sep">·</span>
+<span class="ticker-item">아누아 하트리프 토너 — 글로벌 검색량 +195% 성장</span>
+<span class="ticker-sep">·</span>
+<span class="ticker-item">Beauty of Joseon — 북미 시장 진입 가속화</span>
+<span class="ticker-sep">·</span>
+<span class="ticker-item">K-뷰티 글로벌 인덱스 87.4 — 2026년 3월 기준</span>
+<span class="ticker-sep">·</span>
+<span class="ticker-item">바쿠치올 성분 트렌드 — +340% 신호 상승</span>
+<span class="ticker-sep">·</span>
+<span class="ticker-item">토리든 다이브인 세럼 — 글로벌 베스트셀러</span>
+<span class="ticker-sep">·</span>
+<span class="ticker-item">더마 코스메틱스 트렌드 — 유럽 시장 진입 가속화</span>
+<span class="ticker-sep">·</span>
+<span class="ticker-item">Glass Skin 트렌드 — 글로벌 소셜 언급량 상승</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== 1-B. 3축 플랫폼 소개 ===== -->
+<section aria-labelledby="platform-intro-title" class="kb-section kb-platform-intro" id="kb-platform-intro">
+<div class="kb-container">
+<div class="kb-section-header">
+<span class="kb-section-tag" data-i18n="kb.platform.tag">플랫폼 소개</span>
+<h2 id="platform-intro-title">Media × Data × Commerce를 결합한 글로벌 플랫폼</h2>
+<p class="kb-section-desc">K-Beauty Intelligence는 단순한 콘텐츠 사이트가 아닙니다. 뉴스와 콘텐츠, 데이터와 인텔리전스, 구매 연결이 하나의 플랫폼에서 통합됩니다.</p>
+</div>
+<div class="kb-platform-3col">
+<!-- MEDIA -->
+<div class="kb-platform-card kb-platform-media">
+<div class="kb-platform-card-icon">📡</div>
+<div class="kb-platform-card-tag">K-뷰티 미디어</div>
+<h3 class="kb-platform-card-title">K-뷰티 산업 뉴스 &amp; 콘텐츠</h3>
+<p class="kb-platform-card-desc">K-뷰티 산업의 최신 뉴스, 브랜드 스토리, 시장 트렌드, 크리에이터 동향을 업데이트합니다.</p>
+<ul class="kb-platform-card-list">
+<li>K-뷰티 뉴스</li>
+<li>산업 인사이트</li>
+<li>브랜드 스토리</li>
+<li>시장 트렌드</li>
+<li>크리에이터 &amp; 인플루언서 트렌드</li>
+</ul>
+<a class="kb-platform-card-btn" href="intelligence.html">뉴스 보기 →</a>
+</div>
+<!-- DATA PLATFORM -->
+<div class="kb-platform-card kb-platform-data kb-platform-featured">
+<div class="kb-platform-card-icon">📊</div>
+<div class="kb-platform-card-tag">K-뷰티 데이터 플랫폼</div>
+<h3 class="kb-platform-card-title">브랜드 &amp; 제품 인텔리전스</h3>
+<p class="kb-platform-card-desc">브랜드, 제품, 성분, 글로벌 시장 데이터를 제공하는 데이터 인텔리전스 플랫폼입니다.</p>
+<ul class="kb-platform-card-list">
+<li>브랜드 데이터베이스</li>
+<li>제품 데이터베이스</li>
+<li>성분 트렌드</li>
+<li>글로벌 시장 데이터</li>
+<li>K-뷰티 랭킹 &amp; 인덱스</li>
+</ul>
+<a class="kb-platform-card-btn kb-platform-card-btn-gold" href="brands.html">데이터 탐색하기 →</a>
+</div>
+<!-- COMMERCE -->
+<div class="kb-platform-card kb-platform-commerce">
+<div class="kb-platform-card-icon">🛒</div>
+<div class="kb-platform-card-tag">K-뷰티 커머스</div>
+<h3 class="kb-platform-card-title">플랫폼 기반 추천 &amp; 구매 연결</h3>
+<p class="kb-platform-card-desc">에디터 픽, 글로벌 베스트 제품, 올리브영 &amp; Amazon 딜을 한 곳에서 확인하세요.</p>
+<ul class="kb-platform-card-list">
+<li>K-뷰티 딜</li>
+<li>에디터 픽</li>
+<li>글로벌 베스트 제품</li>
+<li>올리브영 베스트</li>
+<li>Amazon K-뷰티</li>
+</ul>
+<a class="kb-platform-card-btn" href="deals.html">딜 &amp; 추천 보기 →</a>
+</div>
+</div>
+</div>
+</section>
+<div class="kb-section-divider"></div>
+<!-- ===== 2. K-BEAUTY GLOBAL INDEX ===== -->
+<section aria-labelledby="kbgi-title" class="kb-section kb-global-index" id="kb-global-index">
+<div class="kb-section-inner">
+<div class="kb-section-header">
+<span class="kb-section-tag" data-i18n="kb.kbgi.tag">K-뷰티 글로벌 인덱스</span>
+<h2 id="kbgi-title">K-뷰티 글로벌 인텔리전스 인덱스</h2>
+<p class="kb-section-desc">K-뷰티 글로벌 인덱스는 45개 이상의 글로벌 시장에서 브랜드 선호도, 제품 트렌드, 검색 모멘텀, 소셜 미디어 언급량을 종합적으로 측정하는 지수입니다.</p>
+<span class="kb-preview-badge">데이터 프리뷰 — 매주 업데이트</span>
+</div>
+<div class="kbgi-dashboard">
+<div class="kbgi-metrics">
+<div class="kbgi-metric kbgi-metric-main">
+<div class="kbgi-metric-label">K-뷰티 글로벌 인덱스</div>
+<div class="kbgi-metric-value">87.4</div>
+<div class="kbgi-metric-change positive">+8.2% <span>vs. 지난달</span></div>
+<div class="kbgi-metric-sub">45개 이상 글로벌 시장 종합 점수</div>
+</div>
+<div class="kbgi-metric">
+<div class="kbgi-metric-label">브랜드 선호도</div>
+<div class="kbgi-metric-value">91.2</div>
+<div class="kbgi-metric-change positive">+14.5%</div>
+</div>
+<div class="kbgi-metric">
+<div class="kbgi-metric-label">제품 트렌드</div>
+<div class="kbgi-metric-value">88.7</div>
+<div class="kbgi-metric-change positive">+12.1%</div>
+</div>
+<div class="kbgi-metric">
+<div class="kbgi-metric-label">검색 트렌드</div>
+<div class="kbgi-metric-value">84.3</div>
+<div class="kbgi-metric-change positive">+5.8%</div>
+</div>
+<div class="kbgi-metric">
+<div class="kbgi-metric-label">소셜 언급</div>
+<div class="kbgi-metric-value">85.1</div>
+<div class="kbgi-metric-change positive">+9.3%</div>
+</div>
+</div>
+<div class="kbgi-regions">
+<div class="kbgi-regions-title">지역별 인덱스</div>
+<div class="kbgi-region-bars">
+<div class="kbgi-region-bar"><div class="kbgi-region-label">북미</div><div class="kbgi-bar-track"><div class="kbgi-bar-fill" style="width:78%"><span>78</span></div></div></div>
+<div class="kbgi-region-bar"><div class="kbgi-region-label">동아시아</div><div class="kbgi-bar-track"><div class="kbgi-bar-fill kbgi-bar-top" style="width:92%"><span>92</span></div></div></div>
+<div class="kbgi-region-bar"><div class="kbgi-region-label">유럽</div><div class="kbgi-bar-track"><div class="kbgi-bar-fill" style="width:61%"><span>61</span></div></div></div>
+<div class="kbgi-region-bar"><div class="kbgi-region-label">동남아시아</div><div class="kbgi-bar-track"><div class="kbgi-bar-fill" style="width:85%"><span>85</span></div></div></div>
+<div class="kbgi-region-bar"><div class="kbgi-region-label">중동</div><div class="kbgi-bar-track"><div class="kbgi-bar-fill" style="width:54%"><span>54</span></div></div></div>
+<div class="kbgi-region-bar"><div class="kbgi-region-label">라틴아메리카</div><div class="kbgi-bar-track"><div class="kbgi-bar-fill" style="width:47%"><span>47</span></div></div></div>
+</div>
+</div>
+<div class="kbgi-trending">
+<div class="kbgi-trending-title">트렌딩 브랜드</div>
+<div class="kbgi-trending-list">
+<div class="kbgi-trending-item"><span class="kbgi-rank">1</span><span class="kbgi-brand-init kbgi-init-cosrx">CX</span><span class="kbgi-brand-name">COSRX</span><span class="kbgi-score">96</span><span class="kbgi-change positive">+210%</span></div>
+<div class="kbgi-trending-item"><span class="kbgi-rank">2</span><span class="kbgi-brand-init kbgi-init-anua">AN</span><span class="kbgi-brand-name">Anua</span><span class="kbgi-score">94</span><span class="kbgi-change positive">+195%</span></div>
+<div class="kbgi-trending-item"><span class="kbgi-rank">3</span><span class="kbgi-brand-init kbgi-init-boj">BJ</span><span class="kbgi-brand-name">Beauty of Joseon</span><span class="kbgi-score">92</span><span class="kbgi-change positive">+145%</span></div>
+<div class="kbgi-trending-item"><span class="kbgi-rank">4</span><span class="kbgi-brand-init kbgi-init-torriden">TR</span><span class="kbgi-brand-name">Torriden</span><span class="kbgi-score">91</span><span class="kbgi-change positive">+88%</span></div>
+<div class="kbgi-trending-item"><span class="kbgi-rank">5</span><span class="kbgi-brand-init kbgi-init-romand">RA</span><span class="kbgi-brand-name">Rom&amp;nd</span><span class="kbgi-score">90</span><span class="kbgi-change positive">+92%</span></div>
+</div>
+<a class="kbgi-view-all" href="brands.html">전체 브랜드 인덱스 보기 →</a>
+</div>
+</div>
+<div class="kbgi-disclaimer">※ 편집팀 큐레이션 기준 데이터입니다. 실시간 데이터 시스템은 순차적으로 공개됩니다.</div>
+</div>
+</section>
+<div class="kb-section-divider"></div>
+<!-- ===== 3. TOP BRAND RANKINGS ===== -->
+<section aria-labelledby="brand-rank-title" class="kb-section kb-brand-rankings" id="brand-rankings">
+<div class="kb-container">
+<div class="kb-section-header">
+<span class="kb-section-tag" data-i18n="kb.brand.rank.tag">TOP 브랜드 랭킹</span>
+<h2 id="brand-rank-title">Top K-뷰티 브랜드</h2>
+<p class="kb-section-desc">K-뷰티 글로벌 인덱스 기준으로 매주 업데이트되는 신뢰할 수 있는 한국 뷰티 브랜드 랭킹입니다.</p>
+<span class="kb-preview-badge">데이터 프리뷰 — 매주 업데이트</span>
+</div>
+<div class="brand-rank-grid">
+<div class="brand-rank-table">
+<div class="brt-header">
+<span>#</span><span>브랜드</span><span>카테고리</span><span>점수</span><span>변동</span>
+</div>
+<div class="brt-row">
+<span class="brt-rank gold">1</span>
+<div class="brt-brand-cell"><div class="brt-init" style="background:rgba(201,168,76,0.14);color:#C9A84C;">CX</div><div><div class="brt-brand-name">COSRX</div><div class="brt-brand-cat" data-i18n="kb.deals.skincare">스킨케어</div></div></div>
+<span class="brt-cat-tag">에센스</span>
+<div class="brt-score-wrap"><div class="brt-score-bar"><div class="brt-score-fill" style="width:96%"></div></div><span class="brt-score-num">96.0</span></div>
+<span class="brt-change up">▲ 2</span>
+</div>
+<div class="brt-row">
+<span class="brt-rank silver">2</span>
+<div class="brt-brand-cell"><div class="brt-init" style="background:rgba(74,222,128,0.12);color:#4ade80;">AN</div><div><div class="brt-brand-name">Anua</div><div class="brt-brand-cat">스킨케어</div></div></div>
+<span class="brt-cat-tag">토너</span>
+<div class="brt-score-wrap"><div class="brt-score-bar"><div class="brt-score-fill" style="width:94%"></div></div><span class="brt-score-num">94.2</span></div>
+<span class="brt-change up">▲ 5</span>
+</div>
+<div class="brt-row">
+<span class="brt-rank bronze">3</span>
+<div class="brt-brand-cell"><div class="brt-init" style="background:rgba(147,197,253,0.12);color:#93c5fd;">BJ</div><div><div class="brt-brand-name">Beauty of Joseon</div><div class="brt-brand-cat">스킨케어</div></div></div>
+<span class="brt-cat-tag">세럼</span>
+<div class="brt-score-wrap"><div class="brt-score-bar"><div class="brt-score-fill" style="width:92%"></div></div><span class="brt-score-num">92.1</span></div>
+<span class="brt-change up">▲ 8</span>
+</div>
+<div class="brt-row">
+<span class="brt-rank">4</span>
+<div class="brt-brand-cell"><div class="brt-init" style="background:rgba(196,181,253,0.12);color:#c4b5fd;">TR</div><div><div class="brt-brand-name">Torriden</div><div class="brt-brand-cat">스킨케어</div></div></div>
+<span class="brt-cat-tag">세럼</span>
+<div class="brt-score-wrap"><div class="brt-score-bar"><div class="brt-score-fill" style="width:91%"></div></div><span class="brt-score-num">91.0</span></div>
+<span class="brt-change up">▲ 3</span>
+</div>
+<div class="brt-row">
+<span class="brt-rank">5</span>
+<div class="brt-brand-cell"><div class="brt-init" style="background:rgba(249,168,212,0.12);color:#f9a8d4;">LN</div><div><div class="brt-brand-name">Laneige</div><div class="brt-brand-cat">스킨케어</div></div></div>
+<span class="brt-cat-tag">모이스처라이저</span>
+<div class="brt-score-wrap"><div class="brt-score-bar"><div class="brt-score-fill" style="width:89%"></div></div><span class="brt-score-num">89.5</span></div>
+<span class="brt-change same">— 0</span>
+</div>
+</div>
+<div class="brand-rank-table">
+<div class="brt-header">
+<span>#</span><span>브랜드</span><span>카테고리</span><span>점수</span><span>변동</span>
+</div>
+<div class="brt-row">
+<span class="brt-rank">6</span>
+<div class="brt-brand-cell"><div class="brt-init" style="background:rgba(251,191,36,0.12);color:#fbbf24;">RM</div><div><div class="brt-brand-name">Rom&amp;nd</div><div class="brt-brand-cat" data-i18n="kb.deals.makeup">메이크업</div></div></div>
+<span class="brt-cat-tag">립</span>
+<div class="brt-score-wrap"><div class="brt-score-bar"><div class="brt-score-fill" style="width:88%"></div></div><span class="brt-score-num">88.3</span></div>
+<span class="brt-change up">▲ 4</span>
+</div>
+<div class="brt-row">
+<span class="brt-rank">7</span>
+<div class="brt-brand-cell"><div class="brt-init" style="background:rgba(52,211,153,0.12);color:#34d399;">SK</div><div><div class="brt-brand-name">Skin1004</div><div class="brt-brand-cat">스킨케어</div></div></div>
+<span class="brt-cat-tag">앰플</span>
+<div class="brt-score-wrap"><div class="brt-score-bar"><div class="brt-score-fill" style="width:86%"></div></div><span class="brt-score-num">86.7</span></div>
+<span class="brt-change up">▲ 12</span>
+</div>
+<div class="brt-row">
+<span class="brt-rank">8</span>
+<div class="brt-brand-cell"><div class="brt-init" style="background:rgba(167,139,250,0.12);color:#a78bfa;">IS</div><div><div class="brt-brand-name">Isntree</div><div class="brt-brand-cat">스킨케어</div></div></div>
+<span class="brt-cat-tag">토너</span>
+<div class="brt-score-wrap"><div class="brt-score-bar"><div class="brt-score-fill" style="width:84%"></div></div><span class="brt-score-num">84.2</span></div>
+<span class="brt-change up">▲ 9</span>
+</div>
+<div class="brt-row">
+<span class="brt-rank">9</span>
+<div class="brt-brand-cell"><div class="brt-init" style="background:rgba(251,113,133,0.12);color:#fb7185;">DJ</div><div><div class="brt-brand-name">Dr.Jart+</div><div class="brt-brand-cat">스킨케어</div></div></div>
+<span class="brt-cat-tag">크림</span>
+<div class="brt-score-wrap"><div class="brt-score-bar"><div class="brt-score-fill" style="width:83%"></div></div><span class="brt-score-num">83.1</span></div>
+<span class="brt-change down">▼ 1</span>
+</div>
+<div class="brt-row">
+<span class="brt-rank">10</span>
+<div class="brt-brand-cell"><div class="brt-init" style="background:rgba(45,212,191,0.12);color:#2dd4bf;">HH</div><div><div class="brt-brand-name">Haruharu Wonder</div><div class="brt-brand-cat">스킨케어</div></div></div>
+<span class="brt-cat-tag">세럼</span>
+<div class="brt-score-wrap"><div class="brt-score-bar"><div class="brt-score-fill" style="width:81%"></div></div><span class="brt-score-num">81.5</span></div>
+<span class="brt-change up">▲ 7</span>
+</div>
+</div>
+</div>
+<div class="brand-rank-footer">
+<span class="brand-rank-note">※ K-뷰티 글로벌 인덱스 기준 랭킹. 예시 데이터이며 매주 업데이트됩니다.</span>
+<a class="kb-view-all-btn" href="brands.html">전체 브랜드 데이터베이스 보기 →</a>
+</div>
+</div>
+</section>
+<div class="kb-section-divider"></div>
+<!-- ===== 4. TOP PRODUCT RANKINGS ===== -->
+<section aria-labelledby="prod-rank-title" class="kb-section kb-product-rankings" id="product-rankings">
+<div class="kb-container">
+<div class="kb-section-header">
+<span class="kb-section-tag" data-i18n="kb.prod.rank.tag">TOP 제품 랭킹</span>
+<h2 id="prod-rank-title">Top K-뷰티 제품</h2>
+<p class="kb-section-desc">글로벌 선호도, 리뷰 수, 트렌드 모멘텀 기준으로 선정된 K-뷰티 제품 랭킹입니다.</p>
+<span class="kb-preview-badge">데이터 프리뷰 — 매주 업데이트</span>
+</div>
+<div class="prod-rank-grid">
+<div class="prod-rank-category">
+<div class="prc-header"><span class="prc-title">베스트 선크림</span><span class="prc-update">운영 중</span></div>
+<div class="prc-list">
+<div class="prc-item"><span class="prc-num gold">1</span><div class="prc-info"><div class="prc-name">Heartleaf Airy Fit Sun Serum SPF 50+</div><div class="prc-brand">Anua · SPF 50+ PA++++</div></div><span class="prc-score">94</span></div>
+<div class="prc-item"><span class="prc-num silver">2</span><div class="prc-info"><div class="prc-name">Relief Sun: Rice + Probiotics SPF 50+</div><div class="prc-brand">Beauty of Joseon</div></div><span class="prc-score">92</span></div>
+<div class="prc-item"><span class="prc-num bronze">3</span><div class="prc-info"><div class="prc-name">Cicapair Tiger Grass Color Correcting SPF 30</div><div class="prc-brand">Dr.Jart+</div></div><span class="prc-score">88</span></div>
+<div class="prc-item"><span class="prc-num">4</span><div class="prc-info"><div class="prc-name">Daily UV Defense Sunscreen SPF 36</div><div class="prc-brand">Innisfree</div></div><span class="prc-score">85</span></div>
+<div class="prc-item"><span class="prc-num">5</span><div class="prc-info"><div class="prc-name">Hyaluronic Acid Watery Sun Gel SPF 50+</div><div class="prc-brand">Skin1004</div></div><span class="prc-score">83</span></div>
+</div>
+<div class="prc-footer"><a class="kb-view-all-btn" href="best-sunscreens.html" style="font-size:0.62rem;padding:0.35rem 0.8rem;">선크림 전체 보기 →</a></div>
+</div>
+<div class="prod-rank-category">
+<div class="prc-header"><span class="prc-title">베스트 세럼</span><span class="prc-update">운영 중</span></div>
+<div class="prc-list">
+<div class="prc-item"><span class="prc-num gold">1</span><div class="prc-info"><div class="prc-name">Advanced Snail 96 Mucin Power Essence</div><div class="prc-brand">COSRX · 96% Snail Mucin</div></div><span class="prc-score">99</span></div>
+<div class="prc-item"><span class="prc-num silver">2</span><div class="prc-info"><div class="prc-name">Dive-In Low Molecule Hyaluronic Acid Serum</div><div class="prc-brand">Torriden · 5-Type HA</div></div><span class="prc-score">93</span></div>
+<div class="prc-item"><span class="prc-num bronze">3</span><div class="prc-info"><div class="prc-name">Heartleaf 77% Soothing Toner</div><div class="prc-brand">Anua · 77% Heartleaf</div></div><span class="prc-score">91</span></div>
+<div class="prc-item"><span class="prc-num">4</span><div class="prc-info"><div class="prc-name">Glow Serum: Propolis + Niacinamide</div><div class="prc-brand">Beauty of Joseon</div></div><span class="prc-score">90</span></div>
+<div class="prc-item"><span class="prc-num">5</span><div class="prc-info"><div class="prc-name">Madagascar Centella Ampoule</div><div class="prc-brand">Skin1004 · 100% Centella</div></div><span class="prc-score">88</span></div>
+</div>
+<div class="prc-footer"><a class="kb-view-all-btn" href="best-serums.html" style="font-size:0.62rem;padding:0.35rem 0.8rem;">세럼 전체 보기 →</a></div>
+</div>
+<div class="prod-rank-category">
+<div class="prc-header"><span class="prc-title">베스트 모이스처라이저</span><span class="prc-update">운영 중</span></div>
+<div class="prc-list">
+<div class="prc-item"><span class="prc-num gold">1</span><div class="prc-info"><div class="prc-name">Advanced Snail 92 All In One Cream</div><div class="prc-brand">COSRX · 92% Snail Mucin</div></div><span class="prc-score">96</span></div>
+<div class="prc-item"><span class="prc-num silver">2</span><div class="prc-info"><div class="prc-name">Water Sleeping Mask</div><div class="prc-brand">Laneige · Overnight</div></div><span class="prc-score">94</span></div>
+<div class="prc-item"><span class="prc-num bronze">3</span><div class="prc-info"><div class="prc-name">Dive-In Hyaluronic Acid Moisturizing Cream</div><div class="prc-brand">Torriden · 5-Type HA</div></div><span class="prc-score">89</span></div>
+<div class="prc-item"><span class="prc-num">4</span><div class="prc-info"><div class="prc-name">Cicapair Tiger Grass Cream</div><div class="prc-brand">Dr.Jart+ · Centella</div></div><span class="prc-score">87</span></div>
+<div class="prc-item"><span class="prc-num">5</span><div class="prc-info"><div class="prc-name">Ceramide Moisturizing Cream</div><div class="prc-brand">Isntree · Ceramide</div></div><span class="prc-score">85</span></div>
+</div>
+<div class="prc-footer"><a class="kb-view-all-btn" href="best-moisturizers.html" style="font-size:0.62rem;padding:0.35rem 0.8rem;">모이스처라이저 전체 보기 →</a></div>
+</div>
+</div>
+<div style="text-align:center;margin-top:2rem;">
+<a class="kb-view-all-btn" href="products.html">전체 제품 데이터베이스 보기 (2,400+ 제품) →</a>
+</div>
+</div>
+</section>
+<div class="kb-section-divider"></div>
+<!-- ===== 5. AI BEAUTY TREND ENGINE ===== -->
+<section aria-labelledby="ai-title" class="kb-section kb-ai" id="ai-engine">
+<div class="kb-container">
+<div class="kb-section-header">
+<span class="kb-section-tag ai-tag" data-i18n="kb.ai.title">AI 뷰티 트렌드 엔진</span>
+<h2 id="ai-title">AI 뷰티 트렌드 엔진</h2>
+<p class="kb-section-desc">소셜 신호, 크리에이터 활동, 글로벌 뷰티 대화를 분석하여 주류 시장에 도달하기 전에 신흥 뷰티 트렌드를 식별하는 실험적 시스템입니다.</p>
+</div>
+<div class="ai-engine-box">
+<div class="aie-header">
+<div class="aie-dots"><span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span></div>
+<span class="aie-title">K-IMPACT AI 뷰티 트렌드 엔진 — 실시간 분석</span>
+<div class="aie-live"><span class="aie-pulse"></span>AI 분석 중</div>
+</div>
+<div class="aie-body">
+<div class="aie-widget">
+<div class="aie-wt">다음 브레이크아웃 성분</div>
+<div class="aie-items">
+<div class="aie-item"><span class="aie-rank">01</span><span class="aie-name">바쿠치올</span><span class="aie-signal hot">+340% 시그널</span></div>
+<div class="aie-item"><span class="aie-rank">02</span><span class="aie-name">센텔라 아시아티카</span><span class="aie-signal rise">+220% 시그널</span></div>
+<div class="aie-item"><span class="aie-rank">03</span><span class="aie-name">쑥 추출물</span><span class="aie-signal new">+180% 시그널</span></div>
+<div class="aie-item"><span class="aie-rank">04</span><span class="aie-name">쌀겨 오일</span><span class="aie-signal watch">+150% 시그널</span></div>
+</div>
+</div>
+<div class="aie-widget">
+<div class="aie-wt">다음 주목 브랜드</div>
+<div class="aie-brands">
+<div class="aie-brand"><span class="aie-bname">Skin1004</span><div class="aie-bbar-w"><div class="aie-bbar" style="--bw:91%"></div></div><span class="aie-bscore">91</span></div>
+<div class="aie-brand"><span class="aie-bname">Isntree</span><div class="aie-bbar-w"><div class="aie-bbar" style="--bw:87%"></div></div><span class="aie-bscore">87</span></div>
+<div class="aie-brand"><span class="aie-bname">Haruharu</span><div class="aie-bbar-w"><div class="aie-bbar" style="--bw:84%"></div></div><span class="aie-bscore">84</span></div>
+<div class="aie-brand"><span class="aie-bname">Round Lab</span><div class="aie-bbar-w"><div class="aie-bbar" style="--bw:79%"></div></div><span class="aie-bscore">79</span></div>
+</div>
+</div>
+<div class="aie-widget">
+<div class="aie-wt">글로벌 트렌드 시그널</div>
+<div class="aie-signals">
+<div class="aie-sig"><span class="aie-sig-flag">US</span><span class="aie-sig-trend">Glass Skin 튜토리얼</span><span class="aie-sig-val hot">강한 시그널</span></div>
+<div class="aie-sig"><span class="aie-sig-flag">JP</span><span class="aie-sig-trend">Skin Cycling</span><span class="aie-sig-val rise">상승 중</span></div>
+<div class="aie-sig"><span class="aie-sig-flag">EU</span><span class="aie-sig-trend">배리어 리페어</span><span class="aie-sig-val new">등장 중</span></div>
+<div class="aie-sig"><span class="aie-sig-flag">GLOBAL</span><span class="aie-sig-trend">비건 K-뷰티</span><span class="aie-sig-val watch">주목</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="kb-section-divider"></div>
+<!-- ===== 6. BRAND DATABASE PREVIEW ===== -->
+<section aria-labelledby="bdb-title" class="kb-section kb-brand-db-preview" id="brand-db-preview">
+<div class="kb-container">
+<div class="kb-section-header">
+<span class="kb-section-tag" data-i18n="kb.nav.brands_db">브랜드 데이터베이스</span>
+<h2 id="bdb-title">K-뷰티 브랜드 인텔리전스</h2>
+<p class="kb-section-desc">브랜드 프로필, K-뷰티 인덱스 점수, 글로벌 시장 데이터, 주요 제품, 트렌드 분석을 제공하는 가장 완성도 높은 K-뷰티 브랜드 인텔리전스 데이터베이스입니다.</p>
+</div>
+<div class="brand-db-grid">
+<a class="brand-db-card" href="brands.html">
+<div class="bdb-header">
+<div class="bdb-init" style="background:rgba(201,168,76,0.14);color:#C9A84C;">CX</div>
+<div class="bdb-info"><div class="bdb-name">COSRX</div><div class="bdb-cat">스킨케어 · 에센스</div></div>
+<span class="bdb-rank-badge">랭킹 #1</span>
+</div>
+<div class="bdb-metrics">
+<div class="bdb-metric"><div class="bdb-metric-label">브랜드 점수</div><div class="bdb-metric-val">96.0</div></div>
+<div class="bdb-metric"><div class="bdb-metric-label">제품 수</div><div class="bdb-metric-val">50+</div></div>
+</div>
+<div class="bdb-markets">
+<span class="bdb-market-tag">US</span><span class="bdb-market-tag">JP</span><span class="bdb-market-tag">EU</span><span class="bdb-market-tag">SEA</span>
+</div>
+<div class="bdb-trend-score">
+<span class="bdb-trend-label">트렌드</span>
+<div class="bdb-trend-bar"><div class="bdb-trend-fill" style="width:96%"></div></div>
+<span class="bdb-trend-num">96</span>
+</div>
+</a>
+<a class="brand-db-card" href="brands.html">
+<div class="bdb-header">
+<div class="bdb-init" style="background:rgba(74,222,128,0.12);color:#4ade80;">AN</div>
+<div class="bdb-info"><div class="bdb-name">Anua</div><div class="bdb-cat">스킨케어 · 토너</div></div>
+<span class="bdb-rank-badge">랭킹 #2</span>
+</div>
+<div class="bdb-metrics">
+<div class="bdb-metric"><div class="bdb-metric-label">브랜드 점수</div><div class="bdb-metric-val">94.2</div></div>
+<div class="bdb-metric"><div class="bdb-metric-label">성장률</div><div class="bdb-metric-val">+195%</div></div>
+</div>
+<div class="bdb-markets">
+<span class="bdb-market-tag">US</span><span class="bdb-market-tag">KR</span><span class="bdb-market-tag">EU</span>
+</div>
+<div class="bdb-trend-score">
+<span class="bdb-trend-label">트렌드</span>
+<div class="bdb-trend-bar"><div class="bdb-trend-fill" style="width:94%"></div></div>
+<span class="bdb-trend-num">94</span>
+</div>
+</a>
+<a class="brand-db-card" href="brands.html">
+<div class="bdb-header">
+<div class="bdb-init" style="background:rgba(147,197,253,0.12);color:#93c5fd;">BJ</div>
+<div class="bdb-info"><div class="bdb-name">Beauty of Joseon</div><div class="bdb-cat">스킨케어 · 세럼</div></div>
+<span class="bdb-rank-badge">랭킹 #3</span>
+</div>
+<div class="bdb-metrics">
+<div class="bdb-metric"><div class="bdb-metric-label">브랜드 점수</div><div class="bdb-metric-val">92.1</div></div>
+<div class="bdb-metric"><div class="bdb-metric-label">성장률</div><div class="bdb-metric-val">+145%</div></div>
+</div>
+<div class="bdb-markets">
+<span class="bdb-market-tag">US</span><span class="bdb-market-tag">EU</span><span class="bdb-market-tag">AU</span>
+</div>
+<div class="bdb-trend-score">
+<span class="bdb-trend-label">트렌드</span>
+<div class="bdb-trend-bar"><div class="bdb-trend-fill" style="width:92%"></div></div>
+<span class="bdb-trend-num">92</span>
+</div>
+</a>
+<a class="brand-db-card" href="brands.html">
+<div class="bdb-header">
+<div class="bdb-init" style="background:rgba(196,181,253,0.12);color:#c4b5fd;">TR</div>
+<div class="bdb-info"><div class="bdb-name">Torriden</div><div class="bdb-cat">스킨케어 · 세럼</div></div>
+<span class="bdb-rank-badge">랭킹 #4</span>
+</div>
+<div class="bdb-metrics">
+<div class="bdb-metric"><div class="bdb-metric-label">브랜드 점수</div><div class="bdb-metric-val">91.0</div></div>
+<div class="bdb-metric"><div class="bdb-metric-label">성장률</div><div class="bdb-metric-val">+88%</div></div>
+</div>
+<div class="bdb-markets">
+<span class="bdb-market-tag">KR</span><span class="bdb-market-tag">US</span><span class="bdb-market-tag">JP</span>
+</div>
+<div class="bdb-trend-score">
+<span class="bdb-trend-label">트렌드</span>
+<div class="bdb-trend-bar"><div class="bdb-trend-fill" style="width:91%"></div></div>
+<span class="bdb-trend-num">91</span>
+</div>
+</a>
+</div>
+<div style="text-align:center;margin-top:2rem;">
+<a class="kb-view-all-btn" href="brands.html">전체 브랜드 데이터베이스 보기 (500+ 브랜드) →</a>
+</div>
+</div>
+</section>
+<div class="kb-section-divider"></div>
+<!-- ===== 7. PRODUCT DATABASE PREVIEW ===== -->
+<section aria-labelledby="pdb-title" class="kb-section kb-product-db-preview" id="product-db-preview">
+<div class="kb-container">
+<div class="kb-section-header">
+<span class="kb-section-tag" data-i18n="kb.nav.products_db">제품 데이터베이스</span>
+<h2 id="pdb-title">K-뷰티 제품 인텔리전스</h2>
+<p class="kb-section-desc">주요 성분, 피부 타입 추천, 종합 점수, 글로벌 랭킹, 주요 리테일러 직접 구매 링크를 포함한 상세 제품 프로필을 제공합니다.</p>
+</div>
+<div class="prod-db-grid">
+<div class="prod-db-card">
+<div class="pdb-rank-badge gold">글로벌 랭킹 #1 · 역대 베스트</div>
+<div class="pdb-name">Advanced Snail 96 Mucin Power Essence</div>
+<div class="pdb-brand">COSRX · 코스알엑스 · Essence</div>
+<div class="pdb-tags"><span class="pdb-tag">보습</span><span class="pdb-tag">피부 회복</span><span class="pdb-tag">안티에이징</span></div>
+<div class="pdb-ing-section">
+<div class="pdb-ing-label">주요 성분</div>
+<div class="pdb-ing-list"><span class="pdb-ing">Snail Mucin 96%</span><span class="pdb-ing">Sodium Hyaluronate</span><span class="pdb-ing">Allantoin</span></div>
+</div>
+<div class="pdb-score-row">
+<span class="pdb-score-label">종합 점수</span>
+<span class="pdb-score-val">99</span>
+</div>
+<div class="pdb-skin-types"><span class="pdb-skin-type">모든 피부 타입</span><span class="pdb-skin-type">건성 피부</span><span class="pdb-skin-type">민감성 피부</span></div>
+<div class="pdb-buy-links">
+<a class="pdb-buy-link" href="#">Amazon</a>
+<a class="pdb-buy-link" href="#">Sephora</a>
+<a class="pdb-buy-link" href="#">Olive Young</a>
+<a class="pdb-buy-link" href="#">YesStyle</a>
+</div>
+</div>
+<div class="prod-db-card">
+<div class="pdb-rank-badge silver">글로벌 랭킹 #2 · 틱톡 바이럴</div>
+<div class="pdb-name">Heartleaf 77% Soothing Toner</div>
+<div class="pdb-brand">Anua · 아누아 · Toner</div>
+<div class="pdb-tags"><span class="pdb-tag">진정</span><span class="pdb-tag">모공 케어</span><span class="pdb-tag" data-i18n="kb.deals.vegan">비건</span></div>
+<div class="pdb-ing-section">
+<div class="pdb-ing-label">주요 성분</div>
+<div class="pdb-ing-list"><span class="pdb-ing">Heartleaf 77%</span><span class="pdb-ing">Niacinamide</span><span class="pdb-ing">Hyaluronic Acid</span></div>
+</div>
+<div class="pdb-score-row">
+<span class="pdb-score-label">종합 점수</span>
+<span class="pdb-score-val">94</span>
+</div>
+<div class="pdb-skin-types"><span class="pdb-skin-type">민감성 피부</span><span class="pdb-skin-type">지성 피부</span><span class="pdb-skin-type">여드름성 피부</span></div>
+<div class="pdb-buy-links">
+<a class="pdb-buy-link" href="#">Amazon</a>
+<a class="pdb-buy-link" href="#">Olive Young</a>
+<a class="pdb-buy-link" href="#">YesStyle</a>
+</div>
+</div>
+<div class="prod-db-card">
+<div class="pdb-rank-badge bronze">글로벌 랭킹 #3 · 베스트 선크림</div>
+<div class="pdb-name">Relief Sun: Rice + Probiotics SPF 50+</div>
+<div class="pdb-brand">Beauty of Joseon · 조선미녀 · Sunscreen</div>
+<div class="pdb-tags"><span class="pdb-tag">SPF 50+</span><span class="pdb-tag">PA++++</span><span class="pdb-tag">쌀 성분</span></div>
+<div class="pdb-ing-section">
+<div class="pdb-ing-label">주요 성분</div>
+<div class="pdb-ing-list"><span class="pdb-ing">Rice Extract</span><span class="pdb-ing">Probiotics</span><span class="pdb-ing">Niacinamide</span></div>
+</div>
+<div class="pdb-score-row">
+<span class="pdb-score-label">종합 점수</span>
+<span class="pdb-score-val">92</span>
+</div>
+<div class="pdb-skin-types"><span class="pdb-skin-type">모든 피부 타입</span><span class="pdb-skin-type">건성 피부</span><span class="pdb-skin-type">민감성 피부</span></div>
+<div class="pdb-buy-links">
+<a class="pdb-buy-link" href="#">Amazon</a>
+<a class="pdb-buy-link" href="#">Sephora</a>
+<a class="pdb-buy-link" href="#">Olive Young</a>
+</div>
+</div>
+</div>
+<div style="text-align:center;margin-top:2rem;">
+<a class="kb-view-all-btn" href="products.html">전체 제품 데이터베이스 보기 (2,400+ 제품) →</a>
+</div>
+</div>
+</section>
+<div class="kb-section-divider"></div>
+<!-- ===== 8. CREATOR ECOSYSTEM ===== -->
+<section aria-labelledby="creator-title" class="kb-section kb-creator" id="creator">
+<div class="kb-container">
+<div class="kb-section-header">
+<span class="kb-section-tag" data-i18n="kb.creator.tag">크리에이터 인텔리전스</span>
+<h2 id="creator-title">크리에이터 생태계</h2>
+<p class="kb-section-desc">YouTube, TikTok, Instagram에서 크리에이터의 영향력 점수, 팔로워 수, 콘텐츠 카테고리, 브랜드 콜라보레이션 기회를 추적하는 뷰티 크리에이터 인텔리전스 플랫폼입니다.</p>
+</div>
+<div class="creator-grid">
+<article class="creator-card creator-featured" data-aos="fade-up">
+<div class="creator-image-wrap">
+<div aria-label="Creator Photo" class="creator-image-placeholder creator-img-1">
+<div class="creator-monogram">JY</div>
+</div>
+<div class="creator-badge-wrap">
+<span class="creator-badge-featured">주목 크리에이터</span>
+</div>
+</div>
+<div class="creator-content">
+<div class="creator-meta">
+<span class="creator-platform">YouTube · Instagram</span>
+<span class="creator-followers">12.4M 팔로워</span>
+</div>
+<h3 class="creator-name">@jiyeon_beauty</h3>
+<div class="creator-ecosystem-meta">
+<div class="cem-cats">
+<span class="cem-cat">스킨케어</span>
+<span class="cem-cat">성분 정보</span>
+<span class="cem-cat">K-뷰티 리뷰</span>
+</div>
+<div class="cem-links">
+<a aria-label="YouTube" class="cem-sns-link" href="#">YT</a>
+<a aria-label="Instagram" class="cem-sns-link" href="#">IG</a>
+<a aria-label="TikTok" class="cem-sns-link" href="#">TK</a>
+</div>
+</div>
+<p class="creator-title-text">Glass Skin의 비밀을 전 세계에 알린 뷰티 크리에이터</p>
+<div class="creator-stats-mini">
+<div class="csm-item"><span class="csm-val">12.4M</span><span class="csm-label">팔로워</span></div>
+<div class="csm-item"><span class="csm-val" style="color:#4ade80;">18%</span><span class="csm-label">인게이지먼트</span></div>
+<div class="csm-item"><span class="csm-val" style="color:#93c5fd;">65+</span><span class="csm-label">국가</span></div>
+</div>
+<div class="creator-influence-row">
+<span class="cir-label">인플루언스 스코어</span>
+<div class="cir-bar"><div class="cir-fill" style="width:95%"></div></div>
+<span class="cir-score">95</span>
+</div>
+<a class="kb-btn kb-btn-outline-sm" href="#">전체 인터뷰 보기</a>
+</div>
+</article>
+<article class="creator-card" data-aos="fade-up" data-aos-delay="100">
+<div class="creator-image-wrap creator-small">
+<div aria-label="Creator Photo" class="creator-image-placeholder creator-img-2">
+<div class="creator-monogram">MK</div>
+</div>
+</div>
+<div class="creator-content">
+<div class="creator-meta">
+<span class="creator-platform">TikTok · Instagram</span>
+<span class="creator-followers">8.7M 팔로워</span>
+</div>
+<h3 class="creator-name">@minji_kbeauty</h3>
+<div class="creator-ecosystem-meta">
+<div class="cem-cats">
+<span class="cem-cat">저가 뷰티</span>
+<span class="cem-cat">다이소 픽</span>
+<span class="cem-cat">바이럴 제품</span>
+</div>
+<div class="cem-links">
+<a aria-label="TikTok" class="cem-sns-link" href="#">TK</a>
+<a aria-label="Instagram" class="cem-sns-link" href="#">IG</a>
+</div>
+</div>
+<p class="creator-title-text">저가 K-뷰티의 글로벌 접근성을 증명한 틱톡 크리에이터</p>
+<div class="creator-stats-mini">
+<div class="csm-item"><span class="csm-val">8.7M</span><span class="csm-label">팔로워</span></div>
+<div class="csm-item"><span class="csm-val" style="color:#4ade80;">22%</span><span class="csm-label">인게이지먼트</span></div>
+<div class="csm-item"><span class="csm-val" style="color:#93c5fd;">38+</span><span class="csm-label">국가</span></div>
+</div>
+<div class="creator-influence-row">
+<span class="cir-label">인플루언스 스코어</span>
+<div class="cir-bar"><div class="cir-fill" style="width:89%"></div></div>
+<span class="cir-score">89</span>
+</div>
+<a class="kb-btn kb-btn-outline-sm" href="#">전체 인터뷰 보기</a>
+</div>
+</article>
+<article class="creator-card" data-aos="fade-up" data-aos-delay="200">
+<div class="creator-image-wrap creator-small">
+<div aria-label="Creator Photo" class="creator-image-placeholder creator-img-3">
+<div class="creator-monogram">HJ</div>
+</div>
+</div>
+<div class="creator-content">
+<div class="creator-meta">
+<span class="creator-platform">Instagram · YouTube</span>
+<span class="creator-followers">5.2M 팔로워</span>
+</div>
+<h3 class="creator-name">@hyunjin_beauty</h3>
+<div class="creator-ecosystem-meta">
+<div class="cem-cats">
+<span class="cem-cat">스킨케어 사이언스</span>
+<span class="cem-cat">비건 뷰티</span>
+<span class="cem-cat">글로벌 에듀케이션</span>
+</div>
+<div class="cem-links">
+<a aria-label="Instagram" class="cem-sns-link" href="#">IG</a>
+<a aria-label="YouTube" class="cem-sns-link" href="#">YT</a>
+</div>
+</div>
+<p class="creator-title-text">일본 Z세대가 열광하는 K-뷰티 유튜버</p>
+<div class="creator-stats-mini">
+<div class="csm-item"><span class="csm-val">5.2M</span><span class="csm-label">팔로워</span></div>
+<div class="csm-item"><span class="csm-val" style="color:#4ade80;">15%</span><span class="csm-label">인게이지먼트</span></div>
+<div class="csm-item"><span class="csm-val" style="color:#93c5fd;">52+</span><span class="csm-label">국가</span></div>
+</div>
+<div class="creator-influence-row">
+<span class="cir-label">인플루언스 스코어</span>
+<div class="cir-bar"><div class="cir-fill" style="width:82%"></div></div>
+<span class="cir-score">82</span>
+</div>
+<a class="kb-btn kb-btn-outline-sm" href="#">전체 인터뷰 보기</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<div class="kb-section-divider"></div>
+<!-- ===== 9. DEALS ENGINE ===== -->
+<section aria-labelledby="deals-title" class="kb-section kb-deals" id="deals">
+<div class="kb-container">
+<div class="kb-section-header">
+<span class="kb-section-tag" data-i18n="kb.deals.tag">실시간 딜 엔진</span>
+<h2 id="deals-title">지금 가장 핫한 딜</h2>
+<p class="kb-section-desc">올리브영, 다이소, 무신사 등 주요 채널의 K-뷰티 주목 제품을 큐레이션합니다.</p>
+</div>
+<div aria-label="채널 선택" class="deals-tabs" role="tablist">
+<button aria-selected="true" class="deals-tab active" data-channel="all" role="tab" data-i18n="kb.deals.all">전체</button>
+<button aria-selected="false" class="deals-tab" data-channel="skincare" role="tab">스킨케어</button>
+<button aria-selected="false" class="deals-tab" data-channel="makeup" role="tab">메이크업</button>
+<button aria-selected="false" class="deals-tab" data-channel="vegan" role="tab">비건</button>
+<button aria-selected="false" class="deals-tab" data-channel="luxury" role="tab" data-i18n="kb.deals.luxury">럭셔리</button>
+<button aria-selected="false" class="deals-tab" data-channel="global" role="tab" data-i18n="kb.deals.global">글로벌</button>
+</div>
+<div class="deals-grid" id="deals-grid">
+<article class="deal-card" data-aos="fade-up" data-channel="skincare">
+<div class="deal-channel-badge oy-badge">스킨케어</div>
+<div class="deal-image-wrap">
+<div class="deal-image-placeholder" style="background: linear-gradient(135deg,#ff6b9d,#c9a96e);"><span class="deal-brand-init">TR</span></div>
+<div class="deal-discount-badge">-40%</div>
+<div class="deal-hot-badge">HOT</div>
+</div>
+<div class="deal-content">
+<span class="deal-brand">Torriden</span>
+<h3 class="deal-name">Dive-In Low Molecule Serum 50ml</h3>
+<div class="deal-price"><span class="deal-original">₩28,000</span> <span aria-hidden="true" class="deal-price-arrow" style="color:rgba(255,255,255,0.3);font-size:0.75rem;">→</span> <span class="deal-sale">₩16,800</span></div>
+<div class="deal-progress-wrap"><div class="deal-progress" style="--prog:78;"></div><span class="deal-prog-text">78% 판매됨</span></div>
+<div style="display:flex;gap:0.4rem;margin-bottom:0.5rem;flex-wrap:wrap;">
+<a href="#" style="font-size:0.58rem;font-weight:600;padding:0.18rem 0.45rem;border-radius:3px;background:rgba(255,153,0,0.1);border:1px solid rgba(255,153,0,0.2);color:#ff9900;text-decoration:none;">Amazon</a>
+<span aria-hidden="true" style="color:rgba(255,255,255,0.15);font-size:0.55rem;line-height:1.8;">·</span>
+<a href="#" style="font-size:0.58rem;font-weight:600;padding:0.18rem 0.45rem;border-radius:3px;background:rgba(74,222,128,0.07);border:1px solid rgba(74,222,128,0.18);color:#4ade80;text-decoration:none;">Olive Young</a>
+</div>
+<a class="kb-btn kb-btn-deal" href="deals.html">딜 보기 →</a>
+</div>
+</article>
+<article class="deal-card" data-aos="fade-up" data-aos-delay="80" data-channel="makeup">
+<div class="deal-channel-badge makeup-badge">메이크업</div>
+<div class="deal-image-wrap">
+<div class="deal-image-placeholder" style="background: linear-gradient(135deg,#e91e8c,#ff9800);"><span class="deal-brand-init">RM</span></div>
+<div class="deal-discount-badge">-30%</div>
+</div>
+<div class="deal-content">
+<span class="deal-brand">Rom&amp;nd</span>
+<h3 class="deal-name">Juicy Lasting Tint — 5 Colors Set</h3>
+<div class="deal-price"><span class="deal-original">₩40,000</span> <span aria-hidden="true" class="deal-price-arrow" style="color:rgba(255,255,255,0.3);font-size:0.75rem;">→</span> <span class="deal-sale">₩28,000</span></div>
+<div class="deal-progress-wrap"><div class="deal-progress" style="--prog:65;"></div><span class="deal-prog-text">65% 판매됨</span></div>
+<div style="display:flex;gap:0.4rem;margin-bottom:0.5rem;flex-wrap:wrap;">
+<a href="#" style="font-size:0.58rem;font-weight:600;padding:0.18rem 0.45rem;border-radius:3px;background:rgba(255,153,0,0.1);border:1px solid rgba(255,153,0,0.2);color:#ff9900;text-decoration:none;">Amazon</a>
+<span aria-hidden="true" style="color:rgba(255,255,255,0.15);font-size:0.55rem;line-height:1.8;">·</span>
+<a href="#" style="font-size:0.58rem;font-weight:600;padding:0.18rem 0.45rem;border-radius:3px;background:rgba(147,197,253,0.07);border:1px solid rgba(147,197,253,0.18);color:#93c5fd;text-decoration:none;">YesStyle</a>
+</div>
+<a class="kb-btn kb-btn-deal" href="deals.html">딜 보기 →</a>
+</div>
+</article>
+<article class="deal-card" data-aos="fade-up" data-aos-delay="160" data-channel="vegan">
+<div class="deal-channel-badge vegan-badge">비건</div>
+<div class="deal-image-wrap">
+<div class="deal-image-placeholder" style="background: linear-gradient(135deg,#9b59b6,#e91e8c);"><span class="deal-brand-init">AN</span></div>
+<div class="deal-discount-badge">-35%</div>
+</div>
+<div class="deal-content">
+<span class="deal-brand">Anua</span>
+<h3 class="deal-name">Heartleaf 77% Toner Pads 60pcs</h3>
+<div class="deal-price"><span class="deal-original">₩22,000</span> <span aria-hidden="true" class="deal-price-arrow" style="color:rgba(255,255,255,0.3);font-size:0.75rem;">→</span> <span class="deal-sale">₩14,300</span></div>
+<div class="deal-progress-wrap"><div class="deal-progress" style="--prog:62;"></div><span class="deal-prog-text">62% 판매됨</span></div>
+<div style="display:flex;gap:0.4rem;margin-bottom:0.5rem;flex-wrap:wrap;">
+<a href="#" style="font-size:0.58rem;font-weight:600;padding:0.18rem 0.45rem;border-radius:3px;background:rgba(255,153,0,0.1);border:1px solid rgba(255,153,0,0.2);color:#ff9900;text-decoration:none;">Amazon</a>
+<span aria-hidden="true" style="color:rgba(255,255,255,0.15);font-size:0.55rem;line-height:1.8;">·</span>
+<a href="#" style="font-size:0.58rem;font-weight:600;padding:0.18rem 0.45rem;border-radius:3px;background:rgba(74,222,128,0.07);border:1px solid rgba(74,222,128,0.18);color:#4ade80;text-decoration:none;">Olive Young</a>
+</div>
+<a class="kb-btn kb-btn-deal" href="deals.html">딜 보기 →</a>
+</div>
+</article>
+<article class="deal-card" data-aos="fade-up" data-aos-delay="240" data-channel="global">
+<div class="deal-channel-badge global-badge">글로벌</div>
+<div class="deal-image-wrap">
+<div class="deal-image-placeholder" style="background: linear-gradient(135deg,#0b1e3d,#00c8ff);"><span class="deal-brand-init">CX</span></div>
+<div class="deal-discount-badge">-45%</div>
+<div class="deal-hot-badge">글로벌 베스트</div>
+</div>
+<div class="deal-content">
+<span class="deal-brand">COSRX</span>
+<h3 class="deal-name">Advanced Snail 96 Mucin Power Essence</h3>
+<div class="deal-price"><span class="deal-original">₩25,000</span> <span aria-hidden="true" class="deal-price-arrow" style="color:rgba(255,255,255,0.3);font-size:0.75rem;">→</span> <span class="deal-sale">₩13,750</span></div>
+<div class="deal-progress-wrap"><div class="deal-progress" style="--prog:71;"></div><span class="deal-prog-text">71% 판매됨</span></div>
+<div style="display:flex;gap:0.4rem;margin-bottom:0.5rem;flex-wrap:wrap;">
+<a href="#" style="font-size:0.58rem;font-weight:600;padding:0.18rem 0.45rem;border-radius:3px;background:rgba(255,153,0,0.1);border:1px solid rgba(255,153,0,0.2);color:#ff9900;text-decoration:none;">Amazon</a>
+<span aria-hidden="true" style="color:rgba(255,255,255,0.15);font-size:0.55rem;line-height:1.8;">·</span>
+<a href="#" style="font-size:0.58rem;font-weight:600;padding:0.18rem 0.45rem;border-radius:3px;background:rgba(201,168,76,0.07);border:1px solid rgba(201,168,76,0.18);color:#C9A84C;text-decoration:none;">Sephora</a>
+</div>
+<a class="kb-btn kb-btn-deal" href="deals.html">딜 보기 →</a>
+</div>
+</article>
+<article class="deal-card" data-aos="fade-up" data-aos-delay="320" data-channel="skincare">
+<div class="deal-channel-badge oy-badge">스킨케어</div>
+<div class="deal-image-wrap">
+<div class="deal-image-placeholder" style="background: linear-gradient(135deg,#1a1a2e,#4ade80);"><span class="deal-brand-init">BJ</span></div>
+<div class="deal-discount-badge">-25%</div>
+</div>
+<div class="deal-content">
+<span class="deal-brand">Beauty of Joseon</span>
+<h3 class="deal-name">Relief Sun: Rice + Probiotics SPF 50+</h3>
+<div class="deal-price"><span class="deal-original">₩18,000</span> <span aria-hidden="true" class="deal-price-arrow" style="color:rgba(255,255,255,0.3);font-size:0.75rem;">→</span> <span class="deal-sale">₩13,500</span></div>
+<div class="deal-progress-wrap"><div class="deal-progress" style="--prog:55;"></div><span class="deal-prog-text">55% 판매됨</span></div>
+<div style="display:flex;gap:0.4rem;margin-bottom:0.5rem;flex-wrap:wrap;">
+<a href="#" style="font-size:0.58rem;font-weight:600;padding:0.18rem 0.45rem;border-radius:3px;background:rgba(255,153,0,0.1);border:1px solid rgba(255,153,0,0.2);color:#ff9900;text-decoration:none;">Amazon</a>
+<span aria-hidden="true" style="color:rgba(255,255,255,0.15);font-size:0.55rem;line-height:1.8;">·</span>
+<a href="#" style="font-size:0.58rem;font-weight:600;padding:0.18rem 0.45rem;border-radius:3px;background:rgba(147,197,253,0.07);border:1px solid rgba(147,197,253,0.18);color:#93c5fd;text-decoration:none;">YesStyle</a>
+</div>
+<a class="kb-btn kb-btn-deal" href="deals.html">딜 보기 →</a>
+</div>
+</article>
+<article class="deal-card" data-aos="fade-up" data-aos-delay="400" data-channel="luxury">
+<div class="deal-channel-badge luxury-badge">럭셔리</div>
+<div class="deal-image-wrap">
+<div class="deal-image-placeholder" style="background: linear-gradient(135deg,#1a0a2e,#C9A84C);"><span class="deal-brand-init">SU</span></div>
+<div class="deal-discount-badge">-20%</div>
+</div>
+<div class="deal-content">
+<span class="deal-brand">Su:m37°</span>
+<h3 class="deal-name">Secret Essence 30ml Special Set</h3>
+<div class="deal-price"><span class="deal-original">₩85,000</span> <span aria-hidden="true" class="deal-price-arrow" style="color:rgba(255,255,255,0.3);font-size:0.75rem;">→</span> <span class="deal-sale">₩68,000</span></div>
+<div class="deal-progress-wrap"><div class="deal-progress" style="--prog:42;"></div><span class="deal-prog-text">42% 판매됨</span></div>
+<div style="display:flex;gap:0.4rem;margin-bottom:0.5rem;flex-wrap:wrap;">
+<a href="#" style="font-size:0.58rem;font-weight:600;padding:0.18rem 0.45rem;border-radius:3px;background:rgba(201,168,76,0.07);border:1px solid rgba(201,168,76,0.18);color:#C9A84C;text-decoration:none;">Sephora</a>
+<span aria-hidden="true" style="color:rgba(255,255,255,0.15);font-size:0.55rem;line-height:1.8;">·</span>
+<a href="#" style="font-size:0.58rem;font-weight:600;padding:0.18rem 0.45rem;border-radius:3px;background:rgba(74,222,128,0.07);border:1px solid rgba(74,222,128,0.18);color:#4ade80;text-decoration:none;">Olive Young</a>
+</div>
+<a class="kb-btn kb-btn-deal" href="deals.html">딜 보기 →</a>
+</div>
+</article>
+</div>
+<div style="text-align:center;margin-top:2rem;">
+<a class="kb-view-all-btn" href="deals.html">K-뷰티 딜 전체 보기 →</a>
+</div>
+</div>
+</section>
+<div class="kb-section-divider"></div>
+<!-- ===== 10. MARKET INTELLIGENCE ===== -->
+<section aria-labelledby="intel-title" class="kb-section kb-market-intel" id="market-intelligence">
+<div class="kb-container">
+<div class="kb-section-header">
+<span class="kb-section-tag" data-i18n="kb.intel.tag">시장 인텔리전스</span>
+<h2 id="intel-title">뷰티 산업 인텔리전스</h2>
+<p class="kb-section-desc">글로벌 뷰티 산업의 시장 트렌드, 기업 인텔리전스, 산업 전망, 성분 트렌드를 데이터 기반으로 분석합니다. 브랜드, 투자자, 산업 전문가를 위한 인사이트를 제공합니다.</p>
+</div>
+<div class="market-intel-grid">
+<div class="market-intel-articles">
+<div class="mia-card">
+<span class="mia-category mia-cat-market">시장</span>
+<div class="mia-content">
+<div class="mia-title">K-뷰티 글로벌 시장 $213억 돌파 — 북미 시장 성장 선두</div>
+<div class="mia-excerpt">2026년 글로벌 K-뷰티 시장이 213억 달러를 돌파했으며, 북미 시장이 +34%로 가장 높은 연간 성장률을 기록했습니다. 스킨케어가 68% 시장 점유율로 선두를 유지하고 있습니다.</div>
+<div class="mia-meta">
+<span class="mia-date">2026년 3월</span>
+<a class="mia-read" href="#">분석 보기 →</a>
+</div>
+</div>
+</div>
+<div class="mia-card">
+<span class="mia-category mia-cat-company">기업</span>
+<div class="mia-content">
+<div class="mia-title">아모레퍼시픽 Q4 2026: 글로벌 확장으로 매출 28% 성장</div>
+<div class="mia-excerpt">아모레퍼시픽 그룹은 2026년 4분기 매출 1조 8,000억 원을 기록했으며, 북미(+45%)와 유럽(+38%) 시장이 성장을 이끌었습니다. 라네주와 설화수가 해외 시장을 선도하고 있습니다.</div>
+<div class="mia-meta">
+<span class="mia-date">2026년 2월</span>
+<a class="mia-read" href="#">분석 보기 →</a>
+</div>
+</div>
+</div>
+<div class="mia-card">
+<span class="mia-category mia-cat-ingredient">성분</span>
+<div class="mia-content">
+<div class="mia-title">바쿠치올, 2026년 K-뷰티 성분 트렌드 1위 등재</div>
+<div class="mia-excerpt">글로벌 검색 데이터에서 바쿠치올 관련 쿼리가 340% 성장했습니다. 식물 기반 레티놀 대체제로 COSRX, 아누아, 뷰티 오브 조선의 신제품 출시를 이끌고 있습니다.</div>
+<div class="mia-meta">
+<span class="mia-date">2026년 3월</span>
+<a class="mia-read" href="#">분석 보기 →</a>
+</div>
+</div>
+</div>
+<div class="mia-card">
+<span class="mia-category mia-cat-outlook">전망</span>
+<div class="mia-content">
+<div class="mia-title">K-뷰티 2026 전망: 비건, 지속가능성, 과학 기반</div>
+<div class="mia-excerpt">산업 분석가들은 K-뷰티가 2028년까지 280억 달러에 도달할 것으로 예측합니다. 비건 포뮬레이션, 친환경 패키징, Gen Z 소비자가 요구하는 임상급 성분 투명성이 핵심 성장 동력입니다.</div>
+<div class="mia-meta">
+<span class="mia-date">2026년 1월</span>
+<a class="mia-read" href="#">분석 보기 →</a>
+</div>
+</div>
+</div>
+</div>
+<div class="market-intel-sidebar">
+<div class="mis-widget">
+<div class="mis-widget-title">글로벌 시장 규모</div>
+<div class="mis-stat-row"><span class="mis-stat-label">K-뷰티 시장 2026</span><div><span class="mis-stat-val">$21.3B</span></div></div>
+<div class="mis-stat-row"><span class="mis-stat-label">연간 성장률</span><div><span class="mis-stat-change up">+18.4%</span></div></div>
+<div class="mis-stat-row"><span class="mis-stat-label">북미</span><div><span class="mis-stat-change up">+34%</span></div></div>
+<div class="mis-stat-row"><span class="mis-stat-label">유럽</span><div><span class="mis-stat-change up">+22%</span></div></div>
+<div class="mis-stat-row"><span class="mis-stat-label">동남아시아</span><div><span class="mis-stat-change up">+28%</span></div></div>
+<div class="mis-stat-row"><span class="mis-stat-label">2028년 예상</span><div><span class="mis-stat-val">$28B</span></div></div>
+</div>
+<div class="mis-widget">
+<div class="mis-widget-title">주요 성분 트렌드</div>
+<div class="mis-stat-row"><span class="mis-stat-label">바쿠치올</span><div><span class="mis-stat-change up">+340%</span></div></div>
+<div class="mis-stat-row"><span class="mis-stat-label">센텔라 아시아티카</span><div><span class="mis-stat-change up">+220%</span></div></div>
+<div class="mis-stat-row"><span class="mis-stat-label">쑥 추출물</span><div><span class="mis-stat-change up">+180%</span></div></div>
+<div class="mis-stat-row"><span class="mis-stat-label">쌀겨 오일</span><div><span class="mis-stat-change up">+150%</span></div></div>
+<div class="mis-stat-row"><span class="mis-stat-label">스네일 뮤신</span><div><span class="mis-stat-change up">+95%</span></div></div>
+</div>
+<div class="mis-widget">
+<div class="mis-widget-title">인텔리전스 카테고리</div>
+<div class="mis-stat-row"><span class="mis-stat-label">시장 인텔리전스</span><a class="mia-read" href="intelligence.html#market-intelligence">보기 →</a></div>
+<div class="mis-stat-row"><span class="mis-stat-label">기업 인텔리전스</span><a class="mia-read" href="intelligence.html#company-intelligence">보기 →</a></div>
+<div class="mis-stat-row"><span class="mis-stat-label">산업 전망</span><a class="mia-read" href="intelligence.html#industry-outlook">보기 →</a></div>
+<div class="mis-stat-row"><span class="mis-stat-label">성분 인텔리전스</span><a class="mia-read" href="intelligence.html#ingredient-intelligence">보기 →</a></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== ABOUT ===== -->
+<section aria-labelledby="kb-about-title" class="kb-section kb-about" id="about">
+<div class="kb-container">
+<div class="kb-about-layout">
+<div class="kb-about-logo" data-aos="fade-right">
+<img alt="K-Beauty Premium Event" class="kb-about-logo-img" height="280" loading="lazy" src="assets/images/kbeauty-logo-event.png" width="280"/>
+</div>
+<div class="kb-about-content" data-aos="fade-left">
+<span class="kb-section-tag" data-i18n="kb.about.tag">K-뷰티 플랫폼 소개</span>
+<h2 id="kb-about-title">K-뷰티 산업을 위한 글로벌 인텔리전스 플랫폼</h2>
+<p>K-Beauty Intelligence는 미디어, 데이터, 산업 인텔리전스, 크리에이터 생태계, 커머스를 통합한 글로벌 뷰티 인텔리전스 플랫폼입니다. K-뷰티 산업의 대표적인 데이터 플랫폼을 구축하고 있습니다.</p>
+<p>500개 이상의 브랜드, 2,400개 이상의 제품, 45개 이상의 글로벌 시장을 추적하며 브랜드, 투자자, 산업 전문가에게 글로벌 뷰티 시장에서 성공하는 데 필요한 데이터와 인사이트를 제공합니다.</p>
+<div class="kb-about-stats">
+<div class="kb-stat"><span class="kb-stat-num">500+</span> <span class="kb-stat-label">브랜드 추적</span></div>
+<div class="kb-stat"><span class="kb-stat-num">45+</span> <span class="kb-stat-label">글로벌 시장</span></div>
+<div class="kb-stat"><span class="kb-stat-num">매주</span> <span class="kb-stat-label">랭킹 업데이트</span></div>
+</div>
+<div style="display:flex;gap:0.8rem;flex-wrap:wrap;">
+<a class="kb-btn kb-btn-outline" href="../index.html">K-IMPACT 그룹 홈으로</a>
+<a class="kb-btn kb-btn-gold" href="contact.html">파트너십 문의</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ===== TRENDING NOW ===== -->
+<section class="kb-trending-section" id="kb-trending">
+<div class="kb-section-inner">
+<div class="kb-section-header">
+<div>
+<span class="kb-section-label-tag">TRENDING NOW</span>
+<h2 class="kb-section-title" data-i18n="trending.title">지금 주목받는 K-Beauty</h2>
+</div>
+<a class="kb-section-view-all" href="products.html">전체 보기 →</a>
+</div>
+<div class="kb-trending-grid">
+<div class="kb-trending-card">
+<div class="kb-trending-rank">🔥 TRENDING #1</div>
+<div class="kb-trending-name">Beauty of Joseon</div>
+<div class="kb-trending-cat">선크림 · 스킨케어</div>
+<div class="kb-trending-meta">
+<span class="kb-trending-score">98.4</span>
+<span class="kb-trending-change">▲ +12.3%</span>
+</div>
+</div>
+<div class="kb-trending-card">
+<div class="kb-trending-rank">📈 TRENDING #2</div>
+<div class="kb-trending-name">COSRX</div>
+<div class="kb-trending-cat">세럼 · 에센스</div>
+<div class="kb-trending-meta">
+<span class="kb-trending-score">96.1</span>
+<span class="kb-trending-change">▲ +8.7%</span>
+</div>
+</div>
+<div class="kb-trending-card">
+<div class="kb-trending-rank">⚡ TRENDING #3</div>
+<div class="kb-trending-name">Laneige</div>
+<div class="kb-trending-cat">수분크림 · 립케어</div>
+<div class="kb-trending-meta">
+<span class="kb-trending-score">94.8</span>
+<span class="kb-trending-change">▲ +6.2%</span>
+</div>
+</div>
+<div class="kb-trending-card">
+<div class="kb-trending-rank">🌟 TRENDING #4</div>
+<div class="kb-trending-name">Innisfree</div>
+<div class="kb-trending-cat">토너 · 마스크팩</div>
+<div class="kb-trending-meta">
+<span class="kb-trending-score">91.5</span>
+<span class="kb-trending-change">▲ +4.9%</span>
+</div>
+</div>
+<div class="kb-trending-card">
+<div class="kb-trending-rank">💫 TRENDING #5</div>
+<div class="kb-trending-name">Sulwhasoo</div>
+<div class="kb-trending-cat">럭셔리 · 한방</div>
+<div class="kb-trending-meta">
+<span class="kb-trending-score">89.3</span>
+<span class="kb-trending-change">▲ +3.8%</span>
+</div>
+</div>
+<div class="kb-trending-card">
+<div class="kb-trending-rank">🆕 TRENDING #6</div>
+<div class="kb-trending-name">Anua</div>
+<div class="kb-trending-cat">클렌저 · 토너</div>
+<div class="kb-trending-meta">
+<span class="kb-trending-score">87.6</span>
+<span class="kb-trending-change">▲ +18.4%</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ===== TOP RANKING ===== -->
+<section class="kb-ranking-section" id="kb-ranking">
+<div class="kb-section-inner">
+<div class="kb-section-header">
+<div>
+<span class="kb-section-label-tag" style="color:#60a5fa;border-color:rgba(96,165,250,0.3);background:rgba(96,165,250,0.08);">TOP RANKING</span>
+<h2 class="kb-section-title" data-i18n="ranking.title">글로벌 K-Beauty 브랜드 랭킹</h2>
+</div>
+<a class="kb-section-view-all" href="brands.html" style="color:rgba(255,255,255,0.45);">브랜드 전체 →</a>
+</div>
+<table class="kb-ranking-table">
+<thead>
+<tr>
+<th>순위</th>
+<th>브랜드</th>
+<th>카테고리</th>
+<th>트렌드 점수</th>
+<th>변동</th>
+<th>주요 시장</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="kb-ranking-num">01</td>
+<td class="kb-ranking-brand">Beauty of Joseon</td>
+<td>스킨케어</td>
+<td class="kb-ranking-score-val">98.4</td>
+<td class="kb-ranking-change-up">▲ +12.3%</td>
+<td>미국 · 동남아</td>
+</tr>
+<tr>
+<td class="kb-ranking-num">02</td>
+<td class="kb-ranking-brand">COSRX</td>
+<td>세럼 · 에센스</td>
+<td class="kb-ranking-score-val">96.1</td>
+<td class="kb-ranking-change-up">▲ +8.7%</td>
+<td>미국 · 유럽</td>
+</tr>
+<tr>
+<td class="kb-ranking-num">03</td>
+<td class="kb-ranking-brand">Laneige</td>
+<td>수분케어</td>
+<td class="kb-ranking-score-val">94.8</td>
+<td class="kb-ranking-change-up">▲ +6.2%</td>
+<td>미국 · 중동</td>
+</tr>
+<tr>
+<td class="kb-ranking-num">04</td>
+<td class="kb-ranking-brand">Innisfree</td>
+<td>토너 · 마스크</td>
+<td class="kb-ranking-score-val">91.5</td>
+<td class="kb-ranking-change-up">▲ +4.9%</td>
+<td>중국 · 동남아</td>
+</tr>
+<tr>
+<td class="kb-ranking-num">05</td>
+<td class="kb-ranking-brand">Sulwhasoo</td>
+<td>럭셔리</td>
+<td class="kb-ranking-score-val">89.3</td>
+<td class="kb-ranking-change-up">▲ +3.8%</td>
+<td>중국 · 일본</td>
+</tr>
+<tr>
+<td class="kb-ranking-num">06</td>
+<td class="kb-ranking-brand">Anua</td>
+<td>클렌저 · 토너</td>
+<td class="kb-ranking-score-val">87.6</td>
+<td class="kb-ranking-change-up">▲ +18.4%</td>
+<td>미국 · 유럽</td>
+</tr>
+<tr>
+<td class="kb-ranking-num">07</td>
+<td class="kb-ranking-brand">Isntree</td>
+<td>보습 · 진정</td>
+<td class="kb-ranking-score-val">84.2</td>
+<td class="kb-ranking-change-up">▲ +9.1%</td>
+<td>미국 · 동남아</td>
+</tr>
+<tr>
+<td class="kb-ranking-num">08</td>
+<td class="kb-ranking-brand">Torriden</td>
+<td>세럼 · 앰플</td>
+<td class="kb-ranking-score-val">81.9</td>
+<td class="kb-ranking-change-up">▲ +14.6%</td>
+<td>유럽 · 미국</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<!-- ===== DATA INSIGHT ===== -->
+<section class="kb-insight-section" id="kb-insight">
+<div class="kb-section-inner">
+<div class="kb-section-header">
+<div>
+<span class="kb-section-label-tag" style="color:#a78bfa;border-color:rgba(167,139,250,0.3);background:rgba(167,139,250,0.08);">DATA INSIGHT</span>
+<h2 class="kb-section-title" data-i18n="insight.title">K-Beauty 데이터 인사이트</h2>
+</div>
+<a class="kb-section-view-all" href="https://blog.naver.com/kimpactmedia" rel="noopener noreferrer" style="color:rgba(255,255,255,0.45);" target="_blank">블로그에서 더 보기 →</a>
+</div>
+<div class="kb-insight-grid">
+<div class="kb-insight-card">
+<div class="kb-insight-icon">📊</div>
+<div class="kb-insight-title">2026 K-Beauty 글로벌 트렌드 리포트</div>
+<div class="kb-insight-desc">선크림, 세럼, 클렌저 카테고리가 미국·유럽 시장에서 전년 대비 평균 34% 성장. 비건·클린뷰티 라인이 신규 진입 브랜드 중 62%를 차지.</div>
+<a class="kb-insight-link" href="https://blog.naver.com/kimpactmedia" rel="noopener noreferrer" target="_blank">리포트 읽기 →</a>
+</div>
+<div class="kb-insight-card">
+<div class="kb-insight-icon">🌏</div>
+<div class="kb-insight-title">동남아 K-Beauty 시장 진출 전략</div>
+<div class="kb-insight-desc">태국·베트남·인도네시아 3개국 K-Beauty 소비자 데이터 분석. 현지 인플루언서 채널과 연동된 브랜드의 전환율이 2.8배 높음.</div>
+<a class="kb-insight-link" href="https://blog.naver.com/kimpactmedia" rel="noopener noreferrer" target="_blank">인사이트 보기 →</a>
+</div>
+<div class="kb-insight-card">
+<div class="kb-insight-icon">💡</div>
+<div class="kb-insight-title">K-Beauty 브랜드 글로벌 진출 체크리스트</div>
+<div class="kb-insight-desc">성공적인 해외 진출을 위한 플랫폼별 전략, 리테일러 선정 기준, 현지화 포인트를 데이터 기반으로 정리한 실전 가이드.</div>
+<a class="kb-insight-link" href="https://blog.naver.com/kimpactmedia" rel="noopener noreferrer" target="_blank">가이드 다운로드 →</a>
+</div>
+</div>
+</div>
+</section>
+
+<footer id="kb-footer" role="contentinfo">
+<div class="kb-container">
+<div class="kb-footer-top">
+<div class="kb-footer-brand">
+<img alt="K-Beauty" class="kb-footer-logo" height="60" loading="lazy" src="assets/images/kbeauty-logo.png" width="60"/>
+<div>
+<p class="kb-footer-name">K-Beauty Intelligence</p>
+<p class="kb-footer-parent">by K-IMPACT Media Group</p>
+</div>
+</div>
+<nav aria-label="K-Beauty 푸터 내비게이션" class="kb-footer-nav">
+<div class="kb-footer-col">
+<h4>플랫폼</h4>
+<ul>
+<li><a href="#kb-global-index">K-뷰티 글로벌 인덱스</a></li>
+<li><a href="#brand-rankings">브랜드 랭킹</a></li>
+<li><a href="#product-rankings">제품 랭킹</a></li>
+<li><a href="#market-intelligence">시장 인텔리전스</a></li>
+<li><a href="#kb-platform-intro">플랫폼 소개</a></li>
+</ul>
+</div>
+<div class="kb-footer-col">
+<h4>데이터베이스</h4>
+<ul>
+<li><a href="brands.html">브랜드 데이터베이스</a></li>
+<li><a href="products.html">제품 데이터베이스</a></li>
+<li><a href="top100-brands.html">Top 100 브랜드</a></li>
+<li><a href="deals.html">K-뷰티 딜</a></li>
+<li><a href="creators.html">크리에이터</a></li>
+</ul>
+</div>
+<div class="kb-footer-col">
+<h4>랭킹 &amp; 제품</h4>
+<ul>
+<li><a href="best-sunscreens.html">베스트 한국 선크림</a></li>
+<li><a href="best-serums.html">베스트 한국 세럼</a></li>
+<li><a href="best-moisturizers.html">베스트 한국 모이스처라이저</a></li>
+<li><a href="best-cleansers.html">베스트 한국 클렌저</a></li>
+<li><a href="best-essences.html">베스트 한국 에센스</a></li>
+</ul>
+</div>
+<div class="kb-footer-col">
+<h4>회사</h4>
+<ul>
+<li><a href="about.html">소개</a></li>
+<li><a href="contact.html">연락하기</a></li>
+<li><a href="contact.html#partnership">파트너십 문의</a></li>
+<li><a href="privacy.html">개인정보처리방침</a></li>
+<li><a href="terms.html">이용약관</a></li>
+<li><a href="../index.html">K-IMPACT Media Group</a></li>
+</ul>
+</div>
+</nav>
+</div>
+<div class="kb-footer-sns">
+<a aria-label="K-IMPACT Media Group Instagram" class="kb-sns-link" title="K-IMPACT Media Group Instagram" href="https://www.instagram.com/kbeauty.kimpact/" rel="noopener" target="_blank"><svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
+<a aria-label="TikTok" class="kb-sns-link" href="https://www.tiktok.com/@kimpactmedia" rel="noopener" target="_blank"><svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V9.05a8.16 8.16 0 0 0 4.77 1.52V7.12a4.85 4.85 0 0 1-1-.43z"></path></svg></a>
+<a aria-label="YouTube" class="kb-sns-link" href="https://www.youtube.com/@kimpactmedia" rel="noopener" target="_blank"><svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 0 0 .5 6.19C0 8.04 0 12 0 12s0 3.96.5 5.81a3.02 3.02 0 0 0 2.12 2.14C4.46 20.5 12 20.5 12 20.5s7.54 0 9.38-.55a3.02 3.02 0 0 0 2.12-2.14C24 15.96 24 12 24 12s0-3.96-.5-5.81zM9.75 15.5v-7l6.5 3.5-6.5 3.5z"></path></svg></a>
+<a aria-label="Threads" class="kb-sns-link" href="https://www.threads.net/@kimpactmedia" rel="noopener" target="_blank"><svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.473 12.01v-.017c.027-3.579.877-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-.505-1.808-1.403-3.245-2.672-4.271-1.338-1.073-3.14-1.664-5.35-1.679-2.917.02-5.11.938-6.52 2.729-1.337 1.7-2.02 4.138-2.044 7.244.024 3.106.707 5.545 2.044 7.244 1.41 1.79 3.603 2.708 6.52 2.729 2.21-.015 4.013-.606 5.35-1.679 1.269-1.026 2.167-2.463 2.672-4.271l2.04.569c-.651 2.337-1.832 4.177-3.509 5.467-1.783 1.373-4.08 2.078-6.826 2.098h-.028z"></path></svg></a>
+<a aria-label="X (Twitter)" class="kb-sns-link" href="https://x.com/kimpactmedia" rel="noopener" target="_blank"><svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg></a>
+<a aria-label="K-IMPACT Media Group Naver Blog" class="kb-sns-link" title="K-IMPACT Media Group Naver Blog" href="https://blog.naver.com/kimpactmedia" rel="noopener" target="_blank"><svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20"><path d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5zm3 2v2h12V7H6zm0 4v2h12v-2H6zm0 4v2h8v-2H6z"></path></svg></a>
+</div>
+<div class="kb-footer-bottom">
+<div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:20px 24px;margin-bottom:20px;">
+<p style="margin:0;font-size:0.85rem;color:rgba(255,255,255,0.7);line-height:1.8;">
+<strong style="color:#C9A84C;">K-IMPACT Media Group</strong><br/>
+상호: K-IMPACT Media Group | 대표자: 이예정<br/>
+사업자등록번호: 688-07-03669 | 사업장 주소: 서울특별시 동작구 사당로 300<br/>
+이메일: <a href="mailto:yejungi@naver.com" style="color:#C9A84C;text-decoration:none;">yejungi@naver.com</a> | 통신판매업 신고: 준비 중
+</p>
+</div>
+<p>© 2026 K-Beauty Intelligence by K-IMPACT Media Group. All rights reserved.</p>
+<div class="kb-footer-legal">
+<a href="privacy.html">개인정보처리방침</a>
+<a href="terms.html">이용약관</a>
+<a href="about.html">소개</a>
+<a href="contact.html">문의하기</a>
+</div>
+</div>
+</div>
+</footer>
+<script src="assets/js/kb-i18n.js?v=13"></script>
+	<script src="../assets/js/main.js?v=13"></script>
+<script src="assets/js/kb-main.js?v=13"></script>
+<script src="../shared/auth.js?v=13"></script>
+<script>
+    // Animate bars on scroll
+    const animBars = document.querySelectorAll('.brt-score-fill, .bdb-trend-fill, .cir-fill, .aie-bbar');
+    const barObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.transition = 'width 1.2s cubic-bezier(0.4,0,0.2,1)';
+        }
+      });
+    }, { threshold: 0.3 });
+    animBars.forEach(b => barObserver.observe(b));
+
+    // Deals tab filter
+    const dealTabs = document.querySelectorAll('.deals-tab');
+    const dealCards = document.querySelectorAll('.deal-card');
+    dealTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        dealTabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+        const ch = tab.dataset.channel;
+        dealCards.forEach(card => {
+          card.style.display = (ch === 'all' || card.dataset.channel === ch) ? '' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>

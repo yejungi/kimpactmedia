@@ -1,0 +1,303 @@
+/* =====================================================
+   K-Beauty Product Database Page Styles
+   ===================================================== */
+
+/* ── Product Section ── */
+.products-section {
+  padding: 60px 0;
+  background: #0a0a0f;
+}
+
+.products-section-alt {
+  background: #0d0d16;
+}
+
+.products-section-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  gap: 16px;
+}
+
+.products-update-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #4cc978;
+  background: rgba(76, 201, 120, 0.1);
+  border: 1px solid rgba(76, 201, 120, 0.25);
+  padding: 5px 12px;
+  border-radius: 2px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── Products Grid ── */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ── Product Card ── */
+.product-card {
+  background: #111118;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 6px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  transition: border-color 0.25s, transform 0.25s;
+}
+
+.product-card:hover {
+  border-color: rgba(201, 168, 76, 0.35);
+  transform: translateY(-2px);
+}
+
+.product-card-rank {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: rgba(201, 168, 76, 0.6);
+  letter-spacing: 0.05em;
+}
+
+.product-card-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+/* ── Brand Initials ── */
+.product-brand-init {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+.product-init-an  { background: linear-gradient(135deg, #2a3a1a, #4a6a2a); color: #a8c878; }
+.product-init-bj  { background: linear-gradient(135deg, #3a2a1a, #6a4a2a); color: #d8a878; }
+.product-init-cx  { background: linear-gradient(135deg, #1a3a2a, #2a5a3a); color: #78c896; }
+.product-init-tr  { background: linear-gradient(135deg, #1a2a3a, #2a4a6a); color: #78a8d8; }
+.product-init-if  { background: linear-gradient(135deg, #1a3a1a, #2a6a2a); color: #78e878; }
+.product-init-lg  { background: linear-gradient(135deg, #1a1a4a, #2a2a7a); color: #8888e8; }
+.product-init-ra  { background: linear-gradient(135deg, #3a1a2a, #6a2a4a); color: #e878a8; }
+
+.product-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.product-name {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  line-height: 1.4;
+  padding-right: 32px;
+}
+
+.product-brand {
+  font-size: 0.72rem;
+  color: rgba(232, 232, 232, 0.5);
+}
+
+.product-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 4px;
+}
+
+.product-tag {
+  font-size: 0.65rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  padding: 2px 7px;
+  color: rgba(232, 232, 232, 0.65);
+}
+
+.product-score-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.product-score {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #C9A84C;
+  line-height: 1;
+}
+
+.product-score-label {
+  font-size: 0.58rem;
+  color: rgba(232, 232, 232, 0.4);
+  letter-spacing: 0.08em;
+}
+
+/* ── Product Metrics ── */
+.product-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 4px;
+  padding: 12px;
+}
+
+.pm-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pm-label {
+  font-size: 0.62rem;
+  color: rgba(232, 232, 232, 0.38);
+  letter-spacing: 0.05em;
+}
+
+.pm-val {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #e8e8e8;
+}
+
+.pm-up { color: #4cc978; }
+.pm-down { color: #e85858; }
+
+/* ── Ingredient Trends ── */
+.products-ingredients-section {
+  padding: 60px 0;
+  background: #111118;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ingredients-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.ingredient-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 4px;
+  padding: 14px 18px;
+  transition: border-color 0.2s;
+}
+
+.ingredient-card:hover {
+  border-color: rgba(201, 168, 76, 0.25);
+}
+
+.ing-rank {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: rgba(201, 168, 76, 0.6);
+  width: 24px;
+  flex-shrink: 0;
+}
+
+.ing-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 160px;
+  flex-shrink: 0;
+}
+
+.ing-name {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #e8e8e8;
+  margin: 0;
+}
+
+.ing-name-ko {
+  font-size: 0.7rem;
+  color: rgba(232, 232, 232, 0.45);
+}
+
+.ing-bar-wrap {
+  flex: 1;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.ing-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #C9A84C, #e8c86a);
+  border-radius: 2px;
+}
+
+.ing-score {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #C9A84C;
+  width: 28px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.ing-growth {
+  font-size: 0.75rem;
+  font-weight: 700;
+  width: 52px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.ing-up { color: #4cc978; }
+.ing-down { color: #e85858; }
+
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ingredients-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+  .products-section-header {
+    flex-direction: column;
+  }
+  .ingredient-card {
+    flex-wrap: wrap;
+  }
+  .ing-info {
+    width: auto;
+    flex: 1;
+  }
+}
