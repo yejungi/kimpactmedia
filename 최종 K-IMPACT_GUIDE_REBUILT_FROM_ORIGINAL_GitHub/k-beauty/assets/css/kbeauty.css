@@ -1,0 +1,5 @@
+
+@import url("../../assets/css/style.css");
+body{background:var(--paper)}
+.kb-mark{max-width:520px;filter:brightness(0) invert(1)}
+.kb-intro{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.8rem,5.7vw,5.5rem);line-height:1.02;letter-spacing:-.05em;margin:0}
