@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ===== CORE PAGES ===== -->
+
+  <!-- K-Beauty Home -->
+  <url>
+    <loc>https://www.kimpactmedia.com/k-beauty/</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.kimpactmedia.com/k-beauty/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kimpactmedia.com/k-beauty/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.kimpactmedia.com/k-beauty/?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kimpactmedia.com/k-beauty/"/>
+  </url>
+
+  <!-- ===== DATA PLATFORM ===== -->
+
+  <!-- Brand Database -->
+  <url>
+    <loc>https://www.kimpactmedia.com/k-beauty/brands.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Product Database -->
+  <url>
+    <loc>https://www.kimpactmedia.com/k-beauty/products.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Market Intelligence -->
+  <url>
+    <loc>https://www.kimpactmedia.com/k-beauty/intelligence.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- ===== RANKINGS (HIGH SEO VALUE) ===== -->
+
+  <!-- Top 100 K-Beauty Brands -->
+  <url>
+    <loc>https://www.kimpactmedia.com/k-beauty/top100-brands.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Top 100 K-Beauty Products -->
+  <url>
+    <loc>https://www.kimpactmedia.com/k-beauty/top100-products.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Best Korean Sunscreens -->
+  <url>
+    <loc>https://www.kimpactmedia.com/k-beauty/best-sunscreens.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+
+  <!-- Best Korean Serums -->
+  <url>
+    <loc>https://www.kimpactmedia.com/k-beauty/best-serums.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+
+  <!-- Best Korean Moisturizers -->
+  <url>
+    <loc>https://www.kimpactmedia.com/k-beauty/best-moisturizers.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+
+  <!-- Best Korean Cleansers -->
+  <url>
+    <loc>https://www.kimpactmedia.com/k-beauty/best-cleansers.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+
+  <!-- Best Korean Essences -->
+  <url>
+    <loc>https://www.kimpactmedia.com/k-beauty/best-essences.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+
+  <!-- ===== CREATOR & COMMERCE ===== -->
+
+  <!-- Creator Ecosystem -->
+  <url>
+    <loc>https://www.kimpactmedia.com/k-beauty/creators.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Deals Engine -->
+  <url>
+    <loc>https://www.kimpactmedia.com/k-beauty/deals.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- ===== TRUST PAGES ===== -->
+
+  <!-- About -->
+  <url>
+    <loc>https://www.kimpactmedia.com/k-beauty/about.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Contact & Partnership -->
+  <url>
+    <loc>https://www.kimpactmedia.com/k-beauty/contact.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://www.kimpactmedia.com/k-beauty/privacy.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Terms of Service -->
+  <url>
+    <loc>https://www.kimpactmedia.com/k-beauty/terms.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>
